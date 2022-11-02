@@ -4,6 +4,10 @@
     align-items: center;
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+    padding: 0;
+}
 .main{
     display: flex;
     flex-direction: column;
@@ -138,12 +142,13 @@
 .prodleft{
     padding-left: 25px;
 }
-.prodleft h2{
-    font-family: 'Raleway';
+h2{
+    font-family: 'Raleway', bold;
     font-weight: 300;
     font-size: 2rem;
     padding-bottom: 15px;
     text-transform: uppercase;
+    margin-top: 15px;
 }
 .prodleft p{
     max-width: 50rem;
@@ -209,7 +214,7 @@
 hr{
     height: 5px;
     border-radius: 10px;
-    background: #185947;
+    background: #185947de;
 }
 /* diseño int */
 .boxinterior{
@@ -236,20 +241,40 @@ hr{
     color: #262626;
     margin: 50px;
 }
-/* article us /galeria */
-.parrus{
-    display:flex;
-    height: 200px;
-    font-family: 'Raleway', sans-serif;
+/* galeria */
+.box__galeria{
     text-align: center;
-    justify-content: center;
-    background-color: #8c6c5abb;
-    padding: 20px;
-    border-radius: 3px;
-    margin: 10px 0;
-    line-height: 1.5;
-    letter-spacing: 0.1rem;
-    font-size: 18px;
+}
+.column img{
+    width: 100%;
+    border-radius: 20px;
+}
+.column img:hover{
+    opacity: 0.4;
+    box-shadow: #262626;
+}
+.row{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.column{
+    flex: 25%;
+    padding: 5px;
+}
+.column img{
+    margin-top: 5px;
+    padding: 10px;
+}
+@media (max-width: 800px){
+    .column{
+        flex:50%;
+    }
+}
+@media (max-width: 600px){
+    .column{
+        flex: 100%;
+    }
 }
 /* iconos de medios de pago */
 .iconos__compra{
@@ -375,4 +400,86 @@ hr{
 .ulistafin li a:hover{
     font-style: italic;
 }
-@media
+/* PAG PRODUCTOS */
+.pag__prod {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr 1.2fr 1.2fr 0.5fr 1.2fr 1.2fr 1.2fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header header header header"
+    "li__prods h2__org h2__org h2__org h2__org"
+    "li__prods div__img1 div__img2 div__img3 div__img4"
+    "li__prods div__img5 div__img6 div__img7 div__img8"
+    "li__prods h2__escr h2__escr h2__escr h2__escr"
+    "li__prods div__imge1 div__imge2 div__imge3 div__imge4"
+    "li__prods div__imge5 div__imge6 div__imge7 div__imge8"
+    "footer footer footer footer footer";
+}
+
+.header { grid-area: header; }
+
+.footer { grid-area: footer; }
+
+.li__prods { grid-area: li__prods; }
+
+.h2__org { grid-area: h2__org; }
+
+.h2__escr { grid-area: h2__escr; }
+
+.div__img1 { grid-area: div__img1; }
+
+.div__img2 { grid-area: div__img2; }
+
+.div__img3 { grid-area: div__img3; }
+
+.div__img4 { grid-area: div__img4; }
+
+.div__img5 { grid-area: div__img5; }
+
+.div__img6 { grid-area: div__img6; }
+
+.div__img7 { grid-area: div__img7; }
+
+.div__img8 { grid-area: div__img8; }
+
+.div__imge1 { grid-area: div__imge1; }
+
+.div__imge2 { grid-area: div__imge2; }
+
+.div__imge3 { grid-area: div__imge3; }
+
+.div__imge4 { grid-area: div__imge4; }
+
+.div__imge5 { grid-area: div__imge5; }
+
+.div__imge6 { grid-area: div__imge6; }
+
+.div__imge7 { grid-area: div__imge7; }
+
+.div__imge8 { grid-area: div__imge8; 
+}
+.li__prods{
+    font-family: 'Raleway', sans-serif;
+    background-color: #18594780;
+    padding: 100px 0 100px 0;
+    border-radius: 15px;
+    margin:15px;
+    align-self: start;
+    height: 100%;
+}
+.li__prods h3{
+    text-align: left;
+    margin: 15px;
+    text-transform: uppercase;
+}
+.li__prods ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.li__prods ul li{
+    text-align: left;
+}
