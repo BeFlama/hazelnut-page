@@ -108,7 +108,8 @@ body{
     height: 30rem;
     background-color: white;
     color: #0D0D0D;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 .hazelizq{
     margin: 2rem;
@@ -127,11 +128,14 @@ body{
     color: #262626;
     letter-spacing: 0.2rem;
 }
-.hazelder img{
-    display: flex;
-    width: auto;
+.hazelder{
+    width: 80%;
     height: 30rem;
+    overflow: hidden;
+}
+.hazelder img{
     opacity: 0.7;
+    width: max-content;
 }
 /* productos index */
 .box__prod{
@@ -242,11 +246,23 @@ hr{
     color: #262626;
     margin: 2rem;
 }
+
 /* galeria */
 .box__galeria{
+    background-color: #185947;
+    border-radius: 0.5rem;
     text-align: center;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    padding: 5rem;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+.box__galeria p{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    letter-spacing: 0.1rem;
 }
 .column img{
     width: 100%;
@@ -528,8 +544,12 @@ hr{
     grid-area: footer;
     margin-top: 10rem;
 }
-/* media home */
+/* media home index */
 @media(max-width: 800px){
+    .body {
+        margin: 0;
+        padding: 0;
+    }
     h2{
         font-size: 1.2rem;
     }
@@ -561,9 +581,11 @@ hr{
         padding: 0;
     }
     .hazelder{
-        overflow: hidden;
         padding: 0;
         margin: 0;
+    }
+    .hazelder img{
+        overflow-x: hidden;
     }
     .box__prod{
         display: flex;
@@ -582,11 +604,10 @@ hr{
         flex-direction: column;
         padding: 1rem;
     }
-    .box__datoscompra, .iconos__compra {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
+    .iconos__compra{
+        display: block;
+        margin: 1rem;
+    }
     }
     .footer{
         height: 20%;
@@ -595,7 +616,7 @@ hr{
         justify-content: start;
         padding: 0;
     }
-}
+
 /* media galeria */
 @media (max-width: 800px){
     .column{
