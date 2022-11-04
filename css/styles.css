@@ -11,8 +11,8 @@ body{
 .main{
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 /* header */
 .header{
@@ -61,15 +61,6 @@ body{
     height: 3px;
     clip-path: var(--clippy);
     transition: clip-path .3s;
-}
-@media(max-width: 700px){
-    .header{
-        height: 20%;
-        background-color: #185947;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
 .btnav{
     min-width: 130px;
@@ -120,13 +111,13 @@ body{
     margin-bottom: 10rem;
 }
 .hazelizq{
-    margin: 30px;
-    padding: 5px;
+    margin: 2rem;
     flex-direction: column;
     line-height: 1.5;
     text-align: left;
 }
 .hazelizq h1{
+    margin: 1rem;
     font-family: 'Raleway', sans-serif;
     font-size: 4rem;
 }
@@ -137,12 +128,12 @@ body{
     letter-spacing: 0.2rem;
 }
 .hazelder img{
-    display: block;
+    display: flex;
     width: auto;
     height: 30rem;
     opacity: 0.7;
 }
-/* productos */
+/* productos index */
 .box__prod{
     display:flex;
     justify-content: space-between;
@@ -276,16 +267,7 @@ hr{
     flex: 25%;
     padding: 5px;
 }
-@media (max-width: 800px){
-    .column{
-        flex:50%;
-    }
-}
-@media (max-width: 600px){
-    .column{
-        flex: 100%;
-    }
-}
+
 /* iconos de medios de pago */
 .iconos__compra{
     display: flex;
@@ -411,6 +393,8 @@ hr{
 .ulistafin li a:hover{
     font-style: italic;
 }
+
+
 /* PAG PRODUCTOS */
 .pag__prod {  display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -543,4 +527,87 @@ hr{
 .footer { 
     grid-area: footer;
     margin-top: 10rem;
+}
+/* media home */
+@media(max-width: 800px){
+    h2{
+        font-size: 1.2rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    .header{
+        height: 20%;
+        background-color: #185947;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .boxhazel{
+        display: flex;
+        flex-direction: column;
+    }
+    .hazelizq{
+        padding: 0;
+        margin: 0;
+    }
+    .hazelizq h1{
+        font-size: 2rem;
+        text-align: center
+    }
+    .hazelizq p{
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0;
+    }
+    .hazelder{
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    .box__prod{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+    .prodleft,.prodleft__p, .prodder{
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+    .boxinterior{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .box__datoscompra, .iconos__compra {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .footer{
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 0;
+    }
+}
+/* media galeria */
+@media (max-width: 800px){
+    .column{
+        flex:50%;
+    }
+}
+@media (max-width: 600px){
+    .column{
+        flex: 100%;
+    }
+}
+/* media pagina productos */
+@media (max-width: 600px){
+
 }
