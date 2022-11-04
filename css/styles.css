@@ -68,6 +68,7 @@ body{
         background-color: #185947;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
 }
 .btnav{
@@ -163,6 +164,7 @@ h2{
     font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .prodleft__p{
     margin: 0;
@@ -444,6 +446,15 @@ hr{
     background-color: #18594757; 
     font-style: bold;
 }
+.prods__acordion{
+    margin-left: 2rem;
+    padding: 0 3rem;
+}
+.prod__acordion-h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
 .boostrap__list{
     align-items: flex-start;
 }
@@ -456,7 +467,7 @@ hr{
 }
 .list__boostrap li a:hover{
     color: #185947;
-    font-style: italic;
+    text-decoration: underline;
 }
 .div__img{
     align-self: start;
@@ -489,12 +500,10 @@ hr{
     color: #185947;
     margin: 2rem;
 }
-.btn__comprar {
+.btn__comprar{
     margin: 1rem;
-    min-width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
+    min-width: 8rem;
+    height: 2.5rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -506,13 +515,14 @@ hr{
     overflow: hidden;
     border: 2px solid #185947;
 }
-.btn__comprar:hover {
+.btn__comprar:hover{
     color: #fff;
+    text-decoration: none;
 }
 .btn__comprar:hover:after {
     height: 100%;
 }
-.btn__comprar:after {
+.btn__comprar:after{
     content: "";
     position: absolute;
     z-index: -1;
@@ -522,11 +532,13 @@ hr{
     height: 0;
     width: 100%;
     background: #185947;
-
 }
 .btn__comprar a{
     text-decoration: none;
     color: #185947;
+}
+.btn__comprar a:hover{
+    color: #fff;
 }
 .footer { 
     grid-area: footer;
