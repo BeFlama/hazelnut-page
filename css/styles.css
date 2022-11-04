@@ -426,7 +426,6 @@ hr{
     "li__prods div__img5 div__img6 div__img7"
     "footer footer footer footer";
 }
-
 .header { 
     grid-area: header; 
 }
@@ -445,26 +444,16 @@ hr{
     margin: 20px;
     background-color: #18594757; 
 }
+.list__boostrap{
+    list-style-type: "└  ";
+}
 .list__boostrap li a{
+    color: #0D0D0D;
     text-decoration: none;
-    color: #fff;
 }
-.li__prods h2{
-    text-align: center;
-    margin: 15px;
-    text-transform: uppercase;
-}
-.li__prods ul{
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-}
-.li__prods ul li{
-    width: 150px;
-    margin: 10px;
-    padding: 10px;
-    text-align: left;
-    background-color: #8C6C5A;
+.list__boostrap li a:hover{
+    color: #185947;
+    font-style: italic;
 }
 .div__img{
     display: column;
