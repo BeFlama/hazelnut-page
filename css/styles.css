@@ -23,8 +23,8 @@ body{
     border-radius: 0;
     justify-content:space-around;
     align-items: center;
-    margin: 0px;
-    padding: 5px;
+    margin: 0;
+    padding: 2.5rem;
     flex-direction: row;
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
@@ -34,7 +34,7 @@ body{
     cursor: pointer;
 }
 .header .logo a img{
-    height: 80px;
+    height: 4rem;
     width: auto;
 }
 .header .nav .list__nav{
@@ -42,7 +42,8 @@ body{
 }
 .header .nav .list__nav li{
     display: inline-block;
-    padding: 0 20px;
+    padding: 0;
+    margin: 2rem;
 }
 .nav__item{
     color: #fff;
@@ -134,6 +135,7 @@ body{
     overflow: hidden;
 }
 .hazelder img{
+    height: 40rem;
     opacity: 0.7;
     width: max-content;
 }
@@ -215,11 +217,14 @@ h2{
     font-family: 'Raleway';
     text-align: right;
     padding: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .prodimg{
-    border-radius: 0.5rem;
-    width: 15rem;
+    border-radius: 2.5rem;
+    width: 40rem;
     height: auto;
+    padding: 2rem;
 }
 hr{
     height: 0.4rem;
@@ -550,22 +555,50 @@ hr{
         margin: 0;
         padding: 0;
     }
+    .main{
+        margin: 0;
+        padding: 0;
+    }
     h2{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     h3{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .header{
-        height: 20%;
-        background-color: #185947;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        height: 6rem;
+        background-color: #185947;
+        text-align: center;
+        padding: 1rem;
+    }
+    .nav{
+        width: 100%;
+    }
+    .logo{
+        margin: 0;
+        opacity: 0.5;
+    }
+    .header .nav .list__nav li{
+        margin: 0.2rem;
+    }
+    .nav__item{
+        font-size: 0.7rem;
+        margin: 0;
+        padding: 0;
+    }
+    .btnav{
+        display: none;
     }
     .boxhazel{
         display: flex;
         flex-direction: column;
+        justify-content: start;
+        margin: 0;
     }
     .hazelizq{
         padding: 0;
@@ -581,23 +614,30 @@ hr{
         padding: 0;
     }
     .hazelder{
-        padding: 0;
-        margin: 0;
+        width: 100%;
+        height: 50%;
     }
     .hazelder img{
         overflow-x: hidden;
+        height: 100%;
+        width: auto;
+        padding: 0;
+        margin: 0;
     }
     .box__prod{
         display: flex;
         flex-direction: column;
-        padding: 0;
+        padding: 1rem;
         text-align: center;
-        margin: 0;
+        margin: 1rem;
     }
-    .prodleft,.prodleft__p, .prodder{
+    .prodleft,.prodleft__p{
         margin: 0;
         padding: 1rem;
         text-align: center;
+    }
+    .prodder{
+        padding: 0;
     }
     .boxinterior{
         display: flex;
@@ -606,8 +646,15 @@ hr{
     }
     .iconos__compra{
         display: block;
-        margin: 1rem;
+        margin: 0;
+        padding: 0;
     }
+    .column{
+        flex:50%;
+    }
+    .box__galeria{
+        padding: 0;
+        margin: 0;
     }
     .footer{
         height: 20%;
@@ -615,12 +662,6 @@ hr{
         flex-direction: column;
         justify-content: start;
         padding: 0;
-    }
-
-/* media galeria */
-@media (max-width: 800px){
-    .column{
-        flex:50%;
     }
 }
 @media (max-width: 600px){
