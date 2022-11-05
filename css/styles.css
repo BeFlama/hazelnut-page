@@ -146,14 +146,33 @@ body{
     width: 100%;
     height: 40%;
     background-color: #b8b8b86e;
-    padding: 5rem;
+    padding: 2rem 0 2rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    border-radius: 0.3rem;
+}
+.prodder{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 40%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 1rem;
+}
+.prodder h3{
+    font-style: italic; /* aca una font manuscrita */
+}
+.prodder img{
+    padding: 0;
+    width: 30rem;
+    border-radius: 0.5rem;
 }
 .prodleft{
     align-self: center;
     justify-self: start;
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 h2{
     font-family: 'Raleway', bold;
@@ -210,9 +229,6 @@ h2{
     right: -20px;
     transition: 0.4s;
 }
-.prodder{
-    padding-right: 25px;
-}
 .prodder h3{
     font-family: 'Raleway';
     text-align: right;
@@ -241,6 +257,7 @@ hr{
     padding: 5rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    border-radius: 0.3rem;
 }
 .boxinterior h2{
     font-family: 'Raleway';
@@ -567,28 +584,29 @@ hr{
     }
     .header{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 0;
         margin: 0;
         width: auto;
-        height: 6rem;
+        height: 3rem;
         background-color: #185947;
         text-align: center;
-        padding: 1rem;
     }
     .nav{
+        margin-top: 7rem;
         width: 100%;
     }
     .logo{
-        margin: 0;
-        opacity: 0.5;
+        position: relative;
+        margin-bottom: rem;
+        margin-top: 2rem;
     }
     .header .nav .list__nav li{
         margin: 0.2rem;
     }
     .nav__item{
         font-size: 0.7rem;
-        margin: 0;
+        margin-top: 3rem;
         padding: 0;
     }
     .btnav{
@@ -598,11 +616,13 @@ hr{
         display: flex;
         flex-direction: column;
         justify-content: start;
-        margin: 0;
+        margin-top: 2rem;
+        margin-bottom: 0;
     }
     .hazelizq{
         padding: 0;
         margin: 0;
+        margin-top: 3rem;
     }
     .hazelizq h1{
         font-size: 2rem;
@@ -636,8 +656,15 @@ hr{
         padding: 1rem;
         text-align: center;
     }
+    .prodder h3{
+        margin: 1rem;
+    }
     .prodder{
         padding: 0;
+        width: 90%;
+    }
+    .prodder img{
+        width:80%;
     }
     .boxinterior{
         display: flex;
