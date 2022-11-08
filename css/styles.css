@@ -46,7 +46,7 @@ body{
 .mi__header .mi__nav .list__minav li{
     display: inline-block;
     padding: 0;
-    margin: 2rem;
+    margin: 1rem;
 }
 .minav__item{
     color: #fff;
@@ -70,6 +70,10 @@ body{
 }
 .logo{
     cursor: pointer;
+}
+.btnav a{
+    text-decoration: none;
+    color: #fff;
 }
 .btnav{
     min-width: 130px;
@@ -613,8 +617,13 @@ hr{
         position: relative;
         margin-top: 2rem;
     }
-    .mi__header .mi__nav .list__minav li{
-        margin: 0.2rem;
+    .list__minav{
+        margin-top: 3rem;
+        padding: 0;
+    }
+    .list__minav li{
+        margin: 0;
+        padding: 0;
     }
     .minav__item{
         font-size: 0.7rem;
@@ -754,6 +763,7 @@ hr{
 
 /* media query max 1023px - INDEX - tablet */
 @media (min-width: 938px) and (max-width: 1023px){
+    
     .box__prod{
         display: flex;
         flex-direction: column;
