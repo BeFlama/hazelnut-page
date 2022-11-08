@@ -17,7 +17,7 @@ body{
 
 
 /* header */
-.header{
+.mi__header{
     display: flex;
     width: 100%;
     height: 5rem;
@@ -32,31 +32,34 @@ body{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
-.header .nav{
+.mi__header .mi__nav{
     cursor: pointer;
 }
-.header .logo a img{
+.mi__header .logo a img{
     height: 4rem;
     width: auto;
 }
-.header .nav .list__nav{
+.mi__header .mi__nav .list__minav{
     list-style: none;
+    padding: 0;
 }
-.header .nav .list__nav li{
+.mi__header .mi__nav .list__minav li{
     display: inline-block;
     padding: 0;
     margin: 2rem;
 }
-.nav__item{
+.minav__item{
     color: #fff;
     text-decoration: none;
     --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
-.nav__item:hover{
+.minav__item:hover{
     --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    color: #fff;
 }
-.nav__item:after{
+.minav__item:after{
     content: "";
+    color: #185947;
     display: block;
     background: #fff;
     width: 100%;
@@ -64,6 +67,12 @@ body{
     height: 3px;
     clip-path: var(--clippy);
     transition: clip-path .3s;
+}
+.logo{
+    cursor: pointer;
+}
+.logo:hover{
+    
 }
 .btnav{
     min-width: 130px;
@@ -445,12 +454,13 @@ hr{
     grid-template-areas:
     "header header header header"
     "h2__org h2__org h2__org h2__org"
-    "li__prods div__img1 div__img2 div__img3"
-    "li__prods div__img5 div__img6 div__img7"
+    "li__prods productos productos productos"
+    "li__prods productos productos productos"
     "footer footer footer footer";
 }
-.header { 
-    grid-area: header; 
+.mi__header { 
+    grid-area: header;
+    height: 5rem;
 }
 .li__prods { 
     grid-area: li__prods; 
@@ -491,6 +501,11 @@ hr{
 .list__boostrap li a:hover{
     color: #185947;
     text-decoration: underline;
+}
+.container__prods{
+    grid-area: productos;
+    display: contents;
+    flex-wrap: wrap;
 }
 .div__img{
     align-self: start;
@@ -568,7 +583,7 @@ hr{
     margin-top: 10rem;
 }
 /* media home index mobile */
-@media(max-width: 767px){
+@media(max-width: 937px){
     .body {
         margin: 0;
         padding: 0;
@@ -583,29 +598,28 @@ hr{
     h3{
         font-size: 0.8rem;
     }
-    .header{
+    .mi__header{
         display: flex;
         flex-direction: column-reverse;
         padding: 0;
         margin: 0;
-        width: auto;
-        height: 3rem;
+        width: 100%;
+        height: 4rem;
         background-color: #185947;
         text-align: center;
     }
-    .nav{
+    .mi__nav{
         margin-top: 7rem;
         width: 100%;
     }
     .logo{
         position: relative;
-        margin-bottom: rem;
         margin-top: 2rem;
     }
-    .header .nav .list__nav li{
+    .mi__header .mi__nav .list__minav li{
         margin: 0.2rem;
     }
-    .nav__item{
+    .minav__item{
         font-size: 0.7rem;
         margin-top: 3rem;
         padding: 0;
@@ -741,8 +755,8 @@ hr{
     }
 }
 
-/* media query max 1023px - tablet */
-@media (min-width: 767px) and (max-width: 1023px){
+/* media query max 1023px - INDEX - tablet */
+@media (min-width: 938px) and (max-width: 1023px){
     .box__prod{
         display: flex;
         flex-direction: column;
@@ -809,12 +823,169 @@ hr{
     }
 }
 
+/* media query pag galeria */
 
-/* media pagina productos mobile */
-@media(max-width: 767px){
-
+@media (min-width: 938px) and (max-width: 1023px){
+    .column{
+        flex: 50%;
+    }
+    .column_resp{
+        display: none;
+    }
 }
+
+/* media query pagina productos mobile */
+@media(max-width: 767px){
+    .body {
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        margin: 0;
+        padding: 0;
+    }
+    .h2__org h2{
+        display: flex;
+        padding-left: 3rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    .logo__mq{
+        display: none;
+    }
+    .mi__nav{
+        margin: 0;
+        padding-top: 3rem;
+    }
+    .prods__acordion{
+        margin: 0;
+        padding: 0;
+    }
+    .h2__org{
+        padding-left: 1rem;
+        font-size: small;
+        margin: 0;
+        padding: 0;
+    }
+    .pag__prod { 
+        display: grid; 
+        height: 100vh;
+        margin: 0%;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+        gap: 0.5rem;
+        grid-template-areas:
+        "header"
+        "h2__org"
+        "productos"
+        "footer";
+    }
+    .container__prods{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "prod1 prod2"
+        "prod4 prod5"
+        "prod6 prod3";
+    }
+    .prod1{
+        grid-area: prod1;
+    }
+    .prod2{
+        grid-area: prod2;
+    }    
+    .prod3{
+        grid-area: prod3;
+    }
+    .prod4{
+        grid-area: prod4;
+    }
+    .prod5{
+        grid-area: prod5;
+    }
+    .prod6{
+        grid-area: prod6;
+    }
+    .div__img{
+        width: auto;
+        height: auto;
+        align-self: center;
+        justify-self: center;
+        height: auto;
+        padding: 0;
+        margin: 0.5rem;
+    }
+    .prod__img{
+        width: 100%;
+        height: 20rem;
+    }
+    .prod__img img{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .prod__text{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        background-color: #9867326e;
+        border-radius: 0px 0px 5px 5px;
+    }
+    .prod__text h3{
+        font-size: 1.5rem;
+    }
+    .prod__text strong{
+        color: #986632;
+        background-color: #fff;
+        padding: 0.2rem;
+        border-radius: 0px 0px 5px 5px;
+    }
+    .prod__text p{
+        text-align: center;
+        margin: 0.5rem;
+    }
+    .btn__comprar{
+        border: none;
+        background-color: #986632;
+        border-radius: 0px 0px 5px 5px;
+    }
+    .btn__comprar a{
+        margin: 0;
+        padding: 0;
+        color:#ffffff;
+    }
+    .li__prods{
+        display: none;
+    }
+    .prod__text strong, p{
+        margin: 0;
+    }
+    .prod__img{
+        margin: 0;
+        padding: 0;
+    }
+    .footer{
+        height: 400px;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        align-self: end;
+    }
+    .footerlogo p{
+        text-align: center;
+    }
+}
+
 /* media query max 1023px - tablet  - pagina productos*/
 @media (min-width: 767px) and (max-width: 1023px){
 
+    
 }

@@ -15,16 +15,16 @@
 </head>
 <body>
     <div class="pag__prod">
-        <div class="header">
+        <div class="mi__header">
             <div  class="logo">
-                <a href="../index.html"><img src="../assets/img/icons/android-chrome-512x512.png" alt="logo-home"></a>
+                <a href="../index.html"><img src="../assets/img/icons/android-chrome-512x512.png" class= "logo__mq" alt="logo-home"></a>
                 </div>
-                <nav class="nav">
-                    <ul class="list__nav"> 
-                        <li><a href="../pages/Quienes-somos.html" class="nav__item">Quienes somos</a></li>
-                        <li><a href="../pages/Productos.html" class="nav__item">Productos</a></li>
-                        <li><a href="./pages/Preguntas-frecuentes.html" class="nav__item">Preguntas frecuentes</a></li>
-                        <li><a href="../pages/Galería.html" class="nav__item">Galería</a></li>
+                <nav class="mi__nav">
+                    <ul class="list__minav"> 
+                        <li><a href="../pages/Quienes-somos.html" class="minav__item">Quienes somos</a></li>
+                        <li><a href="../pages/Productos.html" class="minav__item">Productos</a></li>
+                        <li><a href="./pages/Preguntas-frecuentes.html" class="minav__item">Preguntas frecuentes</a></li>
+                        <li><a href="../pages/Galería.html" class="minav__item">Galería</a></li>
                     </ul>
                 </nav> 
             <button class="btnav"><a href="./Contactanos.html"></a>Contactanos</button></a>
@@ -34,7 +34,7 @@
                 <div class="prods__acordion" id="accordionExample">
                     <div class="accordion-item">
                     <h2 class="prod__acordion-h2" id="headingOne">
-                        <button class="accordion-button collapsed p-0 m-1 fs-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed p-0 m-1 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             » Organizadores
                         </button>
                     </h2>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="accordion-item">
                     <h2 class="prod__acordion-h2" id="headingTwo">
-                        <button class="accordion-button collapsed p-0 m-1 fs-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed p-0 m-1 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             » Escritorios
                         </button>
                     </h2>
@@ -66,7 +66,7 @@
                     </div>
                     <div class="accordion-item">
                     <h2 class="prod__acordion-h2" id="headingThree">
-                        <button class="accordion-button collapsed p-0 m-1 fs-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed p-0 m-1 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             » Luces
                         </button>
                     </h2>
@@ -86,7 +86,8 @@
         <div class="h2__org">
             <h2>Productos</h2>
         </div>
-        <div class="div__img">
+    <section class="container__prods">
+        <div class="div__img prod1">
             <div class="prod__img">
                 <img src="../assets/img/imgprod/org1.jpg" alt="Organizador1">
             </div>
@@ -97,7 +98,7 @@
                 <button class="btn__comprar"><a href="#">Comprar</a></button>
             </div>
         </div>
-        <div class="div__img">
+        <div class="div__img prod2">
             <div class="prod__img">
                 <img src="../assets/img/imgprod/org2.jpg" alt="Organizador2">
             </div>
@@ -108,7 +109,7 @@
                 <button class="btn__comprar"><a href="#">Comprar</a></button>
             </div>
         </div>
-        <div class="div__img">
+        <div class="div__img prod3">
             <div class="prod__img">
                 <img src="../assets/img/imgprod/org3.jpg" alt="Organizador3">
             </div>
@@ -119,7 +120,7 @@
                 <button class="btn__comprar"><a href="#">Comprar</a></button>
             </div>
         </div>
-        <div class="div__img">
+        <div class="div__img prod4">
             <div class="prod__img">
                 <img src="../assets/img/imgprod/org4.jpg" alt="Organizador4">
             </div>
@@ -130,8 +131,8 @@
                 <button class="btn__comprar"><a href="#">Comprar</a></button>
             </div>
         </div>
-        <div class="div__img">
-            <div class="prod__img">
+        <div class="div__img prod5">
+            <div class="prod__img ">
                 <img src="../assets/img/imgprod/org5.jpg" alt="Organizador5">
             </div>
             <div class="prod__text">
@@ -141,7 +142,7 @@
                 <button class="btn__comprar"><a href="#">Comprar</a></button>
             </div>
         </div>
-        <div class="div__img">
+        <div class="div__img prod6">
             <div class="prod__img">
                 <img src="../assets/img/imgprod/org6.jpg" alt="Organizador6">
             </div>
@@ -152,6 +153,7 @@
                 <button class="btn__comprar"><a href="#">Comprar</a></button>
             </div>
         </div>
+    </section>
         <footer class="footer">
             <div class="footericons">
                     <h4 class="encontranos">Encontranos acá</h4>
