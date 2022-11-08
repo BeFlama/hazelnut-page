@@ -71,9 +71,6 @@ body{
 .logo{
     cursor: pointer;
 }
-.logo:hover{
-    
-}
 .btnav{
     min-width: 130px;
     height: 40px;
@@ -985,7 +982,9 @@ hr{
 }
 
 /* media query max 1023px - tablet  - pagina productos*/
-@media (min-width: 767px) and (max-width: 1023px){
-
-    
+@media (min-width: 768px) and (max-width: 1023px){
+    .prods__acordion{
+        margin: 0;
+        padding: 0;
+    }
 }
