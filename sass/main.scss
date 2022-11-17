@@ -1,3 +1,362 @@
 /* comentario que compila */
 //este no compila
 @import 'vars';
+
+*{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* styles de base */
+.main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+/* header */
+.mi__header{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    background-color:#b8b8b8;
+    border-radius: 0;
+    justify-content:space-around;
+    align-items: center;
+    margin: 0;
+    padding: 2.5rem;
+    flex-direction: row;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    a img{
+        height: 4rem;
+        width: auto;
+    }
+    nav{
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                display: inline-block;
+                padding: 0;
+                margin: 1rem;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+                    &:hover{
+                        --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+                        color: #fff;
+                    }
+                    &:after{
+                        content: "";
+                        color: #185947;
+                        display: block;
+                        background: #fff;
+                        width: 100%;
+                        margin-top: 3px;
+                        height: 3px;
+                        clip-path: var(--clippy);
+                        transition: clip-path .3s;
+                    }
+                }
+            }
+        }
+        }
+    button a{
+        text-decoration: none;
+        color: #fff;
+    }
+}
+/* TENGO QUE APLICAR LOS MIXIN DE BOTON */
+
+
+/* BOX HAZEL */
+.boxhazel{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30rem;
+    background-color: white;
+    color: #0D0D0D;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    .hazelizq{
+        margin: 2rem;
+        flex-direction: column;
+        line-height: 1.5;
+        text-align: left;
+        h1{
+            margin: 1rem;
+            font-family: 'Raleway', sans-serif;
+            font-size: 4rem;
+        } //aca puedo aplicar mixin de h1
+        p {
+            //aca un mixin de p
+            text-align: left;
+            font-family: 'Comfortaa', cursive;
+            color: #262626;
+            letter-spacing: 0.2rem;
+        }
+    }
+    .hazelder{
+        width: auto;
+        height: 100%;
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: auto;
+            opacity: 0.7;
+        }
+    }
+}
+
+/* BOX PRODS INDEX */
+.box__prod{ //mixin de cajas**
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+    background-color: #b8b8b86e;
+    padding: 2rem 0 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 0.3rem;
+    .prodleft{
+        align-self: center;
+        justify-self: start;
+        margin-left: 1rem;
+        h2{
+            font-family: 'Raleway', bold;
+            font-weight: 300;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        p{
+            margin: 0;
+            font-family: 'Comfortaa', cursive;
+            color: #262626;
+            letter-spacing: 0.1rem;
+        }
+    }
+    .prodder{
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+        width: 40%;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        margin: 1rem;
+        h3{
+            font-family: 'Raleway';
+            text-align: right;
+            padding: 10px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        img{
+            padding: 0;
+            width:100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        hr{
+            height: 0.4rem;
+            border-radius: 0.3rem;
+            background: #185947de;
+        }
+    }
+}
+
+/* BOX DISEÑO INT INDEX */
+.boxinterior{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    background-color: #b8b8b86e;
+    padding: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 0.3rem;
+    h2{ //mixin h2
+        font-family: 'Raleway';
+        text-transform: uppercase;
+    }
+    h3{
+        font-family: 'Raleway', sans-serif;
+        color: #262626;
+        margin: 2rem;
+    }
+}
+
+/* BOX GALERIA INDEX */
+.box__galeria{
+    background-color: #185947;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 5rem;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    h2{ //mixin h2
+        font-family: 'Raleway';
+        text-transform: uppercase;
+    }
+    p{
+        text-align: center;
+        font-family: 'Comfortaa', cursive;
+        color: #fff;
+        letter-spacing: 0.1rem;
+    }
+    .row{
+        display: flex;
+        padding: 5px;
+        flex-wrap: wrap;
+        .column {
+            flex: 25%;
+            padding: 5px;
+            img{
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 5px;
+            padding: 10px;
+            &:hover{
+                opacity: 0.4;
+                box-shadow: #262626;
+            }
+        }
+    }
+}
+}
+
+/* BOX MEDIOS DE PAGO INDEX */
+.iconos__compra{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    .icono{
+        height: 20%;
+        margin: 2rem;
+        padding: 1rem;
+        font-family:sans-serif;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        h3{
+            color: #185947;
+            font-weight: 600;
+            font-size: 1.5rem;
+            padding: 1rem;
+            font-family: 'Raleway', sans-serif;
+        }
+        h4{
+            text-align: center;
+            font-weight: 200;
+            color: #262626;
+            font-family: 'Comfortaa', cursive;
+            margin: 1rem;
+        }
+        img{
+            height: 10rem;
+            width: auto;
+        }
+    }
+}
+
+/* FOOTER */
+.footer{
+    height: 20rem;
+    width: 100%;
+    margin-top: 10rem;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    .footericons{
+        text-align: center;
+        color: #b8b8b8;
+        padding: 2rem;
+        .encontranos{
+            margin-top: 0px;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1rem;
+            font-size: 14px;
+            font-family: 'Raleway', sans-serif;
+        }
+        svg{
+            height: 2rem;
+            width: auto;
+            padding: 0.5rem;
+            color: #b8b8b8;
+            &:hover{
+                color: #8C6C5A;
+        }
+    }
+}
+    .footerlogo{
+        text-align: center;
+        color: #b8b8b8;
+        margin: 30px;
+        a{
+            padding: 0;
+            color: #b8b8b8;
+            font-size: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            img{
+                margin-bottom: 0;
+                height: auto;
+                width: 15rem;
+                padding: 1rem;
+            }
+        }
+        p{
+            color: #b8b8b8;
+            font-size: 15px;
+            font-family: 'Comfortaa', cursive;
+            margin-bottom: 0.5rem;
+        }
+        small{
+            font-size: 0.7rem;
+            font-family: 'Comfortaa', cursive;
+        }
+    }
+    .listafin{
+        padding: 2rem;
+        color: #b8b8b8;
+        ul{
+            line-height: 1.5;
+            li{
+                list-style-type: none;
+                text-align: left;
+                a{
+                    font-size: 15px;
+                    text-decoration: none;
+                    color: #b8b8b8;
+                    font-family: 'Comfortaa', cursive;
+                    &:hover{
+                        font-style: italic;
+                }
+            }
+        }
+    }
+}
+}
+/* FALTAN MIXIIN BOTONES */
