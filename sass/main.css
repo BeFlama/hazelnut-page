@@ -501,6 +501,7 @@ body {
   margin: 2rem;
 }
 
+/* media queries */
 /* media home index mobile */
 @media (max-width: 937px) {
   .main {
