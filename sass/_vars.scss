@@ -2,3 +2,55 @@ $color__bg: #b8b8b8;
 $color__text: #262626;
 $color__green: #185947;
 $color__brown: #986632;
+
+.btnVar{
+    min-width: 7.5rem;
+    height: 2.5rem;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 0.3rem;
+    border: none;
+    font-family: 'Raleway';
+    background-color: $color__brown;
+    &:hover {
+        border-radius: 5px;
+        padding-right: 24px;
+        padding-left:8px;
+    }
+    &:hover:after {
+        opacity: 1;
+        right: 10px;
+    }
+    &:after {
+        content: "\00BB";
+        position: absolute;
+        opacity: 0;
+        font-size: 20px;
+        line-height: 40px;
+        top: 0;
+        right: -20px;
+        transition: 0.4s;
+    }
+}
+
+.pVar{
+    font-family: 'Comfortaa', cursive;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+}
+
+.h2Var{
+    font-family: 'Raleway', bold;
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
