@@ -16,17 +16,18 @@
     "footer footer footer footer";
     .mi__header{
         grid-area: header;
+        @extend .headerVar;
     }
-    h2{ 
+    .h2_prods{ 
+        @extend .h2Var;
         grid-area: h2__org;
-        font-weight: 4rem;
-        text-align: center;
-        align-self:center;
-        border-radius: 1rem;
-        padding: 1rem;
-        margin: 1rem;
         background-color: #18594757; 
-        font-style: bold;
+        color: #fff;
+        padding: 2rem;
+        margin: 1rem;
+        width: 50%;
+        border-radius: 0.3rem;
+        text-align: center;
     }
     .li__prods { 
         grid-area: li__prods; 

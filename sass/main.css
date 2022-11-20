@@ -1,5 +1,63 @@
 @charset "UTF-8";
-.btnVar, .boxinterior button, .box__prod .prodleft button, .mi__header button {
+.headerVar, .pag__prod .mi__header, .mi__header {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #b8b8b8;
+  border-radius: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2.5rem;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
+  height: 4rem;
+  width: auto;
+}
+.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem;
+}
+.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  color: #fff;
+}
+.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+}
+.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.btnVar, .boxinterior button, .box__prod .prodleft button, .headerVar button, .pag__prod .mi__header button, .mi__header button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -16,16 +74,16 @@
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .boxinterior button:hover, .box__prod .prodleft button:hover, .mi__header button:hover {
+.btnVar:hover, .boxinterior button:hover, .box__prod .prodleft button:hover, .headerVar button:hover, .mi__header button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .boxinterior button:hover:after, .box__prod .prodleft button:hover:after, .mi__header button:hover:after {
+.btnVar:hover:after, .boxinterior button:hover:after, .box__prod .prodleft button:hover:after, .headerVar button:hover:after, .mi__header button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .boxinterior button:after, .box__prod .prodleft button:after, .mi__header button:after {
+.btnVar:after, .boxinterior button:after, .box__prod .prodleft button:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -70,19 +128,25 @@
   background: #185947;
 }
 
-.pVar, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
+.pVar, .boxfaq div .aq p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+.h3Var, .boxfaq div .aq h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
 }
 
 /* styles de base */
@@ -106,63 +170,6 @@ body {
 }
 
 /* INDEX */
-.mi__header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-.mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.mi__header nav ul {
-  list-style: none;
-  padding: 0;
-}
-.mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.mi__header nav ul li a:after {
-  content: "";
-  color: #185947;
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.mi__header button a {
-  text-decoration: none;
-  color: #fff;
-}
-
 /* BOX HAZEL */
 .boxhazel {
   display: flex;
@@ -431,8 +438,66 @@ body {
   font-style: italic;
 }
 
-/* pagina productos */
-.btnVar, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+/* pagina FAQ preguntas*/
+.headerVar, .pag__prod .mi__header, .mi__header {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #b8b8b8;
+  border-radius: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2.5rem;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
+  height: 4rem;
+  width: auto;
+}
+.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem;
+}
+.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  color: #fff;
+}
+.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+}
+.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -449,16 +514,16 @@ body {
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -503,19 +568,244 @@ body {
   background: #185947;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+.h3Var, .boxfaq div .aq h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.buscadorfaq .buscar {
+  position: absolute;
+  padding: 2rem;
+}
+.buscadorfaq .buscar input {
+  width: 24rem;
+  height: 4rem;
+  padding: 0 3rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.boxfaq {
+  display: flex;
+  flex-direction: column;
+}
+.boxfaq .boxfaq__title h2 {
+  margin: 5rem;
+}
+.boxfaq .boxfaq__title hr {
+  width: 100%;
+  color: #185947;
+}
+.boxfaq .buscadorfaq {
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+  justify-items: flex-start;
+}
+.boxfaq .buscadorfaq .buscar {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  padding: 0;
+}
+.boxfaq .buscadorfaq .buscar input {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  color: #262626;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.boxfaq .buscadorfaq .buscar .btnBuscar {
+  top: 0;
+  right: 0;
+  background-color: #185947;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.boxfaq div .aq {
+  background-color: #b8b8b8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.boxfaq div .aq h3 {
+  margin: 1rem;
+  padding: 1rem;
+}
+.boxfaq div .aq p {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* pagina productos */
+.headerVar, .pag__prod .mi__header, .mi__header {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #b8b8b8;
+  border-radius: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2.5rem;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
+  height: 4rem;
+  width: auto;
+}
+.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem;
+}
+.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  color: #fff;
+}
+.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+}
+.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+  min-width: 7.5rem;
+  height: 2.5rem;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Raleway";
+  background-color: #986632;
+}
+.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+  margin: 1rem;
+  min-width: 8rem;
+  height: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #185947;
+}
+.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+  height: 100%;
+}
+.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #185947;
+}
+
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .boxfaq div .aq p {
+  font-family: "Comfortaa", cursive;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+}
+
+.h2Var, .pag__prod .h2_prods, .box__prod .prodleft h2, .boxfaq .boxfaq__title h2 {
+  font-family: "Raleway", bold;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.h3Var, .boxfaq div .aq h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .pag__prod {
@@ -531,16 +821,15 @@ body {
 .pag__prod .mi__header {
   grid-area: header;
 }
-.pag__prod h2 {
+.pag__prod .h2_prods {
   grid-area: h2__org;
-  font-weight: 4rem;
-  text-align: center;
-  align-self: center;
-  border-radius: 1rem;
-  padding: 1rem;
-  margin: 1rem;
   background-color: rgba(24, 89, 71, 0.3411764706);
-  font-style: bold;
+  color: #fff;
+  padding: 2rem;
+  margin: 1rem;
+  width: 50%;
+  border-radius: 0.3rem;
+  text-align: center;
 }
 .pag__prod .li__prods {
   grid-area: li__prods;
@@ -621,6 +910,156 @@ body {
 }
 
 /* media queries */
+.headerVar, .mi__header, .pag__prod .mi__header {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #b8b8b8;
+  border-radius: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2.5rem;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.headerVar a img, .mi__header a img, .pag__prod .mi__header a img {
+  height: 4rem;
+  width: auto;
+}
+.headerVar nav ul, .mi__header nav ul, .pag__prod .mi__header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.headerVar nav ul li, .mi__header nav ul li, .pag__prod .mi__header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem;
+}
+.headerVar nav ul li a, .mi__header nav ul li a, .pag__prod .mi__header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  color: #fff;
+}
+.headerVar nav ul li a:after, .mi__header nav ul li a:after, .pag__prod .mi__header nav ul li a:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+}
+.headerVar button a, .mi__header button a, .pag__prod .mi__header button a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.btnVar, .headerVar button, .mi__header button, .box__prod .prodleft button, .boxinterior button, .pag__prod .mi__header button {
+  min-width: 7.5rem;
+  height: 2.5rem;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Raleway";
+  background-color: #986632;
+}
+.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.btnVar:after, .headerVar button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after, .pag__prod .mi__header button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+  margin: 1rem;
+  min-width: 8rem;
+  height: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #185947;
+}
+.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+  height: 100%;
+}
+.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #185947;
+}
+
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .boxfaq div .aq p {
+  font-family: "Comfortaa", cursive;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+}
+
+.h2Var, .box__prod .prodleft h2, .boxfaq .boxfaq__title h2, .pag__prod .h2_prods {
+  font-family: "Raleway", bold;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.h3Var, .boxfaq div .aq h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
 /* media home index mobile */
 @media (max-width: 937px) {
   .main {
@@ -897,13 +1336,6 @@ body {
     margin: 0;
     padding: 0;
   }
-  .h2__org h2 {
-    display: flex;
-    padding-left: 3rem;
-  }
-  h3 {
-    font-size: 0.8rem;
-  }
   .logo__mq {
     display: none;
   }
@@ -930,31 +1362,31 @@ body {
     gap: 0.5rem;
     grid-template-areas: "header" "h2__org" "productos" "footer";
   }
-  .container__prods {
+  .pag__prod .container__prods {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "prod1 prod2" "prod4 prod5" "prod6 prod3";
   }
-  .prod1 {
+  .pag__prod .container__prods .prod1 {
     grid-area: prod1;
   }
-  .prod2 {
+  .pag__prod .container__prods .prod2 {
     grid-area: prod2;
   }
-  .prod3 {
+  .pag__prod .container__prods .prod3 {
     grid-area: prod3;
   }
-  .prod4 {
+  .pag__prod .container__prods .prod4 {
     grid-area: prod4;
   }
-  .prod5 {
+  .pag__prod .container__prods .prod5 {
     grid-area: prod5;
   }
-  .prod6 {
+  .pag__prod .container__prods .prod6 {
     grid-area: prod6;
   }
-  .div__img {
+  .pag__prod .container__prods .div__img {
     width: auto;
     height: auto;
     align-self: center;
@@ -963,11 +1395,13 @@ body {
     padding: 0;
     margin: 0.5rem;
   }
-  .prod__img {
+  .pag__prod .container__prods .div__img .prod__img {
     width: 100%;
     height: 20rem;
+    margin: 0;
+    padding: 0;
   }
-  .prod__img img {
+  .pag__prod .container__prods .div__img .prod__img img {
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
@@ -975,7 +1409,7 @@ body {
     margin: 0;
     padding: 0;
   }
-  .prod__text {
+  .pag__prod .container__prods .div__img .prod__text {
     width: 100%;
     height: auto;
     margin: 0;
@@ -984,38 +1418,32 @@ body {
     background-color: rgba(152, 103, 50, 0.431372549);
     border-radius: 0px 0px 5px 5px;
   }
-  .prod__text h3 {
+  .pag__prod .container__prods .div__img .prod__text h3 {
     font-size: 1.5rem;
   }
-  .prod__text strong {
+  .pag__prod .container__prods .div__img .prod__text p {
+    text-align: center;
+    margin: 0;
+  }
+  .pag__prod .container__prods .div__img .prod__text strong {
     color: #986632;
     background-color: #fff;
     padding: 0.2rem;
     border-radius: 0px 0px 5px 5px;
+    margin: 0;
   }
-  .prod__text p {
-    text-align: center;
-    margin: 0.5rem;
-  }
-  .btn__comprar {
+  .pag__prod .container__prods .div__img .prod__text button {
     border: none;
     background-color: #986632;
     border-radius: 0px 0px 5px 5px;
   }
-  .btn__comprar a {
+  .pag__prod .container__prods .div__img .prod__text button a {
     margin: 0;
     padding: 0;
     color: #ffffff;
   }
-  .li__prods {
+  .pag__prod .li__prods {
     display: none;
-  }
-  .prod__text strong, p {
-    margin: 0;
-  }
-  .prod__img {
-    margin: 0;
-    padding: 0;
   }
   .footer {
     height: 400px;

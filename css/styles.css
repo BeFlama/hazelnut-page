@@ -445,7 +445,6 @@ hr{
 
 /* PAG PRODUCTOS */
 
-
 .li__prods { 
     grid-area: li__prods; 
     font-family: 'Raleway', sans-serif;
@@ -501,13 +500,8 @@ hr{
     width: 25rem;
     margin: 1rem;
 }
-.prod__img:hover img{
-    transform:scale(1.2);
-}
-.prod__img img{
-    align-self: flex-start;
-    width: 100%;
-}
+.prod__img
+.prod__img 
 .prod__text{
     display: flex;
     flex-wrap: wrap;
