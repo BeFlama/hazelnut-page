@@ -1,0 +1,10 @@
+@import 'vars';
+
+.mi__header{
+    @extend .headerVar;
+}
+
+
+.footer{
+    @extend .footerVar;
+}

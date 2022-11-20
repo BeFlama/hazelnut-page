@@ -222,89 +222,17 @@ body{
 
 /* FOOTER */
 .footer{
-    height: 20rem;
-    width: 100%;
-    margin-top: 10rem;
-    background-color: #0D0D0D;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    align-items: center;
-    text-align: center;
-    .footericons{
-        text-align: center;
-        color: #b8b8b8;
-        padding: 2rem;
-        .encontranos{
-            margin-top: 0px;
-            margin-bottom: 1rem;
-            letter-spacing: 0.1rem;
-            font-size: 14px;
-            font-family: 'Raleway', sans-serif;
-        }
-        svg{
-            height: 2rem;
-            width: auto;
-            padding: 0.5rem;
-            color: #b8b8b8;
-            &:hover{
-                color: #8C6C5A;
-        }
-    }
+    @extend .footerVar;
 }
-    .footerlogo{
-        text-align: center;
-        color: #b8b8b8;
-        margin: 30px;
-        a{
-            padding: 0;
-            color: #b8b8b8;
-            font-size: 15px;
-            text-decoration: none;
-            transition: 0.3s;
-            img{
-                margin-bottom: 0;
-                height: auto;
-                width: 15rem;
-                padding: 1rem;
-            }
-        }
-        p{
-            color: #b8b8b8;
-            font-size: 15px;
-            font-family: 'Comfortaa', cursive;
-            margin-bottom: 0.5rem;
-        }
-        small{
-            font-size: 0.7rem;
-            font-family: 'Comfortaa', cursive;
-        }
-    }
-    .listafin{
-        padding: 2rem;
-        color: #b8b8b8;
-        ul{
-            line-height: 1.5;
-            li{
-                list-style-type: none;
-                text-align: left;
-                a{
-                    font-size: 15px;
-                    text-decoration: none;
-                    color: #b8b8b8;
-                    font-family: 'Comfortaa', cursive;
-                    &:hover{
-                        font-style: italic;
-                }
-            }
-        }
-    }
-}
-}
+/* pagina galeria */
+@import 'galeria';
+/* pagina quienes somos */
+@import 'quienessomos';
+/* pagina contactanos */
+@import 'contactanos';
 /* pagina FAQ preguntas*/
 @import 'faqs';
 /* pagina productos */
 @import 'productos';
-
 /* media queries */
 @import 'mediaqueries';

@@ -149,6 +149,87 @@
   font-family: "Raleway", sans-serif;
 }
 
+.footerVar, .footer {
+  height: 20rem;
+  width: 100%;
+  margin-top: 10rem;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+.footerVar .footericons, .footer .footericons {
+  text-align: center;
+  color: #b8b8b8;
+  padding: 2rem;
+}
+.footerVar .footericons .encontranos, .footer .footericons .encontranos {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+.footerVar .footericons svg, .footer .footericons svg {
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  color: #b8b8b8;
+}
+.footerVar .footericons svg:hover, .footer .footericons svg:hover {
+  color: #8C6C5A;
+}
+.footerVar .footerlogo, .footer .footerlogo {
+  text-align: center;
+  color: #b8b8b8;
+  margin: 30px;
+}
+.footerVar .footerlogo a, .footer .footerlogo a {
+  padding: 0;
+  color: #b8b8b8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footerVar .footerlogo a img, .footer .footerlogo a img {
+  margin-bottom: 0;
+  height: auto;
+  width: 15rem;
+  padding: 1rem;
+}
+.footerVar .footerlogo p, .footer .footerlogo p {
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 0.5rem;
+}
+.footerVar .footerlogo small, .footer .footerlogo small {
+  font-size: 0.7rem;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin, .footer .listafin {
+  padding: 2rem;
+  color: #b8b8b8;
+}
+.footerVar .listafin ul, .footer .listafin ul {
+  line-height: 1.5;
+}
+.footerVar .listafin ul li, .footer .listafin ul li {
+  list-style-type: none;
+  text-align: left;
+}
+.footerVar .listafin ul li a, .footer .listafin ul li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #b8b8b8;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
+  font-style: italic;
+}
+
 /* styles de base */
 * {
   margin: 0;
@@ -357,7 +438,158 @@ body {
 }
 
 /* FOOTER */
-.footer {
+/* pagina galeria */
+.headerVar, .pag__prod .mi__header, .mi__header {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #b8b8b8;
+  border-radius: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2.5rem;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
+  height: 4rem;
+  width: auto;
+}
+.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem;
+}
+.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  color: #fff;
+}
+.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+}
+.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+  min-width: 7.5rem;
+  height: 2.5rem;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Raleway";
+  background-color: #986632;
+}
+.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+  margin: 1rem;
+  min-width: 8rem;
+  height: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #185947;
+}
+.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+  height: 100%;
+}
+.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #185947;
+}
+
+.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+  font-family: "Comfortaa", cursive;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+}
+
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+  font-family: "Raleway", bold;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.h3Var, .boxfaq div .aq h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.footerVar, .footer {
   height: 20rem;
   width: 100%;
   margin-top: 10rem;
@@ -368,73 +600,535 @@ body {
   align-items: center;
   text-align: center;
 }
-.footer .footericons {
+.footerVar .footericons, .footer .footericons {
   text-align: center;
   color: #b8b8b8;
   padding: 2rem;
 }
-.footer .footericons .encontranos {
+.footerVar .footericons .encontranos, .footer .footericons .encontranos {
   margin-top: 0px;
   margin-bottom: 1rem;
   letter-spacing: 0.1rem;
   font-size: 14px;
   font-family: "Raleway", sans-serif;
 }
-.footer .footericons svg {
+.footerVar .footericons svg, .footer .footericons svg {
   height: 2rem;
   width: auto;
   padding: 0.5rem;
   color: #b8b8b8;
 }
-.footer .footericons svg:hover {
+.footerVar .footericons svg:hover, .footer .footericons svg:hover {
   color: #8C6C5A;
 }
-.footer .footerlogo {
+.footerVar .footerlogo, .footer .footerlogo {
   text-align: center;
   color: #b8b8b8;
   margin: 30px;
 }
-.footer .footerlogo a {
+.footerVar .footerlogo a, .footer .footerlogo a {
   padding: 0;
   color: #b8b8b8;
   font-size: 15px;
   text-decoration: none;
   transition: 0.3s;
 }
-.footer .footerlogo a img {
+.footerVar .footerlogo a img, .footer .footerlogo a img {
   margin-bottom: 0;
   height: auto;
   width: 15rem;
   padding: 1rem;
 }
-.footer .footerlogo p {
+.footerVar .footerlogo p, .footer .footerlogo p {
   color: #b8b8b8;
   font-size: 15px;
   font-family: "Comfortaa", cursive;
   margin-bottom: 0.5rem;
 }
-.footer .footerlogo small {
+.footerVar .footerlogo small, .footer .footerlogo small {
   font-size: 0.7rem;
   font-family: "Comfortaa", cursive;
 }
-.footer .listafin {
+.footerVar .listafin, .footer .listafin {
   padding: 2rem;
   color: #b8b8b8;
 }
-.footer .listafin ul {
+.footerVar .listafin ul, .footer .listafin ul {
   line-height: 1.5;
 }
-.footer .listafin ul li {
+.footerVar .listafin ul li, .footer .listafin ul li {
   list-style-type: none;
   text-align: left;
 }
-.footer .listafin ul li a {
+.footerVar .listafin ul li a, .footer .listafin ul li a {
   font-size: 15px;
   text-decoration: none;
   color: #b8b8b8;
   font-family: "Comfortaa", cursive;
 }
-.footer .listafin ul li a:hover {
+.footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
+  font-style: italic;
+} /* pagina quienes somos */
+.headerVar, .pag__prod .mi__header, .mi__header {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #b8b8b8;
+  border-radius: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2.5rem;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
+  height: 4rem;
+  width: auto;
+}
+.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem;
+}
+.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  color: #fff;
+}
+.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+}
+.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+  min-width: 7.5rem;
+  height: 2.5rem;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Raleway";
+  background-color: #986632;
+}
+.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+  margin: 1rem;
+  min-width: 8rem;
+  height: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #185947;
+}
+.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+  height: 100%;
+}
+.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #185947;
+}
+
+.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+  font-family: "Comfortaa", cursive;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+}
+
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+  font-family: "Raleway", bold;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.h3Var, .boxfaq div .aq h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.footerVar, .footer {
+  height: 20rem;
+  width: 100%;
+  margin-top: 10rem;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+.footerVar .footericons, .footer .footericons {
+  text-align: center;
+  color: #b8b8b8;
+  padding: 2rem;
+}
+.footerVar .footericons .encontranos, .footer .footericons .encontranos {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+.footerVar .footericons svg, .footer .footericons svg {
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  color: #b8b8b8;
+}
+.footerVar .footericons svg:hover, .footer .footericons svg:hover {
+  color: #8C6C5A;
+}
+.footerVar .footerlogo, .footer .footerlogo {
+  text-align: center;
+  color: #b8b8b8;
+  margin: 30px;
+}
+.footerVar .footerlogo a, .footer .footerlogo a {
+  padding: 0;
+  color: #b8b8b8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footerVar .footerlogo a img, .footer .footerlogo a img {
+  margin-bottom: 0;
+  height: auto;
+  width: 15rem;
+  padding: 1rem;
+}
+.footerVar .footerlogo p, .footer .footerlogo p {
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 0.5rem;
+}
+.footerVar .footerlogo small, .footer .footerlogo small {
+  font-size: 0.7rem;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin, .footer .listafin {
+  padding: 2rem;
+  color: #b8b8b8;
+}
+.footerVar .listafin ul, .footer .listafin ul {
+  line-height: 1.5;
+}
+.footerVar .listafin ul li, .footer .listafin ul li {
+  list-style-type: none;
+  text-align: left;
+}
+.footerVar .listafin ul li a, .footer .listafin ul li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #b8b8b8;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
+  font-style: italic;
+}
+
+/* pagina contactanos */
+.headerVar, .pag__prod .mi__header, .mi__header {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #b8b8b8;
+  border-radius: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2.5rem;
+  flex-direction: row;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
+  height: 4rem;
+  width: auto;
+}
+.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 1rem;
+}
+.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
+  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  color: #fff;
+}
+.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s;
+  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
+}
+.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+  min-width: 7.5rem;
+  height: 2.5rem;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Raleway";
+  background-color: #986632;
+}
+.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+  margin: 1rem;
+  min-width: 8rem;
+  height: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #185947;
+}
+.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+  height: 100%;
+}
+.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #185947;
+}
+
+.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+  font-family: "Comfortaa", cursive;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0;
+}
+
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+  font-family: "Raleway", bold;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.h3Var, .boxfaq div .aq h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.footerVar, .footer {
+  height: 20rem;
+  width: 100%;
+  margin-top: 10rem;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+.footerVar .footericons, .footer .footericons {
+  text-align: center;
+  color: #b8b8b8;
+  padding: 2rem;
+}
+.footerVar .footericons .encontranos, .footer .footericons .encontranos {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+.footerVar .footericons svg, .footer .footericons svg {
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  color: #b8b8b8;
+}
+.footerVar .footericons svg:hover, .footer .footericons svg:hover {
+  color: #8C6C5A;
+}
+.footerVar .footerlogo, .footer .footerlogo {
+  text-align: center;
+  color: #b8b8b8;
+  margin: 30px;
+}
+.footerVar .footerlogo a, .footer .footerlogo a {
+  padding: 0;
+  color: #b8b8b8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footerVar .footerlogo a img, .footer .footerlogo a img {
+  margin-bottom: 0;
+  height: auto;
+  width: 15rem;
+  padding: 1rem;
+}
+.footerVar .footerlogo p, .footer .footerlogo p {
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 0.5rem;
+}
+.footerVar .footerlogo small, .footer .footerlogo small {
+  font-size: 0.7rem;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin, .footer .listafin {
+  padding: 2rem;
+  color: #b8b8b8;
+}
+.footerVar .listafin ul, .footer .listafin ul {
+  line-height: 1.5;
+}
+.footerVar .listafin ul li, .footer .listafin ul li {
+  list-style-type: none;
+  text-align: left;
+}
+.footerVar .listafin ul li a, .footer .listafin ul li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #b8b8b8;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
   font-style: italic;
 }
 
@@ -587,6 +1281,87 @@ body {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
+}
+
+.footerVar, .footer {
+  height: 20rem;
+  width: 100%;
+  margin-top: 10rem;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+.footerVar .footericons, .footer .footericons {
+  text-align: center;
+  color: #b8b8b8;
+  padding: 2rem;
+}
+.footerVar .footericons .encontranos, .footer .footericons .encontranos {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+.footerVar .footericons svg, .footer .footericons svg {
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  color: #b8b8b8;
+}
+.footerVar .footericons svg:hover, .footer .footericons svg:hover {
+  color: #8C6C5A;
+}
+.footerVar .footerlogo, .footer .footerlogo {
+  text-align: center;
+  color: #b8b8b8;
+  margin: 30px;
+}
+.footerVar .footerlogo a, .footer .footerlogo a {
+  padding: 0;
+  color: #b8b8b8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footerVar .footerlogo a img, .footer .footerlogo a img {
+  margin-bottom: 0;
+  height: auto;
+  width: 15rem;
+  padding: 1rem;
+}
+.footerVar .footerlogo p, .footer .footerlogo p {
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 0.5rem;
+}
+.footerVar .footerlogo small, .footer .footerlogo small {
+  font-size: 0.7rem;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin, .footer .listafin {
+  padding: 2rem;
+  color: #b8b8b8;
+}
+.footerVar .listafin ul, .footer .listafin ul {
+  line-height: 1.5;
+}
+.footerVar .listafin ul li, .footer .listafin ul li {
+  list-style-type: none;
+  text-align: left;
+}
+.footerVar .listafin ul li a, .footer .listafin ul li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #b8b8b8;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
+  font-style: italic;
 }
 
 .buscadorfaq .buscar {
@@ -806,6 +1581,87 @@ body {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
+}
+
+.footerVar, .footer {
+  height: 20rem;
+  width: 100%;
+  margin-top: 10rem;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+.footerVar .footericons, .footer .footericons {
+  text-align: center;
+  color: #b8b8b8;
+  padding: 2rem;
+}
+.footerVar .footericons .encontranos, .footer .footericons .encontranos {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+.footerVar .footericons svg, .footer .footericons svg {
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  color: #b8b8b8;
+}
+.footerVar .footericons svg:hover, .footer .footericons svg:hover {
+  color: #8C6C5A;
+}
+.footerVar .footerlogo, .footer .footerlogo {
+  text-align: center;
+  color: #b8b8b8;
+  margin: 30px;
+}
+.footerVar .footerlogo a, .footer .footerlogo a {
+  padding: 0;
+  color: #b8b8b8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footerVar .footerlogo a img, .footer .footerlogo a img {
+  margin-bottom: 0;
+  height: auto;
+  width: 15rem;
+  padding: 1rem;
+}
+.footerVar .footerlogo p, .footer .footerlogo p {
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 0.5rem;
+}
+.footerVar .footerlogo small, .footer .footerlogo small {
+  font-size: 0.7rem;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin, .footer .listafin {
+  padding: 2rem;
+  color: #b8b8b8;
+}
+.footerVar .listafin ul, .footer .listafin ul {
+  line-height: 1.5;
+}
+.footerVar .listafin ul li, .footer .listafin ul li {
+  list-style-type: none;
+  text-align: left;
+}
+.footerVar .listafin ul li a, .footer .listafin ul li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #b8b8b8;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
+  font-style: italic;
 }
 
 .pag__prod {
@@ -1058,6 +1914,87 @@ body {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
+}
+
+.footerVar, .footer {
+  height: 20rem;
+  width: 100%;
+  margin-top: 10rem;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+.footerVar .footericons, .footer .footericons {
+  text-align: center;
+  color: #b8b8b8;
+  padding: 2rem;
+}
+.footerVar .footericons .encontranos, .footer .footericons .encontranos {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+.footerVar .footericons svg, .footer .footericons svg {
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  color: #b8b8b8;
+}
+.footerVar .footericons svg:hover, .footer .footericons svg:hover {
+  color: #8C6C5A;
+}
+.footerVar .footerlogo, .footer .footerlogo {
+  text-align: center;
+  color: #b8b8b8;
+  margin: 30px;
+}
+.footerVar .footerlogo a, .footer .footerlogo a {
+  padding: 0;
+  color: #b8b8b8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footerVar .footerlogo a img, .footer .footerlogo a img {
+  margin-bottom: 0;
+  height: auto;
+  width: 15rem;
+  padding: 1rem;
+}
+.footerVar .footerlogo p, .footer .footerlogo p {
+  color: #b8b8b8;
+  font-size: 15px;
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 0.5rem;
+}
+.footerVar .footerlogo small, .footer .footerlogo small {
+  font-size: 0.7rem;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin, .footer .listafin {
+  padding: 2rem;
+  color: #b8b8b8;
+}
+.footerVar .listafin ul, .footer .listafin ul {
+  line-height: 1.5;
+}
+.footerVar .listafin ul li, .footer .listafin ul li {
+  list-style-type: none;
+  text-align: left;
+}
+.footerVar .listafin ul li a, .footer .listafin ul li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #b8b8b8;
+  font-family: "Comfortaa", cursive;
+}
+.footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
+  font-style: italic;
 }
 
 /* media home index mobile */
