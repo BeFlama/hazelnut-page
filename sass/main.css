@@ -128,19 +128,22 @@
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
+.pVar, .boxfaq div .aq p, .box__contactanos p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 2rem;
+}
+.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__prod .prodleft h2 hr {
+  width: 100%;
+  color: #185947;
 }
 
 .h3Var, .boxfaq div .aq h3 {
@@ -568,19 +571,22 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .boxfaq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 2rem;
+}
+.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__prod .prodleft h2 hr {
+  width: 100%;
+  color: #185947;
 }
 
 .h3Var, .boxfaq div .aq h3 {
@@ -668,7 +674,9 @@ body {
 }
 .footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
   font-style: italic;
-} /* pagina quienes somos */
+}
+
+/* pagina quienes somos */
 .headerVar, .pag__prod .mi__header, .mi__header {
   display: flex;
   width: 100%;
@@ -798,19 +806,22 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .boxfaq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 2rem;
+}
+.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__prod .prodleft h2 hr {
+  width: 100%;
+  color: #185947;
 }
 
 .h3Var, .boxfaq div .aq h3 {
@@ -1030,19 +1041,22 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .boxfaq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 2rem;
+}
+.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__prod .prodleft h2 hr {
+  width: 100%;
+  color: #185947;
 }
 
 .h3Var, .boxfaq div .aq h3 {
@@ -1130,6 +1144,54 @@ body {
 }
 .footerVar .listafin ul li a:hover, .footer .listafin ul li a:hover {
   font-style: italic;
+}
+
+.box__contactanos {
+  font-family: "Raleway", bold;
+  text-align: center;
+}
+.box__contactanos h2 {
+  text-align: center;
+}
+.box__contactanos p {
+  letter-spacing: none;
+  font-style: bold;
+}
+.box__contactanos .box_form {
+  width: 80%;
+  margin: auto;
+  background-color: #b8b8b8;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.box__contactanos .box_form label {
+  text-transform: uppercase;
+  color: black;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+.box__contactanos .box_form input {
+  width: 100%;
+  margin: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  text-align: center;
+}
+.box__contactanos .box_form textarea {
+  padding: 0.5rem;
+  min-height: 5rem;
+  max-height: 10rem;
+  width: 100%;
+  max-width: 100%;
+}
+.box__contactanos .box_form .buton_send {
+  width: 100%;
+  color: white;
+  background-color: #185947;
+  padding: 0.5rem;
 }
 
 /* pagina FAQ preguntas*/
@@ -1262,19 +1324,22 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2, .box__contactanos h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 2rem;
+}
+.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__prod .prodleft h2 hr, .box__contactanos h2 hr {
+  width: 100%;
+  color: #185947;
 }
 
 .h3Var, .boxfaq div .aq h3 {
@@ -1562,19 +1627,22 @@ body {
   background: #185947;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .boxfaq div .aq p {
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .boxfaq div .aq p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__prod .prodleft h2, .boxfaq .boxfaq__title h2 {
+.h2Var, .pag__prod .h2_prods, .box__prod .prodleft h2, .box__contactanos h2, .boxfaq .boxfaq__title h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 2rem;
+}
+.h2Var hr, .pag__prod .h2_prods hr, .box__prod .prodleft h2 hr, .box__contactanos h2 hr, .boxfaq .boxfaq__title h2 hr {
+  width: 100%;
+  color: #185947;
 }
 
 .h3Var, .boxfaq div .aq h3 {
@@ -1679,13 +1747,6 @@ body {
 }
 .pag__prod .h2_prods {
   grid-area: h2__org;
-  background-color: rgba(24, 89, 71, 0.3411764706);
-  color: #fff;
-  padding: 2rem;
-  margin: 1rem;
-  width: 50%;
-  border-radius: 0.3rem;
-  text-align: center;
 }
 .pag__prod .li__prods {
   grid-area: li__prods;
@@ -1895,19 +1956,22 @@ body {
   background: #185947;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .boxfaq div .aq p {
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .boxfaq div .aq p {
   font-family: "Comfortaa", cursive;
   letter-spacing: 0.1rem;
   margin: 2rem 0;
 }
 
-.h2Var, .box__prod .prodleft h2, .boxfaq .boxfaq__title h2, .pag__prod .h2_prods {
+.h2Var, .box__prod .prodleft h2, .box__contactanos h2, .boxfaq .boxfaq__title h2, .pag__prod .h2_prods {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 2rem;
+}
+.h2Var hr, .box__prod .prodleft h2 hr, .box__contactanos h2 hr, .boxfaq .boxfaq__title h2 hr, .pag__prod .h2_prods hr {
+  width: 100%;
+  color: #185947;
 }
 
 .h3Var, .boxfaq div .aq h3 {

@@ -21,13 +21,6 @@
     .h2_prods{ 
         @extend .h2Var;
         grid-area: h2__org;
-        background-color: #18594757; 
-        color: #fff;
-        padding: 2rem;
-        margin: 1rem;
-        width: 50%;
-        border-radius: 0.3rem;
-        text-align: center;
     }
     .li__prods { 
         grid-area: li__prods; 

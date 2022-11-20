@@ -144,8 +144,11 @@ $color__brown: #986632;
     font-weight: 300;
     font-size: 2.5rem;
     text-transform: uppercase;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin: 2rem;
+    hr{
+        width: 100%;
+        color: $color__green;
+    }
 }
 .h3Var{
     font-size: 1.5rem;

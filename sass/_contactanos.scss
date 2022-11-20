@@ -6,3 +6,62 @@
 .footer{
     @extend .footerVar;
 }
+
+.box__contactanos{
+    font-family: 'Raleway', bold;
+    text-align: center;
+    h2{
+        @extend .h2Var;
+        text-align: center;
+    }
+    p{
+        @extend .pVar;
+        letter-spacing: none;
+        font-style: bold;
+    }
+    .box_form{
+        width: 80%;
+        margin: auto;
+        background-color: $color__bg;
+        border-radius: 1rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        label{
+            text-transform: uppercase;
+            color: black;
+            margin: 1rem;
+            font-size: 1.5rem;
+        }
+        input, textarea{
+            width: 100%;
+            margin: 0.5rem;
+            border: none;
+            padding: 0.5rem;
+            text-align: center;
+            border-bottom: 1px solid $color__green;
+        }
+        textarea{
+            padding: 0.5rem;
+            min-height: 5rem;
+            max-height: 10rem;
+            width: 100%;
+            max-width: 100%;
+            border: none;
+        }
+        .selec{
+            display: row;
+        }
+        .buton_send{
+            width: 100%;
+            color: white;
+            background-color: $color__green;
+            padding: 0.5rem;
+            &:hover{
+                cursor: pointer;
+                background-color: $color__greendark;
+            }
+        }
+    }
+}

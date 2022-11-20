@@ -29,23 +29,25 @@
         <button class="btnav"><a href="#">Contactanos</a></button>
     </div>
     <main>
-        <section class="box contactanos">
-            <h2>contactanos</h2>
+        <section class="box__contactanos">
+            <h2>contactanos <hr></h2>
             <p>Nuestro objetivo es brindarte la mejor atencion personalizada con los maximos estandares de calidad.
             Por esto mismo te invitamos a dejarnos tus datos en el siguiente formulario para poder darte el asesoramiento correspondiente y poder responder a tus requerimientos derivandote al sector que corresponda.
             Podes dejarnos consultas de modelos a medida, reclamos, seguimientos, agradecimientos, lo que necesites! estamos para ayudarte :)
             </p>
-            <form action="datos.php" method="post">
+            <form action="datos.php" method="post" class="box_form">
                 <label for="">Ingresá tus datos</label> 
                 <input type="text" placeholder="Nombre y Apellido">
                 <input type="email" placeholder="email">
-                <input type="number" placeholder="Número de contacto">
-                <input type="text" placeholder="Tu consulta">
-                    <select name="">
-                        <option value="Realice mi compra">Ya realicé mi compra</option>
-                        <option value="Aún no realicé mi compra">Aún no realicé mi compra</option>
-                    </select>
-                <input type="submit" value="Enviar consulta">
+                <input type="text" placeholder="Número de contacto">
+                <textarea name="mensaje" placeholder="Dejanos aca detalles de tu consulta"></textarea>
+                <div class="selec">
+                    Ya realicé mi compra
+                    <input type="radio" id="cliente" value="realicé una compra"> 
+                    Aún no realicé mi compra
+                    <input type="radio" id="consulta" value="Aún no realicé mi compra">
+                </div>
+                <input type="submit" value="Enviar consulta" class="buton_send">
             </form>
         </section>  
     </main>

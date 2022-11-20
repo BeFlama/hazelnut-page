@@ -4,6 +4,11 @@
     @extend .headerVar;
 }
 
+.box__who{
+    h2{
+        @extend .h2Var;
+    }
+}
 
 .footer{
     @extend .footerVar;

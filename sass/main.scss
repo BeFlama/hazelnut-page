@@ -224,15 +224,21 @@ body{
 .footer{
     @extend .footerVar;
 }
+
 /* pagina galeria */
 @import 'galeria';
+
 /* pagina quienes somos */
 @import 'quienessomos';
+
 /* pagina contactanos */
 @import 'contactanos';
+
 /* pagina FAQ preguntas*/
 @import 'faqs';
+
 /* pagina productos */
 @import 'productos';
+
 /* media queries */
 @import 'mediaqueries';
