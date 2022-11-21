@@ -136,7 +136,7 @@ $color__brown: #986632;
 .pVar{
     font-family: 'Comfortaa', cursive;
     letter-spacing: 0.1rem;
-    margin: 2rem 0;
+    margin: 0.5rem 0;
 }
 
 .h2Var{
@@ -144,10 +144,10 @@ $color__brown: #986632;
     font-weight: 300;
     font-size: 2.5rem;
     text-transform: uppercase;
-    margin: 2rem;
+    margin: 2rem 0;
     hr{
+        border: solid 1px $color__green;
         width: 100%;
-        color: $color__green;
     }
 }
 .h3Var{

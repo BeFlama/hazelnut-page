@@ -1,67 +1,115 @@
 @import 'vars';
 
+/* pagina contactanos */
 .mi__header{
     @extend .headerVar;
 }
 .footer{
     @extend .footerVar;
 }
-
 .box__contactanos{
     font-family: 'Raleway', bold;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     h2{
         @extend .h2Var;
         text-align: center;
+        width: 60%;
     }
     p{
         @extend .pVar;
         letter-spacing: none;
-        font-style: bold;
+        width: 60%;
+        padding: 0.2rem;
+        text-align: start;
     }
     .box_form{
-        width: 80%;
-        margin: auto;
+        width: 60%;
+        margin: 2rem;
         background-color: $color__bg;
         border-radius: 1rem;
         padding: 2rem;
         display: flex;
         flex-direction: column;
-        box-sizing: border-box;
         label{
             text-transform: uppercase;
             color: black;
             margin: 1rem;
             font-size: 1.5rem;
         }
-        input, textarea{
+        .item_form{
             width: 100%;
-            margin: 0.5rem;
+            margin: 2rem;
             border: none;
             padding: 0.5rem;
             text-align: center;
             border-bottom: 1px solid $color__green;
+            background: none;
+            color: white;
         }
-        textarea{
+        .item_text{
             padding: 0.5rem;
             min-height: 5rem;
             max-height: 10rem;
             width: 100%;
             max-width: 100%;
             border: none;
-        }
-        .selec{
-            display: row;
+            margin: 1rem;
+            background: none;
+            color: white;
         }
         .buton_send{
             width: 100%;
             color: white;
             background-color: $color__green;
-            padding: 0.5rem;
+            padding: 1rem;
+            margin: 1rem;
+            border: none;
+            border-radius: 0.5rem;
             &:hover{
                 cursor: pointer;
-                background-color: $color__greendark;
+                background-color: $color__green;
             }
         }
     }
+}
+/* contactanos mobile */
+@media(max-width: 767px){
+    .box__contactanos{
+        h2{
+            width: 100%;
+        }
+        p{
+            width: 100%;
+            padding: 0 1rem;
+        }
+    .box_form{
+        width: 100%;
+        margin: 3rem 0;
+        padding: 0;
+        background-color: $color__green;
+        color: white;
+        border-radius: 0;
+        label{
+            margin: 2rem 0;
+            color: white;
+        }
+        .item_form{
+            color: white;
+        }
+        .item_text{
+            color: white;
+        }
+        .buton_send{
+            border-radius: 0;
+            border: 1px solid;
+            border-color: black;
+        }
+    }
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
 }
