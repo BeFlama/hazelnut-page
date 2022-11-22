@@ -140,6 +140,7 @@
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 2rem 0;
+  text-align: center;
 }
 .h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__who h2 hr, .box__prod .prodleft h2 hr {
   border: solid 1px #185947;
@@ -583,6 +584,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 2rem 0;
+  text-align: center;
 }
 .h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__who h2 hr, .box__prod .prodleft h2 hr {
   border: solid 1px #185947;
@@ -818,6 +820,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 2rem 0;
+  text-align: center;
 }
 .h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__who h2 hr, .box__prod .prodleft h2 hr {
   border: solid 1px #185947;
@@ -1053,6 +1056,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 2rem 0;
+  text-align: center;
 }
 .h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__prod .prodleft h2 hr, .box__who h2 hr {
   border: solid 1px #185947;
@@ -1388,6 +1392,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 2rem 0;
+  text-align: center;
 }
 .h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__prod .prodleft h2 hr, .box__who h2 hr, .box__contactanos h2 hr {
   border: solid 1px #185947;
@@ -1691,6 +1696,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 2rem 0;
+  text-align: center;
 }
 .h2Var hr, .pag__prod .h2_prods hr, .box__prod .prodleft h2 hr, .box__who h2 hr, .box__contactanos h2 hr, .boxfaq .boxfaq__title h2 hr {
   border: solid 1px #185947;
@@ -2020,6 +2026,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 2rem 0;
+  text-align: center;
 }
 .h2Var hr, .box__prod .prodleft h2 hr, .box__who h2 hr, .box__contactanos h2 hr, .boxfaq .boxfaq__title h2 hr, .pag__prod .h2_prods hr {
   border: solid 1px #185947;

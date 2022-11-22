@@ -3,65 +3,7 @@ $color__text: #262626;
 $color__green: #185947;
 $color__brown: #986632;
 
-.headerVar{
-        display: flex;
-        width: 100%;
-        height: 5rem;
-        background-color:#b8b8b8;
-        border-radius: 0;
-        justify-content:space-around;
-        align-items: center;
-        margin: 0;
-        padding: 2.5rem;
-        flex-direction: row;
-        font-size: 1rem;
-        font-family: 'Raleway', sans-serif;
-        font-weight: bold;
-        cursor: pointer;
-        a img{
-            height: 4rem;
-            width: auto;
-        }
-        nav{
-            ul{
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                li{
-                    display: inline-block;
-                    padding: 0;
-                    margin: 1rem;
-                    a{
-                        color: #fff;
-                        text-decoration: none;
-                        --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-                        &:hover{
-                            --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-                            color: #fff;
-                        }
-                        &:after{
-                            content: "";
-                            display: block;
-                            background: #fff;
-                            width: 100%;
-                            margin-top: 3px;
-                            height: 3px;
-                            clip-path: var(--clippy);
-                            transition: clip-path .3s;
-                        }
-                    }
-                }
-            }
-            }
-        button {        
-            @extend .btnVar;
-            a{
-            text-decoration: none;
-            color: #fff;
-            margin: 0;
-        }
-        }
-    }
+
 .btnVar{
     min-width: 7.5rem;
     height: 2.5rem;
@@ -145,6 +87,7 @@ $color__brown: #986632;
     font-size: 2.5rem;
     text-transform: uppercase;
     margin: 2rem 0;
+    text-align: center;
     hr{
         border: solid 1px $color__green;
         width: 100%;
