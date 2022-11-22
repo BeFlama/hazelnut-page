@@ -753,6 +753,18 @@ body {
   width: 100%;
   color: #185947;
 }
+.pag__who .box__clientes {
+  display: flex;
+}
+.pag__who .box__clientes .clientes {
+  flex-direction: column;
+  margin: 2rem;
+  background-color: #185947;
+  border-radius: 0.3rem;
+  height: 20rem;
+  padding: 2rem;
+}
+
 /* pagina contactanos */
 .btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
@@ -1227,6 +1239,13 @@ body {
 .box__faq div .aq p {
   margin: 1rem;
   padding: 1rem;
+}
+.box__faq div .aq p a {
+  text-decoration: none;
+  color: black;
+}
+.box__faq div .aq p a:hover {
+  font-style: italic;
 }
 
 /* pagina productos */

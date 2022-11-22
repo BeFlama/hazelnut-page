@@ -24,6 +24,13 @@
                     @extend .pVar;
                     margin: 1rem;
                     padding: 1rem;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        &:hover{
+                            font-style: italic;
+                        }
+                    }
                 }
                 }
             }
