@@ -1,63 +1,15 @@
 @import 'vars';
 
-.buscadorfaq{
-    .buscar{
-        position: absolute;
-        padding: 2rem;
-        input{
-            width: 24rem;
-            height: 4rem;
-            padding: 0 3rem;
-            font-size: 2rem;
-            color: black;
-        }
-
-    }
-}
-.boxfaq{
+.box__faq{
     display: flex;
     flex-direction: column;
+    max-width: 70%;
     .boxfaq__title{
         h2{
             @extend .h2Var;
             margin: 5rem;
         }
-        hr{
-            width: 100%;
-            color: $color__green;
-        }
     }
-    .buscadorfaq{
-        display: flex;
-        margin: 2rem;
-        align-items: center;
-        justify-items: flex-start;
-            .buscar{
-                display: flex;
-                flex-direction: row;
-                margin: 1rem;
-                padding: 0;
-                input{
-                    width: 100%;
-                    height: 3rem;
-                    font-size: 1rem;
-                    color: $color__text;
-                    outline: none;
-                    border-radius: 0.5rem;
-                    padding: 1rem;
-                }
-                .btnBuscar{
-                    top: 0;
-                    right: 0;
-                    background-color: $color__green;
-                    width: 3rem;
-                    height: 3rem;
-                    text-align: center;
-                    border-radius: 0.5rem;
-                    padding: 1rem;
-                }
-            }
-        }
         div{
             .aq{
                 background-color: $color__bg;

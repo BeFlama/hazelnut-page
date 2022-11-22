@@ -280,9 +280,6 @@
         "h2__org"
         "productos"
         "footer";
-        .mi__header{
-            @extend .headerVar;
-        }
         .container__prods{
             display: grid;
             grid-template-columns: 1fr 1fr;

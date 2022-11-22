@@ -1,63 +1,5 @@
 @charset "UTF-8";
-.headerVar, .pag__prod .mi__header, .mi__header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0;
-}
-
-.btnVar, .boxinterior button, .box__prod .prodleft button, .headerVar button, .pag__prod .mi__header button, .mi__header button {
+.btnVar, .boxinterior button, .box__prod .prodleft button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -74,16 +16,16 @@
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .boxinterior button:hover, .box__prod .prodleft button:hover, .headerVar button:hover, .mi__header button:hover {
+.btnVar:hover, .boxinterior button:hover, .box__prod .prodleft button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .boxinterior button:hover:after, .box__prod .prodleft button:hover:after, .headerVar button:hover:after, .mi__header button:hover:after {
+.btnVar:hover:after, .boxinterior button:hover:after, .box__prod .prodleft button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .boxinterior button:after, .box__prod .prodleft button:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after {
+.btnVar:after, .boxinterior button:after, .box__prod .prodleft button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -128,13 +70,12 @@
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .box__contactanos p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
+.pVar, .box__faq div .aq p, .box__contactanos p, .pag__who .box__who p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
   font-family: "Comfortaa", cursive;
-  letter-spacing: 0.1rem;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__who h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2, .pag__who .box__who h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -142,12 +83,12 @@
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__who h2 hr, .box__prod .prodleft h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr, .pag__who .box__who h2 hr, .box__prod .prodleft h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .boxfaq div .aq h3 {
+.h3Var, .box__faq div .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -443,65 +384,7 @@ body {
 
 /* FOOTER */
 /* pagina galeria */
-.headerVar, .pag__prod .mi__header, .mi__header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0;
-}
-
-.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+.btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -518,16 +401,16 @@ body {
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+.btnVar:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+.btnVar:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+.btnVar:after, .box__prod .prodleft button:after, .boxinterior button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -572,13 +455,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .box__faq div .aq p, .box__contactanos p, .pag__who .box__who p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
-  letter-spacing: 0.1rem;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__who h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2, .pag__who .box__who h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -586,12 +468,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__who h2 hr, .box__prod .prodleft h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr, .pag__who .box__who h2 hr, .box__prod .prodleft h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .boxfaq div .aq h3 {
+.h3Var, .box__faq div .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -679,65 +561,7 @@ body {
 }
 
 /* pagina quienes somos */
-.headerVar, .pag__prod .mi__header, .mi__header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0;
-}
-
-.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+.btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -754,16 +578,16 @@ body {
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+.btnVar:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+.btnVar:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+.btnVar:after, .box__prod .prodleft button:after, .boxinterior button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -808,13 +632,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .box__faq div .aq p, .box__contactanos p, .pag__who .box__who p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
-  letter-spacing: 0.1rem;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__who h2, .box__prod .prodleft h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2, .pag__who .box__who h2, .box__prod .prodleft h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -822,12 +645,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__who h2 hr, .box__prod .prodleft h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr, .pag__who .box__who h2 hr, .box__prod .prodleft h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .boxfaq div .aq h3 {
+.h3Var, .box__faq div .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -914,66 +737,24 @@ body {
   font-style: italic;
 }
 
-/* pagina contactanos */
-.headerVar, .pag__prod .mi__header, .mi__header {
+.pag__who {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem;
+}
+.pag__who .box__who {
+  max-width: 70%;
+}
+.pag__who .box__who h2 {
+  margin: 5rem;
+}
+.pag__who .box__who hr {
   width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
+  color: #185947;
 }
-.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0;
-}
-
-.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+/* pagina contactanos */
+.btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -990,16 +771,16 @@ body {
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+.btnVar:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+.btnVar:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+.btnVar:after, .box__prod .prodleft button:after, .boxinterior button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -1044,13 +825,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .box__faq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .pag__who .box__who p {
   font-family: "Comfortaa", cursive;
-  letter-spacing: 0.1rem;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__contactanos h2, .box__prod .prodleft h2, .box__who h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2, .box__prod .prodleft h2, .pag__who .box__who h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1058,12 +838,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__prod .prodleft h2 hr, .box__who h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr, .box__prod .prodleft h2 hr, .pag__who .box__who h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .boxfaq div .aq h3 {
+.h3Var, .box__faq div .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -1251,65 +1031,7 @@ body {
   }
 }
 /* pagina FAQ preguntas*/
-.headerVar, .pag__prod .mi__header, .mi__header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0;
-}
-
-.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+.btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -1326,16 +1048,16 @@ body {
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+.btnVar:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+.btnVar:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+.btnVar:after, .box__prod .prodleft button:after, .boxinterior button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -1380,13 +1102,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxfaq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p {
+.pVar, .box__faq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .pag__who .box__who p, .box__contactanos p {
   font-family: "Comfortaa", cursive;
-  letter-spacing: 0.1rem;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .boxfaq .boxfaq__title h2, .box__prod .prodleft h2, .box__who h2, .box__contactanos h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__prod .prodleft h2, .pag__who .box__who h2, .box__contactanos h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1394,12 +1115,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .boxfaq .boxfaq__title h2 hr, .box__prod .prodleft h2 hr, .box__who h2 hr, .box__contactanos h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__prod .prodleft h2 hr, .pag__who .box__who h2 hr, .box__contactanos h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .boxfaq div .aq h3 {
+.h3Var, .box__faq div .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -1486,134 +1207,30 @@ body {
   font-style: italic;
 }
 
-.buscadorfaq .buscar {
-  position: absolute;
-  padding: 2rem;
-}
-.buscadorfaq .buscar input {
-  width: 24rem;
-  height: 4rem;
-  padding: 0 3rem;
-  font-size: 2rem;
-  color: black;
-}
-
-.boxfaq {
+.box__faq {
   display: flex;
   flex-direction: column;
+  max-width: 70%;
 }
-.boxfaq .boxfaq__title h2 {
+.box__faq .boxfaq__title h2 {
   margin: 5rem;
 }
-.boxfaq .boxfaq__title hr {
-  width: 100%;
-  color: #185947;
-}
-.boxfaq .buscadorfaq {
-  display: flex;
-  margin: 2rem;
-  align-items: center;
-  justify-items: flex-start;
-}
-.boxfaq .buscadorfaq .buscar {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-  padding: 0;
-}
-.boxfaq .buscadorfaq .buscar input {
-  width: 100%;
-  height: 3rem;
-  font-size: 1rem;
-  color: #262626;
-  outline: none;
-  border-radius: 0.5rem;
-  padding: 1rem;
-}
-.boxfaq .buscadorfaq .buscar .btnBuscar {
-  top: 0;
-  right: 0;
-  background-color: #185947;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  padding: 1rem;
-}
-.boxfaq div .aq {
+.box__faq div .aq {
   background-color: #b8b8b8;
   border-radius: 0.5rem;
   margin: 1rem;
 }
-.boxfaq div .aq h3 {
+.box__faq div .aq h3 {
   margin: 1rem;
   padding: 1rem;
 }
-.boxfaq div .aq p {
+.box__faq div .aq p {
   margin: 1rem;
   padding: 1rem;
 }
 
 /* pagina productos */
-.headerVar, .pag__prod .mi__header, .mi__header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-.headerVar a img, .pag__prod .mi__header a img, .mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.headerVar nav ul, .pag__prod .mi__header nav ul, .mi__header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.headerVar nav ul li, .pag__prod .mi__header nav ul li, .mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.headerVar nav ul li a, .pag__prod .mi__header nav ul li a, .mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.headerVar nav ul li a:after, .pag__prod .mi__header nav ul li a:after, .mi__header nav ul li a:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.headerVar button a, .pag__prod .mi__header button a, .mi__header button a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0;
-}
-
-.btnVar, .headerVar button, .pag__prod .mi__header button, .mi__header button, .box__prod .prodleft button, .boxinterior button {
+.btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -1630,16 +1247,16 @@ body {
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+.btnVar:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+.btnVar:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .headerVar button:after, .pag__prod .mi__header button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after {
+.btnVar:after, .box__prod .prodleft button:after, .boxinterior button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -1684,13 +1301,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .boxfaq div .aq p {
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .pag__who .box__who p, .box__contactanos p, .box__faq div .aq p {
   font-family: "Comfortaa", cursive;
-  letter-spacing: 0.1rem;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__prod .prodleft h2, .box__who h2, .box__contactanos h2, .boxfaq .boxfaq__title h2 {
+.h2Var, .pag__prod .h2_prods, .box__prod .prodleft h2, .pag__who .box__who h2, .box__contactanos h2, .box__faq .boxfaq__title h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1698,12 +1314,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__prod .prodleft h2 hr, .box__who h2 hr, .box__contactanos h2 hr, .boxfaq .boxfaq__title h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__prod .prodleft h2 hr, .pag__who .box__who h2 hr, .box__contactanos h2 hr, .box__faq .boxfaq__title h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .boxfaq div .aq h3 {
+.h3Var, .box__faq div .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -1793,15 +1409,12 @@ body {
 .pag__prod {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 0.2fr 1fr 1fr 0.6fr;
+  grid-template-rows: 0.2fr 1fr 1fr 0.6fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "header header header header" "h2__org h2__org h2__org h2__org" "li__prods productos productos productos" "li__prods productos productos productos" "footer footer footer footer";
-}
-.pag__prod .mi__header {
-  grid-area: header;
+  grid-template-areas: "h2__org h2__org h2__org h2__org" "li__prods productos productos productos" "li__prods productos productos productos" "footer footer footer footer";
 }
 .pag__prod .h2_prods {
   grid-area: h2__org;
@@ -1836,9 +1449,9 @@ body {
   text-decoration: underline;
 }
 .pag__prod .container__prods {
-  grid-area: productos;
   display: contents;
   flex-wrap: wrap;
+  grid-area: productos;
 }
 .pag__prod .container__prods .div__img {
   align-self: start;
@@ -1885,65 +1498,7 @@ body {
 }
 
 /* media queries */
-.headerVar, .mi__header, .pag__prod .mi__header {
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  background-color: #b8b8b8;
-  border-radius: 0;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 2.5rem;
-  flex-direction: row;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-}
-.headerVar a img, .mi__header a img, .pag__prod .mi__header a img {
-  height: 4rem;
-  width: auto;
-}
-.headerVar nav ul, .mi__header nav ul, .pag__prod .mi__header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.headerVar nav ul li, .mi__header nav ul li, .pag__prod .mi__header nav ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 1rem;
-}
-.headerVar nav ul li a, .mi__header nav ul li a, .pag__prod .mi__header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.headerVar nav ul li a:hover, .mi__header nav ul li a:hover {
-  --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  color: #fff;
-}
-.headerVar nav ul li a:after, .mi__header nav ul li a:after, .pag__prod .mi__header nav ul li a:after {
-  content: "";
-  display: block;
-  background: #fff;
-  width: 100%;
-  margin-top: 3px;
-  height: 3px;
-  -webkit-clip-path: var(--clippy);
-          clip-path: var(--clippy);
-  transition: -webkit-clip-path 0.3s;
-  transition: clip-path 0.3s;
-  transition: clip-path 0.3s, -webkit-clip-path 0.3s;
-}
-.headerVar button a, .mi__header button a, .pag__prod .mi__header button a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0;
-}
-
-.btnVar, .headerVar button, .mi__header button, .box__prod .prodleft button, .boxinterior button, .pag__prod .mi__header button {
+.btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
   height: 2.5rem;
   color: white;
@@ -1960,16 +1515,16 @@ body {
   font-family: "Raleway";
   background-color: #986632;
 }
-.btnVar:hover, .headerVar button:hover, .mi__header button:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
+.btnVar:hover, .box__prod .prodleft button:hover, .boxinterior button:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
 }
-.btnVar:hover:after, .headerVar button:hover:after, .mi__header button:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
+.btnVar:hover:after, .box__prod .prodleft button:hover:after, .boxinterior button:hover:after {
   opacity: 1;
   right: 10px;
 }
-.btnVar:after, .headerVar button:after, .mi__header button:after, .box__prod .prodleft button:after, .boxinterior button:after, .pag__prod .mi__header button:after {
+.btnVar:after, .box__prod .prodleft button:after, .boxinterior button:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -2014,13 +1569,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .boxfaq div .aq p {
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .pag__who .box__who p, .box__contactanos p, .box__faq div .aq p {
   font-family: "Comfortaa", cursive;
-  letter-spacing: 0.1rem;
   margin: 0.5rem 0;
 }
 
-.h2Var, .box__prod .prodleft h2, .box__who h2, .box__contactanos h2, .boxfaq .boxfaq__title h2, .pag__prod .h2_prods {
+.h2Var, .box__prod .prodleft h2, .pag__who .box__who h2, .box__contactanos h2, .box__faq .boxfaq__title h2, .pag__prod .h2_prods {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -2028,12 +1582,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .box__prod .prodleft h2 hr, .box__who h2 hr, .box__contactanos h2 hr, .boxfaq .boxfaq__title h2 hr, .pag__prod .h2_prods hr {
+.h2Var hr, .box__prod .prodleft h2 hr, .pag__who .box__who h2 hr, .box__contactanos h2 hr, .box__faq .boxfaq__title h2 hr, .pag__prod .h2_prods hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .boxfaq div .aq h3 {
+.h3Var, .box__faq div .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -2140,39 +1694,6 @@ body {
   }
   h3 {
     font-size: 0.8rem;
-  }
-  .mi__header {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 4rem;
-    background-color: #185947;
-    text-align: center;
-  }
-  .mi__header nav {
-    width: 100%;
-  }
-  .mi__header nav ul {
-    margin-top: 3rem;
-    padding: 0;
-  }
-  .mi__header nav ul li {
-    margin: 0;
-    padding: 0;
-  }
-  .mi__header nav ul li a {
-    font-size: 0.7rem;
-    margin: 0 1rem;
-    padding: 0;
-  }
-  .mi__header .logo {
-    position: relative;
-    margin-top: 2rem;
-  }
-  .mi__header .btnav {
-    display: none;
   }
   /* termina nav */
   .boxhazel {
@@ -2395,13 +1916,6 @@ body {
   .main {
     margin: 0;
     padding: 0;
-  }
-  .logo__mq {
-    display: none;
-  }
-  .mi__nav {
-    margin: 0;
-    padding-top: 3rem;
   }
   .prods__acordion {
     margin: 0;
