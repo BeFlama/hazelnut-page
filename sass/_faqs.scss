@@ -35,3 +35,23 @@
                 }
             }
 }
+/* media querys pag faqs */
+@media(max-width: 938px){
+    .footer{
+    margin: 20rem;
+    height: 30%;
+    padding: 5rem;
+    .footerlogo p{
+        text-align: center;
+    }
+    .listafin{
+        display: none;
+    }
+}
+}
+
+@media (min-width: 938px) and (max-width: 1023px){
+    body{
+        color: red;
+    }
+}

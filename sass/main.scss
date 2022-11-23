@@ -72,11 +72,15 @@ body{
     border-radius: 0.3rem;
     padding: 4rem 2rem;
     .prodleft{
-        align-self: center;
-        justify-self: start;
+        text-align: left;
         margin-left: 1rem;
         h2{
-            @extend .h2Var;
+            font-family: 'Raleway', bold;
+            font-weight: 300;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin: 2rem 0;
+            text-align: left;
         }
         p{
             @extend .pVar;
@@ -86,6 +90,7 @@ body{
             a {text-decoration: none;
             color: #fff}
             @extend .btnVar;
+            margin: 1rem 0;
         }
     }
     .prodder{
@@ -134,7 +139,9 @@ body{
         margin: 2rem;
     }
     button{
-        @extend .btnVar;
+        a {text-decoration: none;
+            color: #fff}
+            @extend .btnVar;
     }
     p{
         @extend .pVar;
@@ -204,7 +211,7 @@ body{
             padding: 1rem;
             font-family: 'Raleway', sans-serif;
         }
-        h4{
+        p{
             text-align: center;
             font-weight: 200;
             color: #262626;
@@ -225,9 +232,6 @@ body{
 
 /* pagina galeria */
 @import 'galeria';
-
-/* pagina quienes somos */
-@import 'quienessomos';
 
 /* pagina contactanos */
 @import 'contactanos';
