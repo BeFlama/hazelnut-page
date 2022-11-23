@@ -1,20 +1,24 @@
 @import 'vars';
 
 .box__faq{
+    font-family: 'Raleway', bold;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    max-width: 70%;
-    .boxfaq__title{
         h2{
             @extend .h2Var;
-            margin: 5rem;
+            text-align: center;
+            width: 60%;
         }
-    }
-        div{
+        .box__aq{
+            display: flex;
+            flex-direction: column;
             .aq{
                 background-color: $color__bg;
                 border-radius: 0.5rem;
+                width: 60%;
                 margin: 1rem;
+                padding: 1rem;
                 h3{
                     @extend .h3Var;
                     margin: 1rem;
@@ -37,21 +41,44 @@
 }
 /* media querys pag faqs */
 @media(max-width: 938px){
-    .footer{
-    margin: 20rem;
-    height: 30%;
-    padding: 5rem;
-    .footerlogo p{
-        text-align: center;
+    .mainfaq{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: $color__bg;
+        color: white;
+        .box__faq{
+            h2{
+                width: 100%;
+            }
+            p{
+                width: 100%;
+                padding: 0 1rem;
+            }
+            .box__aq{
+                margin: 0;
+                .aq{
+                    border-radius: 0;
+                    color: black;
+                    margin: 1rem;
+                    width: 100%;
+                }
+            }
+        }
     }
-    .listafin{
-        display: none;
+    .footer__resp{
+        margin: 20rem;
+        height: 30%;
+        padding: 5rem;
+        .footerlogo p{
+            text-align: center;
+        }
+        .listafin{
+            display: none;
+        }
     }
-}
 }
 
 @media (min-width: 938px) and (max-width: 1023px){
-    body{
-        color: red;
-    }
+
 }

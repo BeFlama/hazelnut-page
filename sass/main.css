@@ -70,12 +70,12 @@
   background: #185947;
 }
 
-.pVar, .box__faq div .aq p, .box__contactanos p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
+.pVar, .box__faq .box__aq .aq p, .box__contactanos p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -83,12 +83,12 @@
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .box__faq div .aq h3 {
+.h3Var, .box__faq .box__aq .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -469,12 +469,12 @@ body {
   background: #185947;
 }
 
-.pVar, .box__faq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -482,12 +482,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .box__faq div .aq h3 {
+.h3Var, .box__faq .box__aq .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -574,6 +574,44 @@ body {
   font-style: italic;
 }
 
+.body__galeria {
+  background-color: #185947;
+}
+
+.box__galeria {
+  background-color: #185947;
+  text-align: center;
+  border-radius: 0;
+  padding: 5rem;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+.box__galeria p {
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+.box__galeria .row {
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+.box__galeria .row .column {
+  flex: 25%;
+  padding: 5px;
+}
+.box__galeria .row .column img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 5px;
+  padding: 10px;
+}
+.box__galeria .row .column img:hover {
+  opacity: 0.4;
+  box-shadow: #262626;
+}
+
 /* pagina contactanos */
 .btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
@@ -646,12 +684,12 @@ body {
   background: #185947;
 }
 
-.pVar, .box__faq div .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.pVar, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -659,12 +697,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .box__faq div .aq h3 {
+.h3Var, .box__faq .box__aq .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -771,7 +809,7 @@ body {
 .box__contactanos .box_form {
   width: 60%;
   margin: 2rem;
-  background-color: #b8b8b8;
+  background-color: rgba(109, 56, 0, 0.4588235294);
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
@@ -923,12 +961,12 @@ body {
   background: #185947;
 }
 
-.pVar, .box__faq div .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p {
+.pVar, .box__faq .box__aq .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq .boxfaq__title h2, .box__contactanos h2 {
+.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__galeria h2, .box__contactanos h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -936,12 +974,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq .boxfaq__title h2 hr, .box__contactanos h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__galeria h2 hr, .box__contactanos h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .box__faq div .aq h3 {
+.h3Var, .box__faq .box__aq .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -1029,51 +1067,77 @@ body {
 }
 
 .box__faq {
+  font-family: "Raleway", bold;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  max-width: 70%;
 }
-.box__faq .boxfaq__title h2 {
-  margin: 5rem;
+.box__faq h2 {
+  text-align: center;
+  width: 60%;
 }
-.box__faq div .aq {
-  background-color: #b8b8b8;
+.box__faq .box__aq {
+  display: flex;
+  flex-direction: column;
+}
+.box__faq .box__aq .aq {
+  background-color: rgba(109, 56, 0, 0.4588235294);
   border-radius: 0.5rem;
-  margin: 1rem;
-}
-.box__faq div .aq h3 {
+  width: 60%;
   margin: 1rem;
   padding: 1rem;
 }
-.box__faq div .aq p {
+.box__faq .box__aq .aq h3 {
   margin: 1rem;
   padding: 1rem;
 }
-.box__faq div .aq p a {
+.box__faq .box__aq .aq p {
+  margin: 1rem;
+  padding: 1rem;
+}
+.box__faq .box__aq .aq p a {
   text-decoration: none;
   color: black;
 }
-.box__faq div .aq p a:hover {
+.box__faq .box__aq .aq p a:hover {
   font-style: italic;
 }
 
 /* media querys pag faqs */
 @media (max-width: 938px) {
-  .footer {
+  .mainfaq {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(109, 56, 0, 0.4588235294);
+    color: white;
+  }
+  .mainfaq .box__faq h2 {
+    width: 100%;
+  }
+  .mainfaq .box__faq p {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .mainfaq .box__faq .box__aq {
+    margin: 0;
+  }
+  .mainfaq .box__faq .box__aq .aq {
+    border-radius: 0;
+    color: black;
+    margin: 1rem;
+    width: 100%;
+  }
+  .footer__resp {
     margin: 20rem;
     height: 30%;
     padding: 5rem;
   }
-  .footer .footerlogo p {
+  .footer__resp .footerlogo p {
     text-align: center;
   }
-  .footer .listafin {
+  .footer__resp .listafin {
     display: none;
-  }
-}
-@media (min-width: 938px) and (max-width: 1023px) {
-  body {
-    color: red;
   }
 }
 /* pagina productos */
@@ -1148,12 +1212,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq div .aq p {
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq .box__aq .aq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__contactanos h2, .box__faq .boxfaq__title h2 {
+.h2Var, .pag__prod .h2_prods, .box__galeria h2, .box__contactanos h2, .box__faq h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1161,12 +1225,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__contactanos h2 hr, .box__faq .boxfaq__title h2 hr {
+.h2Var hr, .pag__prod .h2_prods hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .box__faq div .aq h3 {
+.h3Var, .box__faq .box__aq .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -1416,12 +1480,12 @@ body {
   background: #185947;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq div .aq p {
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq .box__aq .aq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
 }
 
-.h2Var, .box__contactanos h2, .box__faq .boxfaq__title h2, .pag__prod .h2_prods {
+.h2Var, .box__galeria h2, .box__contactanos h2, .box__faq h2, .pag__prod .h2_prods {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1429,12 +1493,12 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .box__contactanos h2 hr, .box__faq .boxfaq__title h2 hr, .pag__prod .h2_prods hr {
+.h2Var hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr, .pag__prod .h2_prods hr {
   border: solid 1px #185947;
   width: 100%;
 }
 
-.h3Var, .box__faq div .aq h3 {
+.h3Var, .box__faq .box__aq .aq h3 {
   font-size: 1.5rem;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
@@ -1621,40 +1685,43 @@ body {
   .box__galeria .column_resp {
     display: none;
   }
-  .iconos__compra {
-    margin: 2rem;
+  .box__datoscompra {
+    width: 100%;
+    margin: 0;
+  }
+  .box__datoscompra .iconos__compra {
+    margin: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "icon icon", "icon icon";
   }
-  .iconos__compra .icono {
+  .box__datoscompra .iconos__compra .icono {
     grid-area: "icon";
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5rem;
-    font-family: sans-serif;
+    margin: 0.2rem;
     padding: 0;
     font-size: small;
     background-color: rgba(24, 89, 71, 0.6235294118);
-    border-radius: 2rem;
-    height: 10rem;
+    border-radius: 0.5rem;
+    height: 12rem;
+    width: auto;
   }
-  .iconos__compra .icono h3 {
+  .box__datoscompra .iconos__compra .icono h3 {
+    font-size: small;
     padding: 0.1rem;
-    font-size: medium;
     font-style: bold;
     color: #fff;
   }
-  .iconos__compra .icono hr {
+  .box__datoscompra .iconos__compra .icono h3 hr {
     display: none;
   }
-  .iconos__compra .icono hr h4 {
-    color: #fff;
+  .box__datoscompra .iconos__compra .icono p {
+    font-size: small;
   }
-  .iconos__compra .icono .img__icon {
+  .box__datoscompra .iconos__compra .icono .img__icon {
     display: none;
   }
   .footer__resp {

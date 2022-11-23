@@ -3,3 +3,42 @@
 .footer{
     @extend .footerVar;
 }
+.body__galeria{
+    background-color: #185947;
+}
+.box__galeria{
+        background-color: #185947;
+        text-align: center;
+        border-radius: 0;
+        padding: 5rem;
+        color: #fff;
+        font-family: 'Raleway', sans-serif;
+        h2{
+            @extend .h2Var;
+        }
+        p{
+            text-align: center;
+            font-family: 'Comfortaa', cursive;
+            color: #fff;
+            letter-spacing: 0.1rem;
+        }
+        .row{
+            display: flex;
+            padding: 5px;
+            flex-wrap: wrap;
+            .column{
+                flex: 25%;
+                padding: 5px;
+            }
+            .column img{
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 5px;
+            padding: 10px;
+            &:hover{
+                opacity: 0.4;
+                box-shadow: #262626;
+                }
+            }
+        }
+}
