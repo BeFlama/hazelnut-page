@@ -36,7 +36,7 @@
   transition: 0.4s;
 }
 
-.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+.btncompraVar {
   margin: 1rem;
   min-width: 8rem;
   height: 2.5rem;
@@ -51,14 +51,14 @@
   overflow: hidden;
   border: 2px solid #185947;
 }
-.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+.btncompraVar:hover {
   color: #fff;
   text-decoration: none;
 }
-.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+.btncompraVar:hover:after {
   height: 100%;
 }
-.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+.btncompraVar:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -75,7 +75,7 @@
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
+.h2Var, .container__prods .h2__prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -83,7 +83,7 @@
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
+.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -217,7 +217,6 @@ body {
 .boxhazel .hazelizq h1 {
   margin: 1rem 0;
   font-family: "Raleway", sans-serif;
-  font-size: 4rem;
 }
 .boxhazel .hazelizq p {
   text-align: left;
@@ -435,7 +434,7 @@ body {
   transition: 0.4s;
 }
 
-.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+.btncompraVar {
   margin: 1rem;
   min-width: 8rem;
   height: 2.5rem;
@@ -450,14 +449,14 @@ body {
   overflow: hidden;
   border: 2px solid #185947;
 }
-.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+.btncompraVar:hover {
   color: #fff;
   text-decoration: none;
 }
-.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+.btncompraVar:hover:after {
   height: 100%;
 }
-.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+.btncompraVar:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -474,7 +473,7 @@ body {
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
+.h2Var, .container__prods .h2__prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -482,7 +481,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
+.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -650,7 +649,7 @@ body {
   transition: 0.4s;
 }
 
-.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+.btncompraVar {
   margin: 1rem;
   min-width: 8rem;
   height: 2.5rem;
@@ -665,14 +664,14 @@ body {
   overflow: hidden;
   border: 2px solid #185947;
 }
-.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+.btncompraVar:hover {
   color: #fff;
   text-decoration: none;
 }
-.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+.btncompraVar:hover:after {
   height: 100%;
 }
-.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+.btncompraVar:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -689,7 +688,7 @@ body {
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
+.h2Var, .container__prods .h2__prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -697,7 +696,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
+.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -927,7 +926,7 @@ body {
   transition: 0.4s;
 }
 
-.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+.btncompraVar {
   margin: 1rem;
   min-width: 8rem;
   height: 2.5rem;
@@ -942,14 +941,14 @@ body {
   overflow: hidden;
   border: 2px solid #185947;
 }
-.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+.btncompraVar:hover {
   color: #fff;
   text-decoration: none;
 }
-.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+.btncompraVar:hover:after {
   height: 100%;
 }
-.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+.btncompraVar:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -966,7 +965,7 @@ body {
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__faq h2, .box__galeria h2, .box__contactanos h2 {
+.h2Var, .container__prods .h2__prods, .box__faq h2, .box__galeria h2, .box__contactanos h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -974,7 +973,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__faq h2 hr, .box__galeria h2 hr, .box__contactanos h2 hr {
+.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__galeria h2 hr, .box__contactanos h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -1178,7 +1177,7 @@ body {
   transition: 0.4s;
 }
 
-.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+.btncompraVar {
   margin: 1rem;
   min-width: 8rem;
   height: 2.5rem;
@@ -1193,14 +1192,14 @@ body {
   overflow: hidden;
   border: 2px solid #185947;
 }
-.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+.btncompraVar:hover {
   color: #fff;
   text-decoration: none;
 }
-.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+.btncompraVar:hover:after {
   height: 100%;
 }
-.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+.btncompraVar:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1217,7 +1216,7 @@ body {
   margin: 0.5rem 0;
 }
 
-.h2Var, .pag__prod .h2_prods, .box__galeria h2, .box__contactanos h2, .box__faq h2 {
+.h2Var, .container__prods .h2__prods, .box__galeria h2, .box__contactanos h2, .box__faq h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1225,7 +1224,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .pag__prod .h2_prods hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr {
+.h2Var hr, .container__prods .h2__prods hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -1317,97 +1316,39 @@ body {
   font-style: italic;
 }
 
-.pag__prod {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1fr 1fr 0.6fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "h2__org h2__org h2__org h2__org" "li__prods productos productos productos" "li__prods productos productos productos" "footer footer footer footer";
-}
-.pag__prod .h2_prods {
-  grid-area: h2__org;
-}
-.pag__prod .li__prods {
-  grid-area: li__prods;
-  font-family: "Raleway", sans-serif;
-  margin-top: 1rem;
-  align-self: start;
-}
-.pag__prod .li__prods .boostrap__list {
-  align-items: flex-start;
-}
-.pag__prod .li__prods .boostrap__list .prods__acordion {
-  margin-left: 2rem;
-  padding: 0 3rem;
-}
-.pag__prod .li__prods .boostrap__list .prods__acordion h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-.pag__prod .list__boostrap {
-  list-style-type: "└  ";
-}
-.pag__prod .list__boostrap li a {
-  color: #0D0D0D;
-  text-decoration: none;
-}
-.pag__prod .list__boostrap li a:hover {
-  color: #185947;
-  text-decoration: underline;
-}
-.pag__prod .container__prods {
-  display: contents;
-  flex-wrap: wrap;
-  grid-area: productos;
-}
-.pag__prod .container__prods .div__img {
-  align-self: start;
-  justify-self: center;
-}
-.pag__prod .container__prods .div__img .prod__img {
-  overflow: hidden;
-  height: 25rem;
-  width: 25rem;
-  margin: 1rem;
-}
-.pag__prod .container__prods .div__img .prod__img img {
-  align-self: flex-start;
-  width: 100%;
-}
-.pag__prod .container__prods .div__img .prod__img:hover img {
-  transform: scale(1.2);
-}
-.pag__prod .container__prods .div__img .prod__text {
+.container__prods .box__prods {
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem;
+  padding: 2rem;
+  gap: 2rem;
 }
-.pag__prod .container__prods .div__img .prod__text h3, .pag__prod .container__prods .div__img .prod__text p {
-  margin: 1rem;
-  text-align: left;
-  font-family: "Raleway", sans-serif;
-}
-.pag__prod .container__prods .div__img .prod__text strong {
-  color: #185947;
-  margin: 2rem;
-}
-.pag__prod .container__prods .div__img .prod__text button a {
-  text-decoration: none;
-  color: #185947;
-}
-.pag__prod .container__prods .div__img .prod__text button a:hover {
-  color: #fff;
+.container__prods .box__prods .card img {
+  width: 25rem;
+  height: auto;
 }
 
 .footer {
-  grid-area: footer;
   margin-top: 10rem;
 }
 
+@media (max-width: 938px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .main .container__prods .box__prods {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .main .container__prods .box__prods .card img {
+    width: 25rem;
+    height: auto;
+  }
+}
 /* media queries */
 .btnVar, .box__prod .prodleft button, .boxinterior button {
   min-width: 7.5rem;
@@ -1446,7 +1387,7 @@ body {
   transition: 0.4s;
 }
 
-.btncompraVar, .pag__prod .container__prods .div__img .prod__text button {
+.btncompraVar {
   margin: 1rem;
   min-width: 8rem;
   height: 2.5rem;
@@ -1461,14 +1402,14 @@ body {
   overflow: hidden;
   border: 2px solid #185947;
 }
-.btncompraVar:hover, .pag__prod .container__prods .div__img .prod__text button:hover {
+.btncompraVar:hover {
   color: #fff;
   text-decoration: none;
 }
-.btncompraVar:hover:after, .pag__prod .container__prods .div__img .prod__text button:hover:after {
+.btncompraVar:hover:after {
   height: 100%;
 }
-.btncompraVar:after, .pag__prod .container__prods .div__img .prod__text button:after {
+.btncompraVar:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1485,7 +1426,7 @@ body {
   margin: 0.5rem 0;
 }
 
-.h2Var, .box__galeria h2, .box__contactanos h2, .box__faq h2, .pag__prod .h2_prods {
+.h2Var, .box__galeria h2, .box__contactanos h2, .box__faq h2, .container__prods .h2__prods {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1493,7 +1434,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr, .pag__prod .h2_prods hr {
+.h2Var hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr, .container__prods .h2__prods hr {
   border: solid 1px #185947;
   width: 100%;
 }

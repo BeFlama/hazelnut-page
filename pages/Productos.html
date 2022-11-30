@@ -45,129 +45,98 @@
             </div>
         </nav>
     </header>  
-    <div class="pag__prod">  
-    <h2 class="h2_prods">Productos<hr></h2>
-        <div class="li__prods">
-            <div class="boostrap__list"> 
-                <div class="prods__acordion" id="accordionExample">
-                    <div class="accordion-item">
-                    <h2 class="prod__acordion-h2 rounded-2" id="headingOne">
-                        <button class="accordion-button collapsed p-2 m-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            » Organizadores
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
-                        <div class="accordion-body">
-                            <strong><ul class="list__boostrap">
-                                <li><a href="#">Organizador1</a></li>
-                                <li><a href="#">Organizador2</a></li>
-                                <li><a href="#">Organizador3</a></li>
-                            </ul></strong>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="accordion-item">
-                    <h2 class="prod__acordion-h2 rounded-2" id="headingTwo">
-                        <button class="accordion-button collapsed p-2 m-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            » Escritorios
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-                        <div class="accordion-body">
-                            <strong><ul class="list__boostrap">
-                                <li><a href="#">Escritorio1</a></li>
-                                <li><a href="#">Escritorio2</a></li>
-                                <li><a href="#">Escritorio3</a></li>
-                            </ul></strong>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="accordion-item">
-                    <h2 class="prod__acordion-h2 rounded-2" id="headingThree">
-                        <button class="accordion-button collapsed p-2 m-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            » Luces
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
-                        <div class="accordion-body">
-                        <strong><ul class="list__boostrap">
-                            <li><a href="#">Luz</a></li>
-                            <li><a href="#">Luuuz</a></li>
-                            <li><a href="#">Luuuuuz</a></li>
-                        </ul></strong>
-                        </div>
-                    </div>
+    <section class="container__prods">
+    <h2 class="h2__prods">Productos<hr></h2>
+<!--navegacion de pag-->
+    <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+        <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">Organizadores</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Escritorios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Iluminación</a>
+        </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+<!-- box productos -->
+        <div class="box__prods">
+
+            <!-- Organizadores -->
+            <section class="box__prods-org" id="scrollspyHeading1">
+                <div class="card text-bg-dark m-2 p-1">
+                    <img class="img__prods" src="../assets/img/imgprod/org1.jpg" alt="Organizador1">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador1</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" ><a href="#" class="btn__compar">Comprar</a></button>
                     </div>
                 </div>
-            </div>
-        </div>
-    <section class="container__prods">
-        <div class="div__img prod1">
-            <div class="prod__img">
-                <img src="../assets/img/imgprod/org1.jpg" alt="Organizador1">
-            </div>
-            <div class="prod__text">
-                <h3>Organizador1</h3>
-                <p>Especificaciones del producto</p>
-                <strong>$ 1.234</strong>
-                <button class="btn__comprar"><a href="#">Comprar</a></button>
-            </div>
-        </div>
-        <div class="div__img prod2">
-            <div class="prod__img">
-                <img src="../assets/img/imgprod/org2.jpg" alt="Organizador2">
-            </div>
-            <div class="prod__text">
-                <h3>Organizador2</h3>
-                <p>Especificaciones del producto</p>
-                <strong>$ 1.234</strong>
-                <button class="btn__comprar"><a href="#">Comprar</a></button>
-            </div>
-        </div>
-        <div class="div__img prod3">
-            <div class="prod__img">
-                <img src="../assets/img/imgprod/org3.jpg" alt="Organizador3">
-            </div>
-            <div class="prod__text">
-                <h3>Organizador3</h3>
-                <p>Especificaciones del producto</p>
-                <strong>$ 1.234</strong>
-                <button class="btn__comprar"><a href="#">Comprar</a></button>
-            </div>
-        </div>
-        <div class="div__img prod4">
-            <div class="prod__img">
-                <img src="../assets/img/imgprod/org4.jpg" alt="Organizador4">
-            </div>
-            <div class="prod__text">
-                <h3>Organizador4</h3>
-                <p>Especificaciones del producto</p>
-                <strong>$ 1.234</strong>
-                <button class="btn__comprar"><a href="#">Comprar</a></button>
-            </div>
-        </div>
-        <div class="div__img prod5">
-            <div class="prod__img ">
-                <img src="../assets/img/imgprod/org5.jpg" alt="Organizador5">
-            </div>
-            <div class="prod__text">
-                <h3>Organizador5</h3>
-                <p>Especificaciones del producto</p>
-                <strong>$ 1.234</strong>
-                <button class="btn__comprar"><a href="#">Comprar</a></button>
-            </div>
-        </div>
-        <div class="div__img prod6">
-            <div class="prod__img">
-                <img src="../assets/img/imgprod/org6.jpg" alt="Organizador6">
-            </div>
-            <div class="prod__text">
-                <h3>Organizador6</h3>
-                <p>Especificaciones del producto</p>
-                <strong>$ 1.234</strong>
-                <button class="btn__comprar"><a href="#">Comprar</a></button>
-            </div>
-        </div>
+    
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org2.jpg" alt="Organizador2">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador2</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Escritorios -->
+            <section class="box__prods-escr"  id="scrollspyHeading2">
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org3.jpg" alt="Organizador3">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador3</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                        <button class="btn__comprar"><a href="#">Comprar</a></button> <!-- aca icono de compra, no texto -->
+                    </div>
+                </div>
+    
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org4.jpg" alt="Organizador4">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador4</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- iluminación -->
+            <section class="box__prods-ilu" id="scrollspyHeading3">   
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org5.jpg" alt="Organizador5">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador5</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                        <button class="btn__comprar"><a href="#">Comprar</a></button> <!-- aca icono de compra, no texto -->
+                    </div>
+                </div>
+    
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org6.jpg" alt="Organizador6">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador6</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- boxprods -->
+    </div> <!-- scroll -->
     </section>
     <footer class="footer">
         <div class="footericons">

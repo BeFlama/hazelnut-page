@@ -40,7 +40,6 @@ body{
         h1{
             margin: 1rem 0;
             font-family: 'Raleway', sans-serif;
-            font-size: 4rem;
         } //aca puedo aplicar mixin de h1
         p {
             @extend .pVar;
