@@ -25,7 +25,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                        <ul class="dropdown-menu ms-auto text-end">
+                        <ul class="dropdown-menu ms-auto text-start bg-dark text-white bg-opacity-25">
                         <li><a class="dropdown-item" href="#">Escritorios</a></li>
                         <li><a class="dropdown-item" href="#">Organizadores</a></li>
                         <li><a class="dropdown-item" href="#">Estantes</a></li>
@@ -46,9 +46,11 @@
         </nav>
     </header>  
     <section class="container__prods">
+
     <h2 class="h2__prods">Productos<hr></h2>
+
 <!--navegacion de pag-->
-    <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+    <nav id="navbar-example2" class="navbar sticky-top p-3 m-2 text-bg-light" style="background-color: #185947;">
         <ul class="nav nav-pills">
         <li class="nav-item">
             <a class="nav-link" href="#scrollspyHeading1">Organizadores</a>
@@ -57,18 +59,19 @@
             <a class="nav-link" href="#scrollspyHeading2">Escritorios</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading2">Iluminación</a>
+            <a class="nav-link" href="#scrollspyHeading3">Iluminación</a>
         </li>
         </ul>
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
     </nav>
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
-<!-- box productos -->
-        <div class="box__prods">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light rounded-2" tabindex="0">
 
+        <!-- box productos -->
+        <div class="box__prods">
+            <h3>Organizadores</h3>
             <!-- Organizadores -->
             <section class="box__prods-org" id="scrollspyHeading1">
                 <div class="card text-bg-dark m-2 p-1">
@@ -81,6 +84,15 @@
                     </div>
                 </div>
     
+                <div class="card text-bg-dark m-2 p-2">
+                    <img src="../assets/img/imgprod/org2.jpg" alt="Organizador2">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador2</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+
                 <div class="card text-bg-dark m-2 p-1">
                     <img src="../assets/img/imgprod/org2.jpg" alt="Organizador2">
                     <div class="card-img-overlay">
@@ -89,10 +101,21 @@
                         <p class="card-text"><small>$ 1.234</small></p>
                     </div>
                 </div>
-            </section>
 
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org2.jpg" alt="Organizador2">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador2</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+
+            </section>
             <!-- Escritorios -->
+            <h3>Escritorios</h3>
             <section class="box__prods-escr"  id="scrollspyHeading2">
+
                 <div class="card text-bg-dark m-2 p-1">
                     <img src="../assets/img/imgprod/org3.jpg" alt="Organizador3">
                     <div class="card-img-overlay">
@@ -111,10 +134,30 @@
                         <p class="card-text"><small>$ 1.234</small></p>
                     </div>
                 </div>
-            </section>
 
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org4.jpg" alt="Organizador4">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador4</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org4.jpg" alt="Organizador4">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador4</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+
+            </section>
+            <h3>Escritorios</h3>
             <!-- iluminación -->
             <section class="box__prods-ilu" id="scrollspyHeading3">   
+
                 <div class="card text-bg-dark m-2 p-1">
                     <img src="../assets/img/imgprod/org5.jpg" alt="Organizador5">
                     <div class="card-img-overlay">
@@ -133,9 +176,28 @@
                         <p class="card-text"><small>$ 1.234</small></p>
                     </div>
                 </div>
+
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org6.jpg" alt="Organizador6">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador6</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+
+                <div class="card text-bg-dark m-2 p-1">
+                    <img src="../assets/img/imgprod/org6.jpg" alt="Organizador6">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Organizador6</h5>
+                        <p class="card-text">**Especificaciones del producto**</p>
+                        <p class="card-text"><small>$ 1.234</small></p>
+                    </div>
+                </div>
+
             </section>
 
-        </div> <!-- boxprods -->
+        </div> <!--  termina boxprods -->
     </div> <!-- scroll -->
     </section>
     <footer class="footer">

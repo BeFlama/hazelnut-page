@@ -1,18 +1,47 @@
 @import 'vars';
 
 .container__prods{
-    .h2__prods{
-        @extend .h2Var;
-    }
+    font-family: 'Raleway', bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+        h2{
+            @extend .h2Var;
+            text-align: center;
+            width: 90%;
+        }
+        nav{
+            width: 100%;
+        }
     .box__prods{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 2rem;
-        gap: 2rem;
+        background-color: $color__bg;
+        width: 100%;
+        padding: 1rem;
+        .box__prods-org,
+        .box__prods-escr,
+        .box__prods-ilu{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+            margin: 2rem;
+        }
         .card{ 
+            padding: 2rem;
             img{
-                width: 25rem;
+                width: 30rem;
                 height: auto;
+            }
+            div{ /* texto de la img */
+                padding: 2rem;
+                button{
+                    a{
+                        text-decoration: none;
+                        color: gray;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
             }
         }
     }

@@ -73,9 +73,10 @@
 .pVar, .box__faq .box__aq .aq p, .box__contactanos p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
-.h2Var, .container__prods .h2__prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
+.h2Var, .container__prods h2, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -83,7 +84,7 @@
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
+.h2Var hr, .container__prods h2 hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -298,7 +299,7 @@ body {
   width: 100%;
   height: 40%;
   background-color: rgba(184, 184, 184, 0.431372549);
-  padding: 5rem;
+  padding: 2rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
   border-radius: 0.3rem;
@@ -369,7 +370,7 @@ body {
 }
 .iconos__compra .icono {
   height: 20%;
-  margin: 2rem;
+  margin: 0;
   padding: 1rem;
   font-family: sans-serif;
   text-align: center;
@@ -471,9 +472,10 @@ body {
 .pVar, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
-.h2Var, .container__prods .h2__prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
+.h2Var, .container__prods h2, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -481,7 +483,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
+.h2Var hr, .container__prods h2 hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -686,9 +688,10 @@ body {
 .pVar, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
-.h2Var, .container__prods .h2__prods, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
+.h2Var, .container__prods h2, .box__faq h2, .box__contactanos h2, .box__galeria h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -696,7 +699,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
+.h2Var hr, .container__prods h2 hr, .box__faq h2 hr, .box__contactanos h2 hr, .box__galeria h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -963,9 +966,10 @@ body {
 .pVar, .box__faq .box__aq .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
-.h2Var, .container__prods .h2__prods, .box__faq h2, .box__galeria h2, .box__contactanos h2 {
+.h2Var, .container__prods h2, .box__faq h2, .box__galeria h2, .box__contactanos h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -973,7 +977,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .container__prods .h2__prods hr, .box__faq h2 hr, .box__galeria h2 hr, .box__contactanos h2 hr {
+.h2Var hr, .container__prods h2 hr, .box__faq h2 hr, .box__galeria h2 hr, .box__contactanos h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -1214,9 +1218,10 @@ body {
 .pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq .box__aq .aq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
-.h2Var, .container__prods .h2__prods, .box__galeria h2, .box__contactanos h2, .box__faq h2 {
+.h2Var, .container__prods h2, .box__galeria h2, .box__contactanos h2, .box__faq h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1224,7 +1229,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .container__prods .h2__prods hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr {
+.h2Var hr, .container__prods h2 hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
@@ -1316,15 +1321,48 @@ body {
   font-style: italic;
 }
 
+.container__prods {
+  font-family: "Raleway", bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.container__prods h2 {
+  text-align: center;
+  width: 90%;
+}
+.container__prods nav {
+  width: 100%;
+}
 .container__prods .box__prods {
+  background-color: rgba(109, 56, 0, 0.4588235294);
+  width: 100%;
+  padding: 1rem;
+}
+.container__prods .box__prods .box__prods-org,
+.container__prods .box__prods .box__prods-escr,
+.container__prods .box__prods .box__prods-ilu {
   display: flex;
   flex-wrap: wrap;
+  padding: 1rem;
+  margin: 2rem;
+}
+.container__prods .box__prods .card {
   padding: 2rem;
-  gap: 2rem;
 }
 .container__prods .box__prods .card img {
-  width: 25rem;
+  width: 30rem;
   height: auto;
+}
+.container__prods .box__prods .card div { /* texto de la img */
+  padding: 2rem;
+}
+.container__prods .box__prods .card div button a {
+  text-decoration: none;
+  color: gray;
+}
+.container__prods .box__prods .card div button a:hover {
+  color: white;
 }
 
 .footer {
@@ -1424,9 +1462,10 @@ body {
 .pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq .box__aq .aq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
-.h2Var, .box__galeria h2, .box__contactanos h2, .box__faq h2, .container__prods .h2__prods {
+.h2Var, .box__galeria h2, .box__contactanos h2, .box__faq h2, .container__prods h2 {
   font-family: "Raleway", bold;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1434,7 +1473,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.h2Var hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr, .container__prods .h2__prods hr {
+.h2Var hr, .box__galeria h2 hr, .box__contactanos h2 hr, .box__faq h2 hr, .container__prods h2 hr {
   border: solid 1px #185947;
   width: 100%;
 }
