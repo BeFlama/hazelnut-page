@@ -236,6 +236,8 @@
         border-radius: 0;
     }
 }
+
+/* media query pag galeria */
 @media (min-width: 938px) and (max-width: 1023px){
     .box__galeria{
         border-radius: 0;
@@ -258,114 +260,40 @@
         margin: 0;
         padding: 0;
     }
-    .prods__acordion{
-        margin: 0;
-        padding: 0;
-    }
-    .h2__org{
-        padding-left: 1rem;
-        font-size: small;
-        margin: 0;
-        padding: 0;
-    }
-    .pag__prod { 
-        display: grid; 
-        height: 100vh;
-        margin: 0%;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(3, auto);
-        gap: 0.5rem;
-        grid-template-areas:
-        "header"
-        "h2__org"
-        "productos"
-        "footer";
-        .container__prods{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-areas: 
-            "prod1 prod2"
-            "prod4 prod5"
-            "prod6 prod3";
-            .prod1{
-                grid-area: prod1;
-            }
-            .prod2{
-                grid-area: prod2;
-            }  
-            .prod3{
-                grid-area: prod3;
-            }  
-            .prod4{
-                grid-area: prod4;
-            }
-            .prod5{
-                grid-area: prod5;
-            }
-            .prod6{
-                grid-area: prod6;
-            }
-            .div__img{
-                width: auto;
-                height: auto;
-                align-self: center;
-                justify-self: center;
-                height: auto;
+    .container__prods{
+        h2{
+            width: 100%;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 0;
+            padding: 0.3rem;
+            ul{ 
+                justify-content: center;
+                width: 100%;
                 padding: 0;
-                margin: 0.5rem;
-                .prod__img{
-                    width: 100%;
-                    height: 20rem;
-                    margin: 0;
-                    padding: 0;
-                    img{
-                        overflow-x: hidden;
-                        overflow-y: hidden;
-                        width: 100%;
-                        height: 100%;
-                        margin: 0;
-                        padding: 0;
-                    }
-                }
-                .prod__text{
-                    width: 100%;
-                    height: auto;
-                    margin: 0;
-                    padding: 0;
-                    justify-content: center;
-                    background-color: #9867326e;
-                    border-radius: 0px 0px 5px 5px;
-                    h3{
-                        font-size: 1.5rem;
-                    }
-                    p{
-                        text-align: center;
-                        margin: 0;
-                    }
-                    strong{
-                        color: #986632;
-                        background-color: #fff;
+                li{
+                    a{
                         padding: 0.2rem;
-                        border-radius: 0px 0px 5px 5px;
-                        margin: 0;
-                    }
-                    button{
-                        border: none;
-                        background-color: #986632;
-                        border-radius: 0px 0px 5px 5px;
-                        a{
-                            margin: 0;
-                            padding: 0;
-                            color:#ffffff;
-                        }
+                        margin: 0.5rem;
                     }
                 }
             }
+            form{
+                margin: 0.3rem;
+                width: 95%;
+            }
         }
-        .li__prods{
-            display: none;
+        .box__prods{
+            h3{
+                width: 100%;
+                margin: 1rem 0;
+                border-radius: 0;
+            }
         }
+    }
     }
     .footer{
         height: 400px;
@@ -378,12 +306,16 @@
     .footerlogo p{
         text-align: center;
     }
-}
 
 /* media query max 1023px - tablet  - pagina productos*/
 @media (min-width: 768px) and (max-width: 1023px){
-    .prods__acordion{
-        margin: 0;
+    .footer{
+        height: 400px;
         padding: 0;
+        margin: 0;
+        align-self: end;
+    }
+    .footerlogo p{
+        text-align: center;
     }
 }
