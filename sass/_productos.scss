@@ -105,30 +105,75 @@
         }
     }
 }
-    .footer { 
-        margin-top: 10rem;
+.footer{
+    @extend .footerVar;
+}
+/* media query pagina productos mobile */
+@media(max-width: 767px){
+    .body {
+        margin: 0;
+        padding: 0;
     }
-
-    @media(max-width: 938px){
-        .main{
+    .main{
+        margin: 0;
+        padding: 0;
+    }
+    .container__prods{
+        h2{
+            width: 100%;
+        }
+        nav{
             display: flex;
             flex-direction: column;
-            margin: 0;
-            padding: 0;
-            .container__prods{
-
-                .box__prods{
-                    display: flex;
-                    flex-wrap: wrap;
-                    padding: 2rem;
-                    gap: 2rem;
-                    .card{
-                        img{
-                            width: 25rem;
-                            height: auto;
-                        }
+            width: 100%;
+            border-radius: 0;
+            padding: 0.3rem;
+            ul{ 
+                justify-content: center;
+                width: 100%;
+                padding: 0;
+                li{
+                    a{
+                        padding: 0.2rem;
+                        margin: 0.5rem;
                     }
                 }
             }
+            form{
+                margin: 0.3rem;
+                width: 95%;
+            }
+        }
+        .box__prods{
+            h3{
+                width: 100%;
+                margin: 1rem 0;
+                border-radius: 0;
+            }
         }
     }
+        .footer__resp{
+        height: 400px;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        align-self: end;
+    }
+    .footerlogo p{
+        text-align: center;
+    }
+    }
+
+/* media querys pag prods tablet */
+@media (min-width: 768px) and (max-width: 1023px){
+    .footer{
+        height: 400px;
+        padding: 0;
+        margin: 0;
+        align-self: end;
+    }
+    .footerlogo p{
+        text-align: center;
+    }
+}

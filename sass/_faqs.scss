@@ -5,6 +5,12 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    .box__faq-p{
+        margin: 1rem;
+        padding: 1rem;
+        width: 60%;
+        font-size: 1.2rem;
+    }
         h2{
             @extend .h2Var;
             text-align: center;
@@ -14,7 +20,9 @@
             display: flex;
             flex-direction: column;
             .aq{
-                background-color: $color__bg;
+                background: #98673265;
+                background: -webkit-linear-gradient(to left, #d8934971, #986632);
+                background: linear-gradient(to top, #986732c0, #986732c5); 
                 border-radius: 0.5rem;
                 width: 60%;
                 margin: 1rem;
@@ -39,7 +47,7 @@
             }
 }
 /* media querys pag faqs mobile */
-@media(max-width: 938px){
+@media(max-width: 767px){
     .mainfaq{
         width: 100%;
         margin: 0;

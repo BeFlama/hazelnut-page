@@ -42,3 +42,23 @@
             }
         }
 }
+
+/* media query pag galeria */
+@media(max-width: 767px){
+    .box__galeria{
+        border-radius: 0;
+    }
+}
+
+/* media query pag galeria */
+@media (min-width: 768px) and (max-width: 1023px){
+    .box__galeria{
+        border-radius: 0;
+    }
+    .column{
+        flex: 50%;
+    }
+    .column_resp{
+        display: none;
+    }
+}

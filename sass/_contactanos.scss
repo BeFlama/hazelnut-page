@@ -1,10 +1,6 @@
 @import 'vars';
 
 /* pagina contactanos */
-
-.footer{
-    @extend .footerVar;
-}
 .box__contactanos{
     font-family: 'Raleway', bold;
     text-align: center;
@@ -25,14 +21,17 @@
     .box_form{
         width: 60%;
         margin: 2rem;
-        background-color: $color__bg;
+        background: #093028;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         border-radius: 1rem;
         padding: 2rem;
         display: flex;
         flex-direction: column;
+        color: white;
         label{
             text-transform: uppercase;
-            color: black;
+            color: white;
             margin: 1rem;
             font-size: 1.5rem;
         }

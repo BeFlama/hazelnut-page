@@ -82,18 +82,14 @@ $color__brown: #986632;
         
     }
 }
-
 .footerVar{
-    height: 20rem;
-    width: 100%;
-    margin-top: 10rem;
-    background-color: #0D0D0D;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    box-sizing: border-box;
-    align-items: center;
-    text-align: center;
+    background-color: #0c0c0c;
+    width: 100%;
+    height: 20rem;
+    margin-top: 10rem;
     .footericons{
         text-align: center;
         color: #b8b8b8;
