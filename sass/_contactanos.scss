@@ -105,6 +105,25 @@
         }
     }
 }
+.footer_resp{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    .footericons{
+        padding: 0;
+        margin: 2rem 0;
+    }
+    .footerlogo{
+        margin: 0;
+    }
+    .listafin{
+        .ulistafin{
+            display: none;
+        }
+    }
+}
 }
 /* contactanos tablet */
 @media (min-width: 768px) and (max-width: 1023px){

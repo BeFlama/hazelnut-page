@@ -1,16 +1,15 @@
 @import 'vars';
 
-.footer{
-    @extend .footerVar;
-}
+
 .body__galeria{
     background-color: #185947;
 }
 .box__galeria{
         background-color: #185947;
         text-align: center;
-        border-radius: 0;
-        padding: 5rem;
+        border-radius: 0.5rem;
+        padding: 3rem;
+        margin: 2rem 0;
         color: #fff;
         font-family: 'Raleway', sans-serif;
         h2{
@@ -42,11 +41,33 @@
             }
         }
 }
+.footer{
+    @extend .footerVar;
+}
 
 /* media query pag galeria */
 @media(max-width: 767px){
     .box__galeria{
         border-radius: 0;
+    }
+    .footer_resp{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 2rem;
+        padding: 1rem;
+        .footericons{
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .footerlogo{
+            margin: 0;
+        }
+        .listafin{
+            .ulistafin{
+                display: none;
+            }
+        }
     }
 }
 

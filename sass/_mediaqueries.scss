@@ -2,15 +2,25 @@
 @import 'vars';
 
 /* media home index mobile */
-@media(max-width: 938px){
+@media(max-width: 767px){
     .main{
         display: flex;
         flex-direction: column;
         margin: 0;
         padding: 0;
     }
-
-/* termina nav */
+    .navbar{
+        div{/* collapse navbar */
+            ul{
+                li{
+                    text-align: center;
+                    a{
+                        color: rgb(207, 207, 207);
+                    }
+                }
+            }
+        }
+    }
     .boxhazel{
         display: flex;
         flex-direction: column;
@@ -46,7 +56,6 @@
         flex-direction: column;
         padding: 1rem;
         text-align: center;
-        margin: 1rem;
         .prodder{
             padding: 0;
             width: 90%;
@@ -93,7 +102,7 @@
     }
     .box__galeria{
         padding: 1rem;
-        margin: 0;
+        margin: 2rem 0;
         h2{
             margin: 2rem;
         }
@@ -145,22 +154,32 @@
                 display: none;
             }
         }
-    }}
-    .footer__resp{
-        margin: 20rem;
-        height: 30%;
-        padding: 5rem;
-        .footerlogo p{
-            text-align: center;
-        }
-        .listafin{
+    }
+}
+.footer_resp{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    .footericons{
+        padding: 0;
+        margin: 2rem 0;
+    }
+    .footerlogo{
+        margin: 0;
+    }
+    .listafin{
+        .ulistafin{
             display: none;
         }
     }
 }
+}
+
 
 /* media query max 1023px - INDEX - tablet */
-@media (min-width: 938px) and (max-width: 1023px){
+@media (min-width: 768px) and (max-width: 1023px){
     .main{
         display: flex;
         flex-direction: column;

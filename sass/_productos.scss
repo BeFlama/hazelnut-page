@@ -152,16 +152,24 @@
             }
         }
     }
-        .footer__resp{
-        height: 400px;
+    .footer_resp{
         display: flex;
-        flex-direction: column-reverse;
-        padding: 0;
-        margin: 0;
-        align-self: end;
-    }
-    .footerlogo p{
-        text-align: center;
+        flex-direction: column;
+        height: auto;
+        margin-top: 2rem;
+        padding: 1rem;
+        .footericons{
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .footerlogo{
+            margin: 0;
+        }
+        .listafin{
+            .ulistafin{
+                display: none;
+            }
+        }
     }
     }
 

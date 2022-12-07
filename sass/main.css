@@ -63,7 +63,7 @@
 
 .pVar, .container__prods .box__prods .box__prods-org .card_prod .card_prod-text p,
 .container__prods .box__prods .box__prods-escr .card_prod .card_prod-text p,
-.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .box__contactanos p, .box__galeria p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
+.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .box__contactanos p, .boxinterior p, .box__prod .prodleft p, .boxhazel .hazelizq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
   padding: 0.5rem;
@@ -282,10 +282,9 @@ body {
   flex-direction: column;
   width: 100%;
   height: 40%;
-  background-color: rgba(184, 184, 184, 0.431372549);
-  padding: 2rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  background: rgba(184, 184, 184, 0.431372549);
+  padding: 3rem;
+  margin: 5rem 0;
   border-radius: 0.3rem;
 }
 .boxinterior h2 {
@@ -303,45 +302,6 @@ body {
 }
 .boxinterior p {
   text-align: center;
-}
-
-/* BOX GALERIA INDEX */
-.box__galeria {
-  background-color: #185947;
-  border-radius: 0.5rem;
-  text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  padding: 5rem;
-  color: #fff;
-  font-family: "Raleway", sans-serif;
-}
-.box__galeria h2 {
-  font-family: "Raleway";
-  text-transform: uppercase;
-}
-.box__galeria p {
-  text-align: center;
-  color: #fff;
-}
-.box__galeria .row {
-  display: flex;
-  padding: 5px;
-  flex-wrap: wrap;
-}
-.box__galeria .row .column {
-  flex: 25%;
-  padding: 5px;
-}
-.box__galeria .row .column img {
-  width: 100%;
-  border-radius: 20px;
-  margin-top: 5px;
-  padding: 10px;
-}
-.box__galeria .row .column img:hover {
-  opacity: 0.4;
-  box-shadow: #262626;
 }
 
 /* BOX MEDIOS DE PAGO INDEX */
@@ -446,7 +406,7 @@ body {
 
 .pVar, .container__prods .box__prods .box__prods-org .card_prod .card_prod-text p,
 .container__prods .box__prods .box__prods-escr .card_prod .card_prod-text p,
-.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
   padding: 0.5rem;
@@ -551,8 +511,9 @@ body {
 .box__galeria {
   background-color: #185947;
   text-align: center;
-  border-radius: 0;
-  padding: 5rem;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  margin: 2rem 0;
   color: #fff;
   font-family: "Raleway", sans-serif;
 }
@@ -586,6 +547,23 @@ body {
 @media (max-width: 767px) {
   .box__galeria {
     border-radius: 0;
+  }
+  .footer_resp {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .footer_resp .footericons {
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .footer_resp .footerlogo {
+    margin: 0;
+  }
+  .footer_resp .listafin .ulistafin {
+    display: none;
   }
 }
 /* media query pag galeria */
@@ -665,7 +643,7 @@ body {
 
 .pVar, .container__prods .box__prods .box__prods-org .card_prod .card_prod-text p,
 .container__prods .box__prods .box__prods-escr .card_prod .card_prod-text p,
-.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p {
+.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .box__contactanos p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
   padding: 0.5rem;
@@ -864,6 +842,23 @@ body {
     border: 1px solid;
     border-color: black;
   }
+  .footer_resp {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .footer_resp .footericons {
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .footer_resp .footerlogo {
+    margin: 0;
+  }
+  .footer_resp .listafin .ulistafin {
+    display: none;
+  }
 }
 /* contactanos tablet */
 /* pagina FAQ preguntas*/
@@ -931,7 +926,7 @@ body {
 
 .pVar, .container__prods .box__prods .box__prods-org .card_prod .card_prod-text p,
 .container__prods .box__prods .box__prods-escr .card_prod .card_prod-text p,
-.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p {
+.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .box__faq .box__aq .aq p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__contactanos p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
   padding: 0.5rem;
@@ -1098,15 +1093,21 @@ body {
     margin: 1rem;
     width: 100%;
   }
-  .footer__resp {
-    margin: 20rem;
-    height: 30%;
-    padding: 5rem;
+  .footer_resp {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
   }
-  .footer__resp .footerlogo p {
-    text-align: center;
+  .footer_resp .footericons {
+    padding: 0;
+    margin: 2rem 0;
   }
-  .footer__resp .listafin {
+  .footer_resp .footerlogo {
+    margin: 0;
+  }
+  .footer_resp .listafin .ulistafin {
     display: none;
   }
 }
@@ -1176,7 +1177,7 @@ body {
 
 .pVar, .container__prods .box__prods .box__prods-org .card_prod .card_prod-text p,
 .container__prods .box__prods .box__prods-escr .card_prod .card_prod-text p,
-.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq .box__aq .aq p {
+.container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__contactanos p, .box__faq .box__aq .aq p {
   font-family: "Comfortaa", cursive;
   margin: 0.5rem 0;
   padding: 0.5rem;
@@ -1435,16 +1436,22 @@ body {
     margin: 1rem 0;
     border-radius: 0;
   }
-  .footer__resp {
-    height: 400px;
+  .footer_resp {
     display: flex;
-    flex-direction: column-reverse;
-    padding: 0;
-    margin: 0;
-    align-self: end;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
   }
-  .footerlogo p {
-    text-align: center;
+  .footer_resp .footericons {
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .footer_resp .footerlogo {
+    margin: 0;
+  }
+  .footer_resp .listafin .ulistafin {
+    display: none;
   }
 }
 /* media querys pag prods tablet */
@@ -1522,7 +1529,7 @@ body {
   box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
 }
 
-.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__galeria p, .box__contactanos p, .box__faq .box__aq .aq p, .container__prods .box__prods .box__prods-org .card_prod .card_prod-text p,
+.pVar, .boxhazel .hazelizq p, .box__prod .prodleft p, .boxinterior p, .box__contactanos p, .box__faq .box__aq .aq p, .container__prods .box__prods .box__prods-org .card_prod .card_prod-text p,
 .container__prods .box__prods .box__prods-escr .card_prod .card_prod-text p,
 .container__prods .box__prods .box__prods-ilu .card_prod .card_prod-text p {
   font-family: "Comfortaa", cursive;
@@ -1623,14 +1630,20 @@ body {
 }
 
 /* media home index mobile */
-@media (max-width: 938px) {
+@media (max-width: 767px) {
   .main {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
   }
-  /* termina nav */
+  .navbar div { /* collapse navbar */ }
+  .navbar div ul li {
+    text-align: center;
+  }
+  .navbar div ul li a {
+    color: rgb(207, 207, 207);
+  }
   .boxhazel {
     display: flex;
     flex-direction: column;
@@ -1664,7 +1677,6 @@ body {
     flex-direction: column;
     padding: 1rem;
     text-align: center;
-    margin: 1rem;
   }
   .box__prod .prodder {
     padding: 0;
@@ -1711,7 +1723,7 @@ body {
   }
   .box__galeria {
     padding: 1rem;
-    margin: 0;
+    margin: 2rem 0;
   }
   .box__galeria h2 {
     margin: 2rem;
@@ -1761,20 +1773,26 @@ body {
   .box__datoscompra .iconos__compra .icono .img__icon {
     display: none;
   }
-  .footer__resp {
-    margin: 20rem;
-    height: 30%;
-    padding: 5rem;
+  .footer_resp {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
   }
-  .footer__resp .footerlogo p {
-    text-align: center;
+  .footer_resp .footericons {
+    padding: 0;
+    margin: 2rem 0;
   }
-  .footer__resp .listafin {
+  .footer_resp .footerlogo {
+    margin: 0;
+  }
+  .footer_resp .listafin .ulistafin {
     display: none;
   }
 }
 /* media query max 1023px - INDEX - tablet */
-@media (min-width: 938px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .main {
     display: flex;
     flex-direction: column;

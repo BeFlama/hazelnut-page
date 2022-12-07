@@ -73,15 +73,23 @@
             }
         }
     }
-    .footer__resp{
-        margin: 20rem;
-        height: 30%;
-        padding: 5rem;
-        .footerlogo p{
-            text-align: center;
+    .footer_resp{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 2rem;
+        padding: 1rem;
+        .footericons{
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .footerlogo{
+            margin: 0;
         }
         .listafin{
-            display: none;
+            .ulistafin{
+                display: none;
+            }
         }
     }
 }

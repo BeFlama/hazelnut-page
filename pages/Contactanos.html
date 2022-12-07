@@ -51,20 +51,20 @@
             <p>¿Quienes somos?</p>
             <p>Somos emprendedores, queremos cambiar la manera de ver el home office, los dias largos de estudio o trabajo, creemos que se puede trabajar comodamente y que nuestro lugar no genere incomodidad visual, sino todo lo contrario, tenemos diseños que ayudan a darte ese empujon para que puedas pasar horas en un lugar que te haga sentir a gusto </p>
             <hr>
-            <p>Nuestro objetivo es brindarte la mejor atencion personalizada con los maximos estandares de calidad.</p>
-            <p>Por esto mismo te invitamos a dejarnos tus datos en el siguiente formulario para poder darte el asesoramiento correspondiente y poder responder a tus requerimientos derivandote al sector que corresponda.</p>
-            <p>Podes dejarnos consultas de modelos a medida, reclamos, seguimientos, agradecimientos, lo que necesites! estamos para ayudarte :)</p>
+            <p>Nuestro objetivo es brindarte la mejor atencion personalizada con los maximos estandares de calidad</p>
+            <p>Por esto mismo te invitamos a dejarnos tus datos en el siguiente formulario para poder darte el asesoramiento correspondiente y poder responder a tus requerimientos derivandote al sector que corresponda</p>
+            <p>Podes dejarnos consultas de modelos a medida, reclamos, seguimientos, agradecimientos, lo que necesites! estamos para ayudarte</p>
             <form action="datos.php" method="post" class="box_form">
                 <label for="">Ingresá tus datos</label> 
-                <input type="text" placeholder="Nombre y Apellido" class="item_form">
-                <input type="email" placeholder="email" class="item_form">
-                <input type="text" placeholder="Número de contacto" class="item_form">
-                <textarea name="mensaje" placeholder="Dejanos aca detalles de tu consulta" class="item_text"></textarea>
+                <input type="text" placeholder="Nombre y Apellido" class="item_form" minlength="5" maxlength="30" pattern="[a-zA-Z]+" required="">
+                <input type="email" placeholder="email" class="item_form" required="" minlength="20" maxlength="40">
+                <input type="text" placeholder="Número de contacto" class="item_form" pattern="[0-9]+" minlength="8" maxlength="10" required="">
+                <textarea name="mensaje" placeholder="Dejanos aca detalles de tu consulta" class="item_text" required="" minlength="10" maxlength="300"></textarea>
                 <input type="submit" value="Enviar consulta" class="buton_send">
             </form>
         </section>  
     </main>
-    <footer class="footer footer__resp">
+    <footer class="footer footer_resp">
         <div class="footericons">
                 <h4 class="encontranos">Encontranos acá</h4>
                 <a href="https://www.instagram.com/hazelnut_deco/"target="blank" class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -91,7 +91,7 @@
                 <li><a href="./Productos.html">Productos</a></li>
                 <li><a href="./Preguntas-frecuentes.html">Preguntas</a></li>
                 <li><a href="./Galería.html">Galería</a></li>
-                <li><a href="./Contactanos.html">Contactanos</a></li>
+                <li><a href="#">Contactanos</a></li>
             </ul>
         </div>
     </footer>
