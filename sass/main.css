@@ -1259,6 +1259,7 @@ body {
   border-radius: 0.5rem;
   width: 90%;
   background-color: rgba(24, 89, 71, 0.7411764706);
+  padding: 0.5rem 2rem;
 }
 .container__prods nav ul {
   padding: 0.3rem;
@@ -1402,9 +1403,9 @@ body {
   .container__prods nav {
     border-radius: 0;
     margin: 0;
-    padding: 0.3rem;
+    padding: 0.5rem;
     width: 100%;
-    background-color: rgba(24, 89, 71, 0.7411764706);
+    justify-content: center;
   }
   .container__prods nav ul {
     padding: 0.3rem;
@@ -1483,25 +1484,24 @@ body {
 .container__prods .box__prods .box__prods-ilu .card_prod button {
     margin: 1rem;
   }
+  .footer_resp {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .footer_resp .footericons {
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .footer_resp .footerlogo {
+    margin: 0;
+  }
+  .footer_resp .listafin .ulistafin {
+    display: none;
+  }
 }
-.footer_resp {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  margin-top: 2rem;
-  padding: 1rem;
-}
-.footer_resp .footericons {
-  padding: 0;
-  margin: 2rem 0;
-}
-.footer_resp .footerlogo {
-  margin: 0;
-}
-.footer_resp .listafin .ulistafin {
-  display: none;
-}
-
 /* media querys pag prods tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer {
