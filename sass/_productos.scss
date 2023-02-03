@@ -1,5 +1,79 @@
 @import 'vars';
 
+body{
+    transition: .3s ease all;
+    &.darkMode{
+        background-color: #454545;
+        color: #fff;
+        transition: .3s ease all;
+        .container__prods{
+        div{
+            .box__prods{
+                section{
+                    .card{
+                        .card_prod-text{
+                            strong{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+.header{
+    nav{
+        div{
+            div{
+            ul{
+                .navSwitch{
+                    .switchDarkMode{
+                        background-color: #F2B705;
+                        border-radius: 3rem;
+                        cursor: pointer;
+                        display: flex;
+                        outline: none;
+                        padding: 0.2rem;
+                        position: relative;
+                        &::after{
+                            content: " ";
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            background: #252525;
+                            top: 0;
+                            left: 0;
+                            right: unset;
+                            border-radius: 4rem;
+                            transition: .3s ease all;
+                            box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+                        }
+                        &.active{
+                            background:  #1B578C;
+                            color: #252525;
+                            &::after{
+                                right: 0;
+                                left: unset;
+                            }
+                        }
+                        span{
+                            width: 25px;
+                            svg{
+                                width: 20px;
+                                height: 20px;
+                                color: white;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
+}}
 .container__prods{
     font-family: 'Raleway', bold;
     text-align: center;
@@ -64,6 +138,7 @@
                 .card_prod-img{
                     overflow: hidden;
                     height: 30rem;
+                    border-radius: 0.5rem 0.5rem 0 0;
                     img{
                         width: 100%;
                         height: auto;
