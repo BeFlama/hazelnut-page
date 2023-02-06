@@ -1,14 +1,23 @@
 let btnDark = document.getElementById("btnDarkMode")
 
-btnDark.addEventListener(("click"),()=>{
-    document.body.classList.toggle('darkMode');
-    btnDark.classList.toggle('active')
-	console.log("funciona boton oscuro")
-    localStorage.setItem("darkMode", true)
-})
 
-let modoOscuro = localStorage.getItem("darkMode")
-
-if(modoOscuro == "true"){
-    document.body.classList.add("darkMode")
+if(localStorage.getItem("darkmode")){
+    if(JSON.parse(localStorage.getItem("darkmode")) == true){
+        console.log("funciona boton oscuro")
+        document.body.classList.toggle('darkMode')
+        btnDark.classList.toggle('active')
+    }
+}else{
+    localStorage.setItem("darkmode", false)
 }
+
+
+btnDark.addEventListener(("click"),()=>{
+    document.body.classList.toggle('darkMode')
+    btnDark.classList.toggle('active')
+    if(JSON.parse(localStorage.getItem("darkmode")) == false){
+        localStorage.setItem("darkmode", true)
+    }else{
+        localStorage.setItem("darkmode", false)
+    }
+})

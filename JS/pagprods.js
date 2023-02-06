@@ -1,39 +1,28 @@
-class Mueble {
-    constructor(id, tipo, nombre, precio, imagen){
-        this.id = id,
-        this.tipo = tipo,
-        this.nombre = nombre,
-        this.precio = precio,
-        this.imagen = imagen
-
-    }
-    mostrarMueble(){
-        console.log(`El ${this.tipo} de nombre ${this.nombre} vale ${this.precio} pesos`)
-    }
-}
-
-const Mueble1 = new Mueble (1, "Luz", "Momo", 10000)
-const Mueble2 = new Mueble (2, "Luz", "Apa", 12000)
-const Mueble3 = new Mueble (3, "Luz", "Azula", 8000)
-const Mueble4 = new Mueble (4, "Luz", "Iroh", 11000)
-const Mueble5 = new Mueble (5, "Organizador", "Aang", 14000)
-const Mueble6 = new Mueble (6, "Organizador", "Katara", 16000)
-const Mueble7 = new Mueble (7, "Escritorio", "Toph", 18000)
-const Mueble8 = new Mueble (8, "Escritorio", "Zoka", 20000)
-const Mueble9 = new Mueble (9, "Organizador", "Zuko", 5000)
-const Mueble10 = new Mueble (10, "Escritorio", "Nach", 30000)
-
-const deposito = []
-deposito.push(Mueble1, Mueble2, Mueble3, Mueble4, Mueble5, Mueble6, Mueble7, Mueble8, Mueble9, Mueble10)
-
 /* 1 */
-function abrirDeposito(array){
-    console.log(`Nuestro stock de muebles es el siguiente:`)
-    array.forEach(mueble => {
-        console.log(mueble.id, mueble.tipo, mueble.nombre, mueble.precio)
-        }
-    )
+/* function abrirDeposito(array){
+} */
+/* DOM */
+let divdeposito = document.getElementById("deposito")
+
+for(let mueble of deposito){
+    let divMueble = document.createElement("div")
+    
+    divMueble.innerHTML = `
+
+    <div class="card_prod-img">
+        <img src="../assets/img/imgprod/${mueble.imagen}" alt="${mueble.tipo}/${mueble.nombre}">
+    </div>
+    <div class="card_prod-text">
+        <h5>${mueble.tipo} - ${mueble.nombre}</h5>
+        <p><a href="#">Detalles del producto</a></p>
+        <strong>$${mueble.precio}</strong>
+        <button>Comprar</button>
+    </div>
+
+    `
+    divdeposito.appendChild(divMueble)
 }
+
 
 /* 2 */
 function buscarMueble(array){
@@ -167,7 +156,7 @@ function reciclarMueble(array){
 
 /* MENU INICIAL */
 
-let salirMenu = true
+/* let salirMenu = true
 
 do{
     let opcionMenu = prompt(`Ingrese su opcion requerida
@@ -209,7 +198,7 @@ do{
         break
 }
 }while(salirMenu)
-
+ */
 
 
 
