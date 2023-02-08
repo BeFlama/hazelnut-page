@@ -67,7 +67,7 @@
 
 <!--navegacion de pag-->
     <nav id="navbar-example2" class="navbar sticky-top">
-        <ul class="nav nav-pills">
+<!--         <ul class="nav nav-pills">
         <li class="nav-item">
             <a class="nav-link_me" href="#scrollspyHeading1">Organizadores</a>
         </li>
@@ -77,23 +77,18 @@
         <li class="nav-item">
             <a class="nav-link_me" href="#scrollspyHeading3">Iluminación</a>
         </li>
-        </ul>
+        </ul> -->
         <!-- btn search -->
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
-            <button class="btn btn-dark" type="submit"> 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
-            </button>
+        <form class="d-flex formclass" role="search">
+            <input class="form-control me-2" id="inputSearch" type="search" placeholder="Buscar producto" aria-label="Search">
         </form>
         <!-- btn order -->
-        <button type="button" id= "btnCarr" class="btn btn-primary btn-dark m-2"> 
+        <button type="button" id= "btnOrder" class="btn btn-primary btn-dark m-2"> 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
             <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>                    </svg>
         </button>
         <!-- btn carr -->
-        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <button class="btn btn-dark" id="btnCarr" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
             </svg>
@@ -101,18 +96,21 @@
         <!-- list carr -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Productos</h5>
+
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-            ...
+            <div class="offcanvas-body" id="bodyCarrito">
+            </div>
+            <div>
+                <p id="precioTotal"></p>
             </div>
         </div>
     </nav>
 <!-- products -->
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
         <!-- box productos -->
-        <div class="box__prods" id="deposito">
+        <div class="box__prods" id="deposito" >
 
 <!--             <h3 id="scrollspyHeading2">Escritorios</h3> como ej de scroll-->
 <!-- <div> creado en js

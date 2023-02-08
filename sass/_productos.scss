@@ -88,6 +88,15 @@ body{
             width: 90%;
             background-color: #185947bd;
             padding: 0.5rem 2rem;
+            justify-content: flex-start;
+            .formclass{
+                input{
+                    &:focus{
+                        box-shadow: none;
+                        border: none;
+                    }
+                }
+            }
             ul{
                 padding: 0.3rem;
                 li{
@@ -109,16 +118,25 @@ body{
     .box__prods{
         width: 100%;
         display: flex;
+        gap: 32px;
+        margin: 32px 0;
         flex-wrap: wrap;
         text-align: center;
         justify-content: center;
+        .prod404{
+            font-size: 2rem;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            background-color: $color__bg;
+            color: #fff;
+            margin: 5rem 0 30rem 0;
+            &::after{
+                content: ", intentá nuevamete";
+            }
+        }
             div{
-                display: flex;
-                flex-direction: column;
-
                 background-color: $color__bg;
                 border-radius: 0.5rem;
-                margin: 1rem;
                 width: 30rem;
                 height: auto;
                 box-shadow: 2px 2px 4px #4d3822, -1px -1px 3px #98673277;
@@ -136,17 +154,16 @@ body{
                     }
                 }
                 .card_prod-text{
-                    margin: 1rem;
                     h5{
                         font-size: 1.5rem;
                         text-transform: uppercase;
                         font-style: bold;
                         color: white;
+                        padding: 1rem 0;
                     }
                     p{
                         font-family: 'Comfortaa', cursive;
-                        margin: 0.5rem 0;
-                        padding: 0.5rem;
+
                         color: white;
                         a{
                             text-decoration: none;
