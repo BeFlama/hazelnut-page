@@ -1,5 +1,6 @@
 @import 'vars';
 
+/* dark mode */
 body{
     transition: .3s ease all;
     &.darkMode{
@@ -7,20 +8,31 @@ body{
         color: #fff;
         transition: .3s ease all;
         .container__prods{
-        div{
-            .box__prods{
-                div{
-                    .card_prod-text{
-                        strong{
-                        color: #fff;
+            nav{
+                .darkCarrito{
+                    background-color: #252525ea;
+                    #bodyCarrito{
+                        div{
+                            background-color: #4d3822;
                         }
+                    }
+
+                    }
+                }
+            }
+            div{
+                .box__prods{
+                    div{
+                        .card_prod-text{
+                            strong{
+                            color: #fff;
+                            }
                         }
                     }
                 }
             }
         }
     }
-}
 
 
 .header{

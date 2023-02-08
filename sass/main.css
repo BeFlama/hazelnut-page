@@ -1245,6 +1245,7 @@ body {
   font-style: italic;
 }
 
+/* dark mode */
 body {
   transition: 0.3s ease all;
 }
@@ -1253,7 +1254,13 @@ body.darkMode {
   color: #fff;
   transition: 0.3s ease all;
 }
-body.darkMode .container__prods div .box__prods div .card_prod-text strong {
+body.darkMode .container__prods nav .darkCarrito {
+  background-color: rgba(37, 37, 37, 0.9176470588);
+}
+body.darkMode .container__prods nav .darkCarrito #bodyCarrito div {
+  background-color: #4d3822;
+}
+body.darkMode div .box__prods div .card_prod-text strong {
   color: #fff;
 }
 

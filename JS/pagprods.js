@@ -55,6 +55,16 @@ function agregarAlCarrito(mueble){
     carritoCompra.push(mueble)
     localStorage.setItem("carrito", JSON.stringify(carritoCompra))
     console.log(carritoCompra)
+    Toastify({
+        text: `Agregaste el producto ${mueble.tipo} - ${mueble.nombre} al carrito`,
+        duration: 2000,
+        gravity: "top",
+        position: "center",
+        style: {
+            background: "#986632",
+            color: "white",
+        }
+    }).showToast()
 } 
 
 function cargarProducto(array){
@@ -73,8 +83,8 @@ function cargarProducto(array){
             <h5 class="card-title">${prodCarrito.tipo} ${prodCarrito.nombre}</h5>
             <strong>$${prodCarrito.precio}</strong>
                 <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-primary" type="button">Modificar</button>
-                <button class="btn btn-primary" id= "supr${prodCarrito.id}" type="button">Eliminar</button>
+                <button class="btn btn-dark" type="button">Modificar</button>
+                <button class="btn btn-dark" id= "supr${prodCarrito.id}" type="button">Eliminar</button>
                 </div>
             </div>
             </div>
