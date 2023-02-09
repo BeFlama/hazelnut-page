@@ -119,7 +119,9 @@ function agregarAlCarrito(mueble){
     let repeat = carritoCompra.some((repeatMueble) => repeatMueble.id === mueble.id)
     if(repeat){
         carritoCompra.map((prod) =>{
+            if(prod.id === mueble.id){
             prod.cantidad++
+        }
         })
     }else{
         carritoCompra.push(mueble)
@@ -167,7 +169,7 @@ function buscarProd(buscado, array){
     )
 
     busquedaArray.length == 0 ? 
-    (divdeposito.innerHTML = `<h3 class="prod404" >No encontramos lo que buscas</h3>`, 
+    (divdeposito.innerHTML = `<h3 class="prod404" >No encontramos lo que buscás</h3>`, 
     abrirDeposito(busquedaArray))
     : (divdeposito.innerHTML = "", abrirDeposito(busquedaArray))
 }
@@ -212,6 +214,7 @@ btnContiunuarCompra.addEventListener("click", ()=>{
         title: 'Uy!',
         text: 'No se puede continuar la compra',
         background: '#232323',
+        showConfirmButton: false,
     })
 })
 btnVaciarCarrito.addEventListener("click", () =>{
