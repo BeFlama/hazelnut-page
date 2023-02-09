@@ -30,13 +30,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
+<!--                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                         <ul class="dropdown-menu ms-auto text-start bg-dark text-white bg-opacity-25">
                         <li><a class="dropdown-item" href="#">Escritorios</a></li>
                         <li><a class="dropdown-item" href="#">Organizadores</a></li>
                         <li><a class="dropdown-item" href="#">Estantes</a></li>
                         </ul>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./Preguntas-frecuentes.html">Preguntas frecuentes</a>
@@ -72,28 +75,29 @@
 
         <h2 class="h2__prods">Productos<hr></h2>
 
-<!--navegacion de pag-->
+        <!--navegacion de pag-->
         <nav id="navbar-example2" class="navbar sticky-top">
-<!--         <ul class="nav nav-pills">
-        <li class="nav-item">
-            <a class="nav-link_me" href="#scrollspyHeading1">Organizadores</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link_me" href="#scrollspyHeading2">Escritorios</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link_me" href="#scrollspyHeading3">Iluminación</a>
-        </li>
-        </ul> -->
+
         <!-- btn search -->
         <form class="d-flex formclass" role="search">
             <input class="form-control me-2" id="inputSearch" type="search" placeholder="Buscar producto" aria-label="Search">
         </form>
+
         <!-- btn order -->
-        <button type="button" id= "btnOrder" class="btn btn-primary btn-dark m-2"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
-            <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>                    </svg>
-        </button>
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle m-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>                  
+                </svg>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li id="menorPrecio"><a class="dropdown-item" href="#">Menor precio</a></li>
+                    <li><a class="dropdown-item" href="#" id="mayorPrecio">Mayor precio</a></li>
+                    <li><a class="dropdown-item" href="#" id="orderAZ">A-Z</a></li>
+                </ul>
+            </button>
+        </div>
+
+
         <!-- btn carr -->
         <button class="btn btn-dark" id="btnCarr" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
@@ -110,12 +114,16 @@
             </div>
             <div>
                 <p id="precioTotal"></p>
-                <button type="button" class="btn btn-dark m-3">
+                <button type="button" class="btn btn-dark m-3" id="btnContinuarCompra">
                     Continuar compra
+                </button>
+                <button type="button" class="btn btn-dark m-3" id="btnVaciarCompra">
+                    Vaciar carrito
                 </button>
             </div>
         </div>
     </nav>
+
 <!-- products -->
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
         <!-- box productos -->
@@ -168,6 +176,8 @@
             </ul>
         </div>
     </footer>
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- boostrap -->

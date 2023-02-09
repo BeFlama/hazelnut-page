@@ -1,17 +1,25 @@
 /* elemtnos del html */
 let divdeposito = document.getElementById("deposito")
+//nav de la pagina
 let inputSearch = document.getElementById("inputSearch")
-let btnOrder = document.getElementById("btnOrder")
-let btnCarr = document.getElementById("btnCarr")
-let precioTotal = document.getElementById("precioTotal")
+//list order
+let menorPrecio = document.getElementById("menorPrecio")
+let mayorPrecio = document.getElementById("mayorPrecio")
+let orderAZ = document.getElementById("orderAZ")
 
-/* let bodyCarrito = document.getElementsById("bodyCarrito") */
+//carrito
+let bodyCarrito = document.getElementById("bodyCarrito")
+let btnCarr = document.getElementById("btnCarr")
+let cantidadCarrito = document.getElementById("cantidadCarrito")
+let precioTotal = document.getElementById("precioTotal")
+let btnContiunuarCompra = document.getElementById("btnContinuarCompra")
+let btnVaciarCarrito = document.getElementById("btnVaciarCompra")
 
 
 abrirDeposito(deposito)
 
 /* STORAGE CARRITO */
-let carritoCompra
+let carritoCompra = []
 
 if(localStorage.getItem("carrito")){
     carritoCompra = JSON.parse(localStorage.getItem("carrito"))
@@ -21,7 +29,8 @@ if(localStorage.getItem("carrito")){
 }
 
 
-/* DOM */
+//functions
+
 function abrirDeposito(array){
     for(let mueble of array){
         let divMueble = document.createElement("div")
@@ -34,6 +43,7 @@ function abrirDeposito(array){
         <div class="card_prod-text">
             <h5>${mueble.tipo} - ${mueble.nombre}</h5>
             <p><a href="#">Detalles del producto</a></p>
+            <p id= "${mueble.cantidad}"></p>
             <strong>$${mueble.precio}</strong>
             <button id="agregarBtn${mueble.id}">Comprar</button>
         </div>
@@ -50,28 +60,11 @@ function abrirDeposito(array){
 
 /* carrito de compras */
 
-function agregarAlCarrito(mueble){
-    console.log(`el producto ${mueble.tipo} - ${mueble.nombre} se agregó`)
-    carritoCompra.push(mueble)
-    localStorage.setItem("carrito", JSON.stringify(carritoCompra))
-    console.log(carritoCompra)
-    Toastify({
-        text: `Agregaste el producto ${mueble.tipo} - ${mueble.nombre} al carrito`,
-        duration: 2000,
-        gravity: "top",
-        position: "center",
-        style: {
-            background: "#986632",
-            color: "white",
-        }
-    }).showToast()
-} 
-
 function cargarProducto(array){
     console.log("funciona el carrito")
     bodyCarrito.innerHTML = ""
     array.forEach((prodCarrito)=>{
-        console.log(prodCarrito.nombre)
+
         bodyCarrito.innerHTML += `
         <div class="card mb-3" style="max-width: 540px;" id="cardProd${prodCarrito.id}">
             <div class="row g-0">
@@ -83,8 +76,13 @@ function cargarProducto(array){
             <h5 class="card-title">${prodCarrito.tipo} ${prodCarrito.nombre}</h5>
             <strong>$${prodCarrito.precio}</strong>
                 <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-dark" type="button">Modificar</button>
-                <button class="btn btn-dark" id= "supr${prodCarrito.id}" type="button">Eliminar</button>
+                <button class="btn btn-dark" type="button" id="cantidadCarrito">${prodCarrito.cantidad}</button>
+                <button class="btn btn-dark" id= "supr${prodCarrito.id}" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"          fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                    </svg>
+                </button>
                 </div>
             </div>
             </div>
@@ -111,17 +109,55 @@ function cargarProducto(array){
             compraTotal(array)
         })
     })
+    
     compraTotal(array)
 }
 
+function agregarAlCarrito(mueble){
+    console.log(`el producto ${mueble.tipo} - ${mueble.nombre} se agregó`)
+    
+    let repeat = carritoCompra.some((repeatMueble) => repeatMueble.id === mueble.id)
+    if(repeat){
+        carritoCompra.map((prod) =>{
+            prod.cantidad++
+        })
+    }else{
+        carritoCompra.push(mueble)
+        localStorage.setItem("carrito", JSON.stringify(carritoCompra))
+        console.log(carritoCompra)
+        Toastify({
+            text: `Agregaste • ${mueble.tipo} - ${mueble.nombre} • al carrito`,
+            duration: 2000,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#986632",
+                color: "white",
+            }
+        }).showToast()
+    }
+    console.log(carritoCompra)
+    }
+    
+
 function compraTotal(array){
-    let total = array.reduce((acc, prodCarrito)=> acc + prodCarrito.precio , 0)
+    let total = array.reduce((acc, prodCarrito)=> acc + (prodCarrito.precio*prodCarrito.cantidad) , 0)
     console.log("precio total" + total)
     total == 0 ?
     precioTotal.innerHTML = `Todavia no agregaste ningun producto` :
     precioTotal.innerHTML = `El total de tu compra es <strong>$${total}</strong>`
     return total
 }
+
+function vaciarCarrito(array){
+    let vacio = array.length = 0
+    console.log("se vació el carrito")
+    bodyCarrito.innerHTML = ""
+    precioTotal.innerHTML = `Todavia no agregaste ningun producto` 
+    localStorage.removeItem("carrito")
+    return vacio
+}
+
 
 /* busqueda */
 
@@ -136,6 +172,31 @@ function buscarProd(buscado, array){
     : (divdeposito.innerHTML = "", abrirDeposito(busquedaArray))
 }
 
+/* function ordenarMenor(array){
+    const menorMayor = [].concat(array)
+    menorMayor.sort((param1, param2)=> param1.precio - param2.precio)
+    abrirDeposito(menorMayor)
+}
+
+function ordenarMayor(array){
+    const mayorMenor = [].concat(array)
+    mayorMenor.sort((a, b)=> b.precio - a.precio)
+    abrirDeposito(mayorMenor)
+}
+
+function ordenarAZ(array){
+    const ordenadoAZ = [].concat(array)
+    ordenadoAZ.sort((a, b) => {
+        if (a.nombre > b.nombre) {
+            return 1;
+        }
+        if (a.nombre < b.nombre){
+            return -1;
+        }
+        return 0
+    })
+} */
+
 //EVENTOS
 btnCarr.addEventListener("click", ()=>{
     cargarProducto(carritoCompra)
@@ -144,11 +205,26 @@ btnCarr.addEventListener("click", ()=>{
 inputSearch.addEventListener("input", ()=>{
     buscarProd(inputSearch.value.toLowerCase(), deposito)
 })
+btnContiunuarCompra.addEventListener("click", ()=>{
+    console.log("no se puede continuar la compra")
+    Swal.fire({
+        icon: 'warning',
+        title: 'Uy!',
+        text: 'No se puede continuar la compra',
+        background: '#232323',
+    })
+})
+btnVaciarCarrito.addEventListener("click", () =>{
+    vaciarCarrito(carritoCompra)
+})
 
 
 
 
-/* function cuotasTres(){
+
+
+/* SEGUNDA ENTREGA
+function cuotasTres(){
     let precio = parseInt(prompt("Ingresa el precio del mueble que queres comprar"))
     let precioCuotas = (precio / 3)
 

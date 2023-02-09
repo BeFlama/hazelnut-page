@@ -1325,22 +1325,8 @@ body.darkMode div .box__prods div .card_prod-text strong {
   box-shadow: none;
   border: none;
 }
-.container__prods nav ul {
-  padding: 0.3rem;
-}
-.container__prods nav ul li a {
-  text-decoration: none;
-  color: black;
-  padding: 0.8rem;
-  font-size: 1.3rem;
-  color: white;
-}
-.container__prods nav ul li a:hover {
-  color: white;
-  background-color: #185947;
-  border-radius: 0.5rem;
-}
-.container__prods .box__prods {
+
+.box__prods {
   width: 100%;
   display: flex;
   gap: 32px;
@@ -1349,7 +1335,7 @@ body.darkMode div .box__prods div .card_prod-text strong {
   text-align: center;
   justify-content: center;
 }
-.container__prods .box__prods .prod404 {
+.box__prods .prod404 {
   font-size: 2rem;
   padding: 2rem;
   border-radius: 0.5rem;
@@ -1357,53 +1343,53 @@ body.darkMode div .box__prods div .card_prod-text strong {
   color: #fff;
   margin: 5rem 0 30rem 0;
 }
-.container__prods .box__prods .prod404::after {
+.box__prods .prod404::after {
   content: ", intentá nuevamete";
 }
-.container__prods .box__prods div {
+.box__prods div {
   background-color: rgba(109, 56, 0, 0.4117647059);
   border-radius: 0.5rem;
   width: 30rem;
   height: auto;
   box-shadow: 2px 2px 4px #4d3822, -1px -1px 3px rgba(152, 103, 50, 0.4666666667);
 }
-.container__prods .box__prods div .card_prod-img {
+.box__prods div .card_prod-img {
   overflow: hidden;
   height: 30rem;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-.container__prods .box__prods div .card_prod-img img {
+.box__prods div .card_prod-img img {
   width: 100%;
   height: auto;
   transition: 0.5s;
 }
-.container__prods .box__prods div .card_prod-img img:hover {
+.box__prods div .card_prod-img img:hover {
   transform: scale(1.2);
 }
-.container__prods .box__prods div .card_prod-text h5 {
+.box__prods div .card_prod-text h5 {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-style: bold;
   color: white;
   padding: 1rem 0;
 }
-.container__prods .box__prods div .card_prod-text p {
+.box__prods div .card_prod-text p {
   font-family: "Comfortaa", cursive;
   color: white;
 }
-.container__prods .box__prods div .card_prod-text p a {
+.box__prods div .card_prod-text p a {
   text-decoration: none;
   color: white;
 }
-.container__prods .box__prods div .card_prod-text p:hover {
+.box__prods div .card_prod-text p:hover {
   text-decoration: underline;
 }
-.container__prods .box__prods div .card_prod-text strong {
+.box__prods div .card_prod-text strong {
   font-size: 1.5rem;
   color: #185947;
   text-shadow: #4d3822;
 }
-.container__prods .box__prods div .card_prod-text button {
+.box__prods div .card_prod-text button {
   margin: 1rem;
   min-width: 130px;
   height: 40px;
@@ -1421,7 +1407,7 @@ body.darkMode div .box__prods div .card_prod-text strong {
   box-shadow: 2px 2px 4px #4d3822, -1px -1px 3px rgba(152, 103, 50, 0.4666666667);
   color: #ffffff;
 }
-.container__prods .box__prods div .card_prod-text button:active {
+.box__prods div .card_prod-text button:active {
   box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
 }
 
