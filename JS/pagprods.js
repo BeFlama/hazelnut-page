@@ -219,6 +219,16 @@ btnContiunuarCompra.addEventListener("click", ()=>{
 })
 btnVaciarCarrito.addEventListener("click", () =>{
     vaciarCarrito(carritoCompra)
+    Toastify({
+        text: `Se vació el carrito`,
+        duration: 1500,
+        gravity: "top",
+        position: "center",
+        style: {
+            background: "#986632",
+            color: "white",
+        }
+    }).showToast()
 })
 
 
