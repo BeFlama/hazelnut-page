@@ -12,13 +12,13 @@ let bodyCarrito = document.getElementById("bodyCarrito")
 let btnCarr = document.getElementById("btnCarr")
 let cantidadCarrito = document.getElementById("cantidadCarrito")
 let precioTotal = document.getElementById("precioTotal")
-let btnContiunuarCompra = document.getElementById("btnContinuarCompra")
+let btnContCompra = document.getElementById("btnContCompra")
 let btnVaciarCarrito = document.getElementById("btnVaciarCompra")
+let btnFinish = document.getElementById("btnFinish")
 
 
 /* STORAGE CARRITO */
-let carritoCompra = []
-
+let carritoCompra
 if(localStorage.getItem("carrito")){
     carritoCompra = JSON.parse(localStorage.getItem("carrito"))
 }else{
@@ -28,11 +28,8 @@ if(localStorage.getItem("carrito")){
 
 
 //functions
-
 function abrirDeposito(array){
-
     divdeposito.innerHTML = ""
-
     for(let mueble of array){
         let divMueble = document.createElement("div")
         
@@ -54,14 +51,21 @@ function abrirDeposito(array){
         console.log(agregarBtn)
         agregarBtn.onclick = ()=>{
             agregarAlCarrito(mueble)
+            mostrar()
         }
     }
 }
 
 /* carrito de compras */
+function ocultar(){
+    document.getElementById("footerCarrito").style.display = 'none'
+}
+function mostrar(){
+    document.getElementById("footerCarrito").style.display = 'block'
+}
+
 
 function cargarProducto(array){
-    console.log("funciona el carrito")
     bodyCarrito.innerHTML = ""
     array.forEach((prodCarrito)=>{
 
@@ -92,33 +96,29 @@ function cargarProducto(array){
     })
     array.forEach((prodCarrito)=>{
         document.getElementById(`supr${prodCarrito.id}`).addEventListener("click", ()=>{
-            let cardProd = document.getElementById(`cardProd${prodCarrito.id}`)
-            cardProd.remove()
-/* 
-            let cardCant = document.getElementById(`cantidadCarrito`)
-            cardCant.innerHTML = `${prodCarrito.cantidad}` */
 
             let prodEliminar = array.find(mueble => mueble.id == prodCarrito.id)
-            console.log(prodEliminar)
+            prodEliminar.cantidad --
 
-            let posicion = array.indexOf(prodEliminar)
-            console.log(posicion)
-
-            array.splice(posicion, 1)
-            console.log(array)
-
-            localStorage.setItem("carrito", JSON.stringify(array))
-
-            compraTotal(array)
+            if (prodCarrito.cantidad < 1 || prodCarrito.cantidad === 0){
+                let cardProd = document.getElementById(`cardProd${prodCarrito.id}`)
+                cardProd.remove()
+                let posicion = array.indexOf(prodCarrito)
+                array.splice(posicion, 1)
+                localStorage.setItem("carrito", JSON.stringify(array))
+                compraTotal(array)
+            }else{
+                localStorage.setItem("carrito", JSON.stringify(array))
+            }
+            cargarProducto(array)
         })
+
     })
-    
     compraTotal(array)
 }
 
 function agregarAlCarrito(mueble){
     console.log(`el producto ${mueble.tipo} - ${mueble.nombre} se agregó`)
-    
     let repeat = carritoCompra.some((repeatMueble) => repeatMueble.id === mueble.id)
     if(repeat){
         carritoCompra.map((prod) =>{
@@ -126,7 +126,7 @@ function agregarAlCarrito(mueble){
             prod.cantidad++
         }
         Toastify({
-            text: `Agregaste • ${mueble.tipo} - ${mueble.nombre} • al carrito`,
+            text: `Agregaste + 1 • ${mueble.tipo} - ${mueble.nombre} • al carrito`,
             duration: 2000,
             gravity: "top",
             position: "center",
@@ -137,6 +137,7 @@ function agregarAlCarrito(mueble){
         }).showToast()
         })
     }else{
+        mueble.cantidad = 1
         carritoCompra.push(mueble)
         localStorage.setItem("carrito", JSON.stringify(carritoCompra))
         console.log(carritoCompra)
@@ -158,19 +159,20 @@ function agregarAlCarrito(mueble){
 function compraTotal(array){
     let total = array.reduce((acc, prodCarrito)=> acc + (prodCarrito.precio*prodCarrito.cantidad) , 0)
     console.log("precio total" + total)
-    total == 0 ?
-    precioTotal.innerHTML = `Todavia no agregaste ningun producto` :
-    precioTotal.innerHTML = `El total de tu compra es <strong>$${total}</strong>`
+    total == 0 ? 
+    precioTotal.innerHTML = `Todavia no agregaste ningun producto` : precioTotal.innerHTML = `El total de tu compra es <strong>$${total}</strong>`
+    total == 0 ? ocultar() : mostrar()
     return total
 }
 
 function vaciarCarrito(array){
     let vacio = array.length = 0
-    console.log("se vació el carrito")
     bodyCarrito.innerHTML = ""
     precioTotal.innerHTML = `Todavia no agregaste ningun producto` 
     localStorage.removeItem("carrito")
+    ocultar()
     return vacio
+
 }
 
 
@@ -213,6 +215,20 @@ function ordenarAZ(array){
     abrirDeposito(ordenadoAZ)
 }
 
+function ordenarTipo(array){
+    const ordenTipo = [].concat(array)
+    ordenTipo.sort((a, b)=>{
+        if (a.tipo > b.tipo){
+            return 1
+        }
+        if (a.tipo < b.tipo) {
+            return -1
+        }
+            return 0
+    })
+    abrirDeposito(ordenTipo)
+}
+
 
 //EVENTOS
 //barranav
@@ -221,6 +237,7 @@ inputSearch.addEventListener("input", ()=>{
 }) 
 
 btnCarr.addEventListener("click", ()=>{
+    mostrar()
     cargarProducto(carritoCompra)
 })
 
@@ -232,6 +249,8 @@ selectOrden.addEventListener("change", ()=>{
         ordenarMenorMayor(deposito)
     }else if(selectOrden.value == "3"){
         ordenarAZ(deposito)
+    }else if(selectOrden.value == "4"){
+        ordenarTipo(deposito)
     }else{
         abrirDeposito(deposito)
     }
@@ -239,16 +258,16 @@ selectOrden.addEventListener("change", ()=>{
 
 
 //carrito
-/* btnContiunuarCompra.addEventListener("click", ()=>{
-    console.log("no se puede continuar la compra")
+btnFinish.addEventListener("click", ()=>{
+    console.log("Compra realizada")
     Swal.fire({
-        icon: 'warning',
-        title: 'Uy!',
-        text: 'No se puede continuar la compra',
-        background: '#232323',
+        icon: 'success',
+        title: '¡Muchas Gracias!',
+        text: 'Tu compra fue realizada con éxito',
         showConfirmButton: false,
+        timer: 3000
     })
-}) */
+    })
 
 btnVaciarCarrito.addEventListener("click", () =>{
     vaciarCarrito(carritoCompra)

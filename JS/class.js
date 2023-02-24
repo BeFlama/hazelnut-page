@@ -5,7 +5,7 @@ class Mueble {
         this.nombre = nombre,
         this.precio = precio,
         this.imagen = imagen,
-        this.cantidad = cantidad
+        this.cantidad = 1
 
     }
     mostrarMueble(){
@@ -24,5 +24,5 @@ const Mueble8 = new Mueble (8, "Escritorio", "Zoka", 20000, "escr2.jpg", 1)
 const Mueble9 = new Mueble (9, "Organizador", "Zuko", 5000, "org3.jpg", 1)
 const Mueble10 = new Mueble (10, "Escritorio", "Nach", 30000, "escr3.jpg", 1)
 
-const deposito = []
+let deposito = []
 deposito.push(Mueble1, Mueble2, Mueble3, Mueble4, Mueble5, Mueble6, Mueble7, Mueble8, Mueble9, Mueble10)
