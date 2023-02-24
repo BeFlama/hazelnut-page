@@ -30,14 +30,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<!--                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                        <ul class="dropdown-menu ms-auto text-start bg-dark text-white bg-opacity-25">
-                        <li><a class="dropdown-item" href="#">Escritorios</a></li>
-                        <li><a class="dropdown-item" href="#">Organizadores</a></li>
-                        <li><a class="dropdown-item" href="#">Estantes</a></li>
-                        </ul>
-                    </li> -->
                     <li class="nav-item">
                         <a href="#" class="nav-link">Productos</a>
                     </li>
@@ -73,6 +65,7 @@
     
     <section class="container__prods">
 
+
         <h2 class="h2__prods">Productos<hr></h2>
 
         <!--navegacion de pag-->
@@ -84,27 +77,22 @@
         </form>
 
         <!-- btn order -->
-        <div class="dropdown">
-            <button class="btn btn-dark dropdown-toggle m-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
-                <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>                  
-                </svg>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li id="menorPrecio"><a class="dropdown-item" href="#">Menor precio</a></li>
-                    <li><a class="dropdown-item" href="#" id="mayorPrecio">Mayor precio</a></li>
-                    <li><a class="dropdown-item" href="#" id="orderAZ">A-Z</a></li>
-                </ul>
-            </button>
-        </div>
-
+        <ul class="m-0 p-0">
+            <select id="selectOrden" class="form-select form-select" aria-label=".form-select-sm example">
+                <option selected>Más relevantes</option>
+                <option value="1">Mayor Precio</option>
+                <option value="2">Menor Precio</option>
+                <option value="3">Nombre A-Z</option>
+            </select>
+        </ul>
 
         <!-- btn carr -->
-        <button class="btn btn-dark" id="btnCarr" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <button class="btn btn-dark m-2" id="btnCarr" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
             </svg>
         </button>
-        <!-- list carr -->
+        <!-- offcanva carr -->
         <div class="offcanvas offcanvas-end darkCarrito" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Productos elegidos</h5>
@@ -114,7 +102,7 @@
             </div>
             <div>
                 <p id="precioTotal"></p>
-                <button type="button" class="btn btn-dark m-3" id="btnContinuarCompra">
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Continuar compra
                 </button>
                 <button type="button" class="btn btn-dark m-3" id="btnVaciarCompra">
@@ -124,27 +112,65 @@
         </div>
     </nav>
 
-<!-- products -->
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
-        <!-- box productos -->
-        <div class="box__prods" id="deposito" >
 
-<!--             <h3 id="scrollspyHeading2">Escritorios</h3> como ej de scroll-->
-<!-- <div> creado en js
-    <div class="card_prod-img">
-        <img src="../assets/img/imgprod/org1.jpg" alt="Organizador1">
+    <!-- loader -->
+    <div id="loader" class="div_loader">                
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-    <div class="card_prod-text">
-        <h5>${mueble.tipo} - ${mueble.nombre}</h5>
-        <p><a href="#">Detalles del producto</a></p>
-        <strong>${mueble.precio}</strong>
-        <button>Comprar</button>
-    </div>
-</div> -->
 
-        </div> <!--  termina boxprods -->
-    </div> <!-- scroll -->
+    <!-- products -->
+    <div class="box__prods" id="deposito" ></div>
+    <div id="busqueda"></div>
+
     </section>
+
+    <!-- modal form api -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <div class="camioncito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                </div>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Continuar compra</h1>
+            </div>
+            <div class="modal-body" id="formapi">
+                    <h3>Completa tus datos:</h3>
+                    <input type="text" placeholder="Nombre y Apellido" class="item_form" minlength="5" maxlength="30" pattern="[a-zA-Z]+" required="">
+                    <input type="email" placeholder="email" class="item_form" required="" minlength="20" maxlength="40">
+                    <input type="text" placeholder="Número de contacto" class="item_form" pattern="[0-9]+" minlength="8" maxlength="10" required="">
+
+
+                    <select id="selectProv">
+                        <option value="Provincia">Provincia</option>
+                    </select>
+                    <span></span>
+            
+                    <select id="selectMuni">
+                        <option value="Municipio">Municipio</option>
+                    </select>
+                    <span></span>
+            
+                    <select id="selectLocal">
+                        <option value="Localidad">Localidad</option>
+                    </select>
+                    <span></span>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success">Terminar compra</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
     <footer class="footer footer_resp">
         <div class="footericons">
                 <h4 class="encontranos">Encontranos acá</h4>
@@ -186,6 +212,7 @@
     <!-- links pag JS -->
     <script src="../JS/class.js"></script>
     <script src="../JS/pagprods.js"></script>
+    <script src="../JS/api.js"></script>
     <script src="../JS/darkmode.js"></script>
 </body>
 </html>

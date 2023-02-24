@@ -1325,6 +1325,75 @@ body.darkMode div .box__prods div .card_prod-text strong {
   box-shadow: none;
   border: none;
 }
+.container__prods nav ul select:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.div_loader {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 15rem auto;
+}
+.div_loader div {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 3rem 0.5rem;
+  border-radius: 50%;
+  background-color: #185947;
+  animation: loader-move 0.6s infinite alternate;
+}
+@keyframes loader-move {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+.div_loader div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.div_loader div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+#busqueda .prod404 {
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: rgba(109, 56, 0, 0.4117647059);
+  color: #fff;
+  margin: 5rem 0 30rem 0;
+}
+#busqueda .prod404::after {
+  content: ", intentá nuevamete";
+}
+
+.modal .modal-header {
+  display: contents;
+}
+.modal .modal-header .camioncito {
+  margin-top: 1rem;
+}
+.modal .modal-body {
+  display: contents;
+}
+.modal .modal-body h3 {
+  font-size: medium;
+}
+.modal .modal-body input, .modal .modal-body select {
+  margin: 0.5rem;
+  width: 80%;
+  height: 2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.modal .modal-body span {
+  color: red;
+  border-color: red;
+  border-radius: 5px;
+}
 
 .box__prods {
   width: 100%;
@@ -1334,17 +1403,6 @@ body.darkMode div .box__prods div .card_prod-text strong {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-}
-.box__prods .prod404 {
-  font-size: 2rem;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  background-color: rgba(109, 56, 0, 0.4117647059);
-  color: #fff;
-  margin: 5rem 0 30rem 0;
-}
-.box__prods .prod404::after {
-  content: ", intentá nuevamete";
 }
 .box__prods div {
   background-color: rgba(109, 56, 0, 0.4117647059);

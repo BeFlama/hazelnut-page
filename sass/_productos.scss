@@ -109,16 +109,43 @@ body{
                     }
                 }
             }
+            ul{
+                select{
+                    &:focus{
+                        box-shadow: none;
+                        border: none;
+                    }
+                    }
+                }
+            }
+            }
+    .div_loader{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin: 15rem auto;
+        div{
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 3rem .5rem;
+            border-radius: 50%;
+            background-color: $color__green;
+            animation: loader-move .6s infinite alternate;
+        }
+        @keyframes loader-move {
+            to{
+                opacity: .1;
+                transform: translate3d(0, -1rem, 0);
             }
         }
-    .box__prods{
-        width: 100%;
-        display: flex;
-        gap: 32px;
-        margin: 32px 0;
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
+        div:nth-child(2){
+            animation-delay: .2s;
+        }
+        div:nth-child(3){
+            animation-delay: .4s;
+        }
+    }
+    #busqueda{ 
         .prod404{
             font-size: 2rem;
             padding: 2rem;
@@ -130,6 +157,44 @@ body{
                 content: ", intentá nuevamete";
             }
         }
+    }
+    .modal{
+        .modal-header{
+            display: contents;
+            .camioncito{
+                margin-top: 1rem;
+            }
+        }
+        .modal-body{
+            display: contents;
+            h3{
+                font-size: medium;
+                
+            }
+            input, select{
+                margin: 0.5rem;
+                width: 80%;
+                height: 2rem;
+                border: none;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+            span{
+                color: red;
+                border-color: red;
+                border-radius: 5px;
+
+            }
+        }
+    }
+    .box__prods{
+        width: 100%;
+        display: flex;
+        gap: 32px;
+        margin: 32px 0;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
             div{
                 background-color: $color__bg;
                 border-radius: 0.5rem;
@@ -159,7 +224,6 @@ body{
                     }
                     p{
                         font-family: 'Comfortaa', cursive;
-
                         color: white;
                         a{
                             text-decoration: none;
@@ -197,8 +261,9 @@ body{
                 }
             }
         }
+        
 }
-    
+
 
 .footer{
     @extend .footerVar;

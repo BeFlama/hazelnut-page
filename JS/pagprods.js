@@ -1,11 +1,11 @@
 /* elemtnos del html */
 let divdeposito = document.getElementById("deposito")
+
+let loader = document.getElementById("loader")
 //nav de la pagina
 let inputSearch = document.getElementById("inputSearch")
-//list order
-let menorPrecio = document.getElementById("menorPrecio")
-let mayorPrecio = document.getElementById("mayorPrecio")
-let orderAZ = document.getElementById("orderAZ")
+let busqueda = document.getElementById("busqueda")
+let selectOrden = document.getElementById("selectOrden")
 
 //carrito
 let bodyCarrito = document.getElementById("bodyCarrito")
@@ -15,8 +15,6 @@ let precioTotal = document.getElementById("precioTotal")
 let btnContiunuarCompra = document.getElementById("btnContinuarCompra")
 let btnVaciarCarrito = document.getElementById("btnVaciarCompra")
 
-
-abrirDeposito(deposito)
 
 /* STORAGE CARRITO */
 let carritoCompra = []
@@ -32,11 +30,13 @@ if(localStorage.getItem("carrito")){
 //functions
 
 function abrirDeposito(array){
+
+    divdeposito.innerHTML = ""
+
     for(let mueble of array){
         let divMueble = document.createElement("div")
         
         divMueble.innerHTML = `
-    
         <div class="card_prod-img" id=${mueble.id}>
             <img src="../assets/img/imgprod/${mueble.imagen}" alt="${mueble.tipo}/${mueble.nombre}">
         </div>
@@ -94,6 +94,9 @@ function cargarProducto(array){
         document.getElementById(`supr${prodCarrito.id}`).addEventListener("click", ()=>{
             let cardProd = document.getElementById(`cardProd${prodCarrito.id}`)
             cardProd.remove()
+/* 
+            let cardCant = document.getElementById(`cantidadCarrito`)
+            cardCant.innerHTML = `${prodCarrito.cantidad}` */
 
             let prodEliminar = array.find(mueble => mueble.id == prodCarrito.id)
             console.log(prodEliminar)
@@ -122,6 +125,16 @@ function agregarAlCarrito(mueble){
             if(prod.id === mueble.id){
             prod.cantidad++
         }
+        Toastify({
+            text: `Agregaste • ${mueble.tipo} - ${mueble.nombre} • al carrito`,
+            duration: 2000,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#986632",
+                color: "white",
+            }
+        }).showToast()
         })
     }else{
         carritoCompra.push(mueble)
@@ -162,27 +175,27 @@ function vaciarCarrito(array){
 
 
 /* busqueda */
-
 function buscarProd(buscado, array){
     let busquedaArray = array.filter(
         (mueble) => mueble.tipo.toLocaleLowerCase().includes(buscado.toLowerCase()) || mueble.nombre.toLocaleLowerCase().includes(buscado.toLowerCase())
     )
 
     busquedaArray.length == 0 ? 
-    (divdeposito.innerHTML = `<h3 class="prod404" >No encontramos lo que buscás</h3>`, 
+    (busqueda.innerHTML = `<h3 class="prod404">No encontramos lo que buscás</h3>`, 
     abrirDeposito(busquedaArray))
-    : (divdeposito.innerHTML = "", abrirDeposito(busquedaArray))
+    : (busqueda.innerHTML = "", abrirDeposito(busquedaArray))
 }
 
-/* function ordenarMenor(array){
+/* orden */
+function ordenarMenorMayor(array){
     const menorMayor = [].concat(array)
     menorMayor.sort((param1, param2)=> param1.precio - param2.precio)
     abrirDeposito(menorMayor)
 }
 
-function ordenarMayor(array){
+function ordenarMayorMenor(array){
     const mayorMenor = [].concat(array)
-    mayorMenor.sort((a, b)=> b.precio - a.precio)
+    mayorMenor.sort((a,b)=> b.precio - a.precio)
     abrirDeposito(mayorMenor)
 }
 
@@ -190,24 +203,43 @@ function ordenarAZ(array){
     const ordenadoAZ = [].concat(array)
     ordenadoAZ.sort((a, b) => {
         if (a.nombre > b.nombre) {
-            return 1;
+            return 1
         }
-        if (a.nombre < b.nombre){
-            return -1;
+        if (a.nombre < b.nombre) {
+            return -1
         }
-        return 0
+            return 0
     })
-} */
+    abrirDeposito(ordenadoAZ)
+}
+
 
 //EVENTOS
+//barranav
+inputSearch.addEventListener("input", ()=>{
+    buscarProd(inputSearch.value.toLowerCase(), deposito)
+}) 
+
 btnCarr.addEventListener("click", ()=>{
     cargarProducto(carritoCompra)
 })
 
-inputSearch.addEventListener("input", ()=>{
-    buscarProd(inputSearch.value.toLowerCase(), deposito)
+selectOrden.addEventListener("change", ()=>{
+    console.log(selectOrden.value)
+    if(selectOrden.value == "1"){
+        ordenarMayorMenor(deposito)
+    }else if(selectOrden.value =="2"){
+        ordenarMenorMayor(deposito)
+    }else if(selectOrden.value == "3"){
+        ordenarAZ(deposito)
+    }else{
+        abrirDeposito(deposito)
+    }
 })
-btnContiunuarCompra.addEventListener("click", ()=>{
+
+
+//carrito
+/* btnContiunuarCompra.addEventListener("click", ()=>{
     console.log("no se puede continuar la compra")
     Swal.fire({
         icon: 'warning',
@@ -216,7 +248,8 @@ btnContiunuarCompra.addEventListener("click", ()=>{
         background: '#232323',
         showConfirmButton: false,
     })
-})
+}) */
+
 btnVaciarCarrito.addEventListener("click", () =>{
     vaciarCarrito(carritoCompra)
     Toastify({
@@ -231,90 +264,11 @@ btnVaciarCarrito.addEventListener("click", () =>{
     }).showToast()
 })
 
-
-
-
-
-
-/* SEGUNDA ENTREGA
-function cuotasTres(){
-    let precio = parseInt(prompt("Ingresa el precio del mueble que queres comprar"))
-    let precioCuotas = (precio / 3)
-
-    alert(`El precio final del mueble elgido es ${precio} en 3 cuotas de ${precioCuotas}`)
-}
-
-function calculcarCuotas(){
-    let precioCalc = parseInt(prompt("Ingresa el precio del mueble que queres comprar"))
-    let cuotasCalc = parseInt(prompt("En cuantas cuotas queres realizar la compra?"))
-
-    let precioInt = (precioCalc + (precioCalc*(25/100)))
-    let finalCalc = (precioInt / cuotasCalc)
-
-    alert(`El precio final del mueble elegido de ${precioCalc} pesos, quedaria en ${cuotasCalc} de ${finalCalc}, siendo el total con intereses ${precioInt}`)
-}
-
-function calcularDesc(){
-    let precioDesc = parseInt(prompt("Ingresa el precio del mueble que queres comprar"))
-    let precioFinalDesc = (precioDesc - (precioDesc * (10 / 100)))
-
-    alert(`el precio del mueble que elegiste es ${precioDesc} pesos, en efectivo o transferencia quedaria en ${precioFinalDesc} pesos`)
-} */
-
-
-/* function ordenar(array){
-    let opcion = parseInt(prompt(`
-    1 - Ordenar por precio, mayor a menor
-    2 - Ordenar por precio, menor a mayor`))
-    switch(opcion){
-        case 1:
-            ordenarMayor(array)
-        break
-        case 2:
-            ordenarMenor(array)
-        break
-        default:
-            console.log(`${opcion} no es valido`)
-        break
-    }
-}
-
-function ordenarMayor(array){
-    const mayorMenor = [].concat(array)
-    mayorMenor.sort((a, b)=> b.precio - a.precio)
-    abrirDeposito(mayorMenor)
-}
-
-function ordenarMenor(array){
-    const menorMayor = [].concat(array)
-    menorMayor.sort((param1, param2)=> param1.precio - param2.precio)
-    abrirDeposito(menorMayor)
-} */
-
-/* 5 */
-/* function reciclarMueble(array){
-    let muebleIngresado = prompt(`Que tipo de mueble tenes?
-    Recorda que solo aceptamos del tipo que vendemos`)
-
-    if (muebleIngresado.toLocaleLowerCase() == "escritorio" 
-    || muebleIngresado.toLowerCase() == "luz" 
-    || (muebleIngresado.toLowerCase() == "organizador")) {
-        console.log(`Perfecto, si aceptamos ${muebleIngresado} como tipo de mueble`)
-
-        let mueblePrecio = parseInt(prompt("A que precio queres venderlo?"))
-        let muebleNombre= prompt("Ahora decinos el nombre con el que quieras publicarlo: ")
-    
-        const nuevoMueble = new Mueble(array.length+1, muebleIngresado, muebleNombre, mueblePrecio)
-        console.log(nuevoMueble)
-    
-        array.push(nuevoMueble)
-        abrirDeposito(array)
-        console.log("Gracias! agregamos tu mueble a nuestro stock")
-
-    }else{
-        console.log("Disculpa, no aceptamos este tipo de mueble")
-    }
-} */
+//loader
+setTimeout(()=>{
+    loader.remove()
+    abrirDeposito(deposito)
+},1900)
 
 
 
