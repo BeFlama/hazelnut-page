@@ -327,6 +327,7 @@ form.addEventListener("submit", e=>{
         console.log("Compra realizada")
         warning += `Tus datos fueron enviados correctamente <br>`
         form.reset()
+        vaciarCarrito(carritoCompra)
         Swal.fire({
             icon: 'success',
             title: '¡Muchas Gracias!',
