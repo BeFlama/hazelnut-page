@@ -270,17 +270,6 @@ selectOrden.addEventListener("change", ()=>{
     }
 })
 
-//carrito
-/* btnFinish.addEventListener("click", ()=>{
-    console.log("Compra realizada")
-    Swal.fire({
-        icon: 'success',
-        title: '¡Muchas Gracias!',
-        text: 'Tu compra fue realizada con éxito',
-        showConfirmButton: false,
-        timer: 3000
-    })
-    }) */
 
 btnVaciarCarrito.addEventListener("click", () =>{
     vaciarCarrito(carritoCompra)
@@ -337,12 +326,13 @@ form.addEventListener("submit", e=>{
     else{
         console.log("Compra realizada")
         warning += `Tus datos fueron enviados correctamente <br>`
+        form.reset()
         Swal.fire({
             icon: 'success',
             title: '¡Muchas Gracias!',
             text: 'Tu compra fue realizada con éxito',
             showConfirmButton: false,
-            timer: 3000
+            timer: 2000
         })
     }
 })
