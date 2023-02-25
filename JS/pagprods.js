@@ -24,6 +24,7 @@ let email = document.getElementById("email")
 let numero = document.getElementById("numero")
 let alerta = document.getElementById("alerta")
 let btnFinish = document.getElementById("btnFinish")
+let modAll = document.getElementById("staticBackdrop")
 
 /* STORAGE CARRITO */
 let carritoCompra
@@ -243,7 +244,7 @@ function ordenarTipo(array){
 setTimeout(()=>{
     loader.remove()
     abrirDeposito(deposito)
-},1900)
+},1100)
 
 //barranav
 inputSearch.addEventListener("input", ()=>{
@@ -327,7 +328,12 @@ form.addEventListener("submit", e=>{
         console.log("Compra realizada")
         warning += `Tus datos fueron enviados correctamente <br>`
         form.reset()
+        setTimeout(()=>{
+            location.reload()
+        }, 1000)
         vaciarCarrito(carritoCompra)
+
+
         Swal.fire({
             icon: 'success',
             title: '¡Muchas Gracias!',
