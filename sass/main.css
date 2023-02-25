@@ -1263,7 +1263,20 @@ body.darkMode .container__prods nav .darkCarrito #bodyCarrito div {
 body.darkMode div .box__prods div .card_prod-text strong {
   color: #fff;
 }
+body.darkMode .box__prods div .card_prod-text strong {
+  color: #fff;
+}
+body.darkMode .modal .modal-content {
+  background-color: #986632;
+}
+body.darkMode .modal .modal-dialog .modal-body .modal-footer p {
+  width: 80%;
+  text-align: end;
+  color: yellow;
+  padding-top: 1rem;
+}
 
+/* lihgt mode */
 .header nav div div ul .navSwitch .switchDarkMode {
   background-color: #F2B705;
   border-radius: 3rem;
@@ -1375,24 +1388,37 @@ body.darkMode div .box__prods div .card_prod-text strong {
 .modal .modal-header .camioncito {
   margin-top: 1rem;
 }
-.modal .modal-body {
-  display: contents;
+.modal .modal-header h1 {
+  font-size: large;
 }
-.modal .modal-body h3 {
+.modal .modal-header h3 {
   font-size: medium;
 }
-.modal .modal-body input, .modal .modal-body select {
+.modal .modal-dialog .modal-body {
+  display: contents;
+}
+.modal .modal-dialog .modal-body form {
+  text-align: center;
+  width: 90%;
+}
+.modal .modal-dialog .modal-body form input, .modal .modal-dialog .modal-body form select {
   margin: 0.5rem;
-  width: 80%;
+  width: 90%;
   height: 2rem;
   border: none;
   cursor: pointer;
   border-radius: 10px;
 }
-.modal .modal-body span {
+.modal .modal-dialog .modal-body form span {
   color: red;
   border-color: red;
   border-radius: 5px;
+}
+.modal .modal-dialog .modal-body form .modal-footer p {
+  width: 80%;
+  text-align: end;
+  color: red;
+  padding-top: 1rem;
 }
 
 .box__prods {

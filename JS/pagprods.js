@@ -1,4 +1,4 @@
-/* elemtnos del html */
+//DOM
 let divdeposito = document.getElementById("deposito")
 
 let loader = document.getElementById("loader")
@@ -14,8 +14,16 @@ let cantidadCarrito = document.getElementById("cantidadCarrito")
 let precioTotal = document.getElementById("precioTotal")
 let btnContCompra = document.getElementById("btnContCompra")
 let btnVaciarCarrito = document.getElementById("btnVaciarCompra")
-let btnFinish = document.getElementById("btnFinish")
 
+
+//form
+let form = document.getElementById("form")
+let nombre = document.getElementById("nombre")
+let apellido = document.getElementById("apellido")
+let email = document.getElementById("email")
+let numero = document.getElementById("numero")
+let alerta = document.getElementById("alerta")
+let btnFinish = document.getElementById("btnFinish")
 
 /* STORAGE CARRITO */
 let carritoCompra
@@ -229,8 +237,14 @@ function ordenarTipo(array){
     abrirDeposito(ordenTipo)
 }
 
-
 //EVENTOS
+
+//loader
+setTimeout(()=>{
+    loader.remove()
+    abrirDeposito(deposito)
+},1900)
+
 //barranav
 inputSearch.addEventListener("input", ()=>{
     buscarProd(inputSearch.value.toLowerCase(), deposito)
@@ -256,9 +270,8 @@ selectOrden.addEventListener("change", ()=>{
     }
 })
 
-
 //carrito
-btnFinish.addEventListener("click", ()=>{
+/* btnFinish.addEventListener("click", ()=>{
     console.log("Compra realizada")
     Swal.fire({
         icon: 'success',
@@ -267,7 +280,7 @@ btnFinish.addEventListener("click", ()=>{
         showConfirmButton: false,
         timer: 3000
     })
-    })
+    }) */
 
 btnVaciarCarrito.addEventListener("click", () =>{
     vaciarCarrito(carritoCompra)
@@ -283,11 +296,56 @@ btnVaciarCarrito.addEventListener("click", () =>{
     }).showToast()
 })
 
-//loader
-setTimeout(()=>{
-    loader.remove()
-    abrirDeposito(deposito)
-},1900)
+//form
+form.addEventListener("submit", e=>{
+    e.preventDefault()
+    let warning = ""
+    let entrar = false
+    let emailValido = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    alerta.innerHTML = ""
+    if(nombre.value.length < 4){
+        warning += `El nombre no es válido <br>`
+        entrar = true
+    }
+    if(apellido.value.length < 4){
+        warning += `El apellido no es válido <br>`
+        entrar = true
+    }
+    if(!emailValido.test(email.value)){
+        warning += `El email no es válido <br>`
+        entrar = true
+    }
+    if(numero.value.length < 10){
+        warning += `El número no es válido <br>`
+        entrar = true
+    }
+    if(selectProv.value == 0 || selectProv.value == "Provincia"){
+        warning += `Selecciona tu provincia correctamente <br>`
+        entrar = true
+    }
+    if(selectMuni.value == 0 || selectMuni.value == "Municipio"){
+        warning += `Selecciona tu municipio correctamente <br>`
+        entrar = true
+    }
+    if(selectLocal.value == 0 || selectLocal.value == "Localidad"){
+        warning += `Selecciona tu localidad correctamente <br>`
+        entrar = true
+    }
+    if(entrar){
+        alerta.innerHTML = warning
+    }
+    else{
+        console.log("Compra realizada")
+        warning += `Tus datos fueron enviados correctamente <br>`
+        Swal.fire({
+            icon: 'success',
+            title: '¡Muchas Gracias!',
+            text: 'Tu compra fue realizada con éxito',
+            showConfirmButton: false,
+            timer: 3000
+        })
+    }
+})
 
 
 

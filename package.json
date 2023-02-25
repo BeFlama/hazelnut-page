@@ -1,0 +1,24 @@
+{
+  "name": "hazelnut",
+  "version": "1.0.0",
+  "description": "Ecommerce",
+  "main": "pagprods.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeFlama/hazelnut-page.git"
+  },
+  "author": "Benitez Florencia Naomy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeFlama/hazelnut-page/issues"
+  },
+  "homepage": "https://github.com/BeFlama/hazelnut-page#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1",
+    "sweetalert2": "^11.7.2",
+    "toastify-js": "^1.12.0"
+  }
+}

@@ -31,10 +31,34 @@ body{
                     }
                 }
             }
+            .box__prods{
+                div{
+                    .card_prod-text{
+                        strong{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .modal{
+                .modal-content{
+                    background-color: #986632;
+                }
+                .modal-dialog{
+                    .modal-body{
+                        .modal-footer{
+                            p{
+                                width: 80%;
+                                text-align: end;
+                                color: yellow;
+                                padding-top: 1rem;
+                            }
+            }}
         }
     }
+    }}
 
-
+/* lihgt mode */
 .header{
     nav{
         div{
@@ -119,7 +143,6 @@ body{
                 }
             }
     }
-/* offcanva */
     .div_loader{
         display: flex;
         justify-content: center;
@@ -165,26 +188,41 @@ body{
             .camioncito{
                 margin-top: 1rem;
             }
-        }
-        .modal-body{
-            display: contents;
+            h1{
+                font-size: large;
+            }
             h3{
                 font-size: medium;
-                
             }
-            input, select{
-                margin: 0.5rem;
-                width: 80%;
-                height: 2rem;
-                border: none;
-                cursor: pointer;
-                border-radius: 10px;
-            }
-            span{
-                color: red;
-                border-color: red;
-                border-radius: 5px;
-
+        }
+        .modal-dialog{
+            .modal-body{
+                display: contents;
+                form{
+                    text-align: center;
+                    width: 90%;
+                    input, select{
+                        margin: 0.5rem;
+                        width: 90%;
+                        height: 2rem;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 10px;
+                    }
+                    span{
+                        color: red;
+                        border-color: red;
+                        border-radius: 5px;
+                    }
+                    .modal-footer{
+                        p{
+                            width: 80%;
+                            text-align: end;
+                            color: red;
+                            padding-top: 1rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -236,7 +274,7 @@ body{
                     }
                     strong{
                         font-size: 1.5rem;
-                        color: $color__green;
+                        color: #185947;
                         text-shadow: #4d3822;
                     }
                     button{

@@ -136,36 +136,36 @@
                     </svg>
                 </div>
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Continuar compra</h1>
+                <h3>Completa con tus datos el siguiente formulario</h3>
             </div>
             <div class="modal-body" id="formapi">
-                    <h3>Completa con tus datos el siguiente formulario</h3>
-                    <input type="text" placeholder="Nombre y Apellido" class="item_form" minlength="5" maxlength="30" pattern="[a-zA-Z]+" required>
-                    <input type="email" placeholder="Email" class="item_form" required="" minlength="20" maxlength="40" required>
-                    <input type="text" placeholder="Número de contacto (sin 0 ni 15)" class="item_form" pattern="[0-9]+" minlength="8" maxlength="10" required>
-                    <select id="selectProv">
-                        <option value="Provincia">Provincia</option>
-                    </select>
-                    <span></span>
-                    <select id="selectMuni">
-                        <option value="Municipio">Municipio</option>
-                    </select>
-                    <span></span>
-                    <select id="selectLocal">
-                        <option value="Localidad">Localidad</option>
-                    </select>
-                    <span></span>
-
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar compra</button>
-                <button type="button" class="btn btn-success" id="btnFinish">Terminar compra</button>
+                    <form action="" id="form">
+                        <input type="text" id="nombre" placeholder="Nombre" class="item_form" minlength="4" maxlength="30" pattern="[a-zA-Z]+" >
+                        <input type="text" id="apellido" placeholder="Apellido" class="item_form" minlength="4" maxlength="30" pattern="[a-zA-Z]+" >
+                        <input type="email" id="email" placeholder="Email" class="item_form" minlength="20" maxlength="40" >
+                        <input type="text" id="numero" placeholder="Número de contacto (sin 0 ni 15)" class="item_form" pattern="[0-9]+" minlength="8" maxlength="10" >
+                        <select id="selectProv" >
+                            <option value="Provincia">Provincia</option>
+                        </select>
+                        <span></span>
+                        <select id="selectMuni" >
+                            <option value="Municipio">Municipio</option>
+                        </select>
+                        <span></span>
+                        <select id="selectLocal" >
+                            <option value="Localidad">Localidad</option>
+                        </select>
+                        <span></span>
+                        <div class="modal-footer">
+                            <p id="alerta" class="warning"></p>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success" id="btnFinish">Terminar compra</button>
+                        </div>
+                    </form>
             </div>
             </div>
         </div>
-        </div>
-
-
+    </div>
     <footer class="footer footer_resp">
         <div class="footericons">
                 <h4 class="encontranos">Encontranos acá</h4>
